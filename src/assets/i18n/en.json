@@ -1,0 +1,245 @@
+{
+    "WEBSITE_NAME": "Encryption Key",
+    "WEBSITE_SHORT_NAME": "Dashboard",
+    "ADDRESS": "Hofuf - Prince Sultan Road - Al Faisaliah District II",
+    "GREETINGS": {
+        "GOOD_MORNING": "Good Morning {{name}} 🌅",
+        "GOOD_AFTERNOON": "Good Afternoon {{name}} ☀️",
+        "GOOD_EVENING": "Good Evening {{name}} 🌘"
+    },
+    "DESCRIPTIONS": {
+        "READ": "only vision",
+        "WRITE": "Possibility of addition",
+        "EXECUTE": "It is the possibility of modification and deletion"
+    },
+    "MAIN_MENU": {
+        "HOME": "Home",
+        "ABOUT_US": "About Us",
+        "BRANCHES": "Store Locator",
+        "MEDIA_CENTER": "Media Center",
+        "OFFERS": "Offers",
+        "JOBS": "Jobs",
+        "PRIVATE_POLICY": "Private Policy",
+        "ALYAHYA_REWARDS": "Alyahya Rewards",
+        "ALYAHYA_BAKERY": "Alyahya Bakery",
+        "INQUIRIES_AND_SUGGESTIONS": "Inquiries & Suggestions",
+        "CUSTOMER_CARE": "Customer Care"
+    },
+    "CATEGORIES": {
+        "GROCERY": "Grocery",
+        "FRESH_AND_BAKERY": "Fresh & Bakery",
+        "FROZEN": "Frozen",
+        "BEVERAGE": "Beverage",
+        "HEALTH_AND_BEAUTY": "Health & Beauty",
+        "BABY_NEEDS": "Baby Needs",
+        "HOME_CARE": "Home Care",
+        "KITCHEN_UTENSILS": "Kitchen Utensils"
+    },
+    "FOOTER_ELEMENTS": {
+        "ABOUT_ALYAHYA": "ABOUT ALYHYA",
+        "PROMOTIONS": "PROMOTIONS",
+        "OTHER_LINKS": "OTHER LINKS",
+        "CONTACT_US": "CONTACT US"
+    },
+    "LABELS": {
+        "DELETE_ALL": "Delete all items in the wishlist!",
+        "WEBSITE": "Website",
+        "TEAM": "Team Work",
+        "GREETINGS": "Please accept our highest regards",
+        "SHARED_TIME": "Shared Time",
+        "TOTAL_PRICE": "Total Price",
+        "VAT": "VAT",
+        "TOTAL_SUMMATION": "Total Summation",
+        "WISHLIST_EMPTY": "Your wishlist appears to be empty. You may return to <a routerLink='/home'>Home</a> to complete your shopping.",
+        "WISHLIST": "This list helps you put your thoughts in order before you come to us for shopping",
+        "OFFERS_HINT": "Click the buttons to browse offers",
+        "AM": "am",
+        "PM": "pm",
+        "TELEGRAM_CHANNEL": "Our channel on Telegram",
+        "TELEGRAM_CHANNEL_DESCRIPTION": "Join our Telegram channel now and receive all our special offers first",
+        "ACTIVED": "Active",
+        "BLOCKED": "Blocked",
+        "BASIC_INFORMATION": "Basic Information",
+        "ROLE_NAME": "Role Name",
+        "ENGLISH_ROLE_NAME": "English Role Name",
+        "PRIVILEGES_TABLE": "Privileges Table",
+        "READ": "Read",
+        "WRITE": "Write",
+        "EXECUTE": "Execute",
+        "INSTRUCTIONS": "Instructions",
+        "ACTIONS": "Actions",
+        "STATUS": "Status",
+        "FULL_NAME": "Full Name",
+        "NO_DATA_MATCHING_THE_FILTER": "No data matching the filter \"{{words}}\"",
+        "PRIVILEGES": "Privileges",
+        "LBL_DEVELOPER": "Development",
+        "DEVELOPER": "Development: Eng. Abdullah Al-Salem",
+        "COPYRIGHT": "Copyright © {{YEAR}}. All rights reserved.",
+        "LOGIN": "LOGIN",
+        "PASSWORD": "Password",
+        "PERSONAL_INFORMATION": "Personal Info",
+        "FIRST_NAME": "First Name",
+        "LAST_NAME": "Surname",
+        "JOB_TITLE": "Job Title",
+        "ENGLISH_JOB_TITLE": "English Job Title",
+        "EMPLOYEE_ID": "Employee ID",
+        "CONTACT_INFORMATION": "Contact Info",
+        "EMAIL": "Email",
+        "TELEPHONE": "Telephone",
+        "EXTENSION": "ext.",
+        "MOBILE_NO": "Mobile NO.",
+        "WORKING_HOURS": "Working Hours",
+        "CREATED_AT": "Created at",
+        "MODIFIED_AT": "Last modified",
+        "LAST_ACTIVITY": "Last Activity",
+        "SECURITY_INFORMATION": "Security Info",
+        "AUTHORIZED_TO_ENTER": "Are you logged in and do not have an account?",
+        "DECISION": "Do you really want to make this decision?",
+        "DELETE_USER": "Delete user {{USERNAME}}",
+        "DELETE_ROLE": "Delete role{{ROLE}}",
+        "DELETE_ITEM": "Delete item \"{{ITEM}}\"",
+        "SPECIALS_OFFERS": "SPECIALS OFFERS",
+        "MONTHLY_DEALS": "Monthly Deals",
+        "WEEKLY_DEALS": "Weekly Deals",
+        "DAILY_DEALS": "Daily Deals",
+        "BRANDS": "BRANDS",
+        "FEATURED_PRODUCTS": "FEATURED",
+        "DISCOUNT": "Discount",
+        "CURRENCY": "SAR",
+        "OFF": "OFF"
+    },
+    "TABLES": {
+        "ITEM_IMG": "Item Image",
+        "ITEM_NAME": "Item Name",
+        "QUANTITY": "Quantity",
+        "PRICE": "Price",
+        "UNIT_PRICE": "Unit Price"
+    },
+    "TOOLTIPS": {
+        "EDIT_QUANTITY": "You can adjust the quantity after adding through the wish list",
+        "DEVELOPER": "Click here to view the engineer's CV",
+        "RESET": "When this button is pressed, the user will receive a password recovery email",
+        "BACK_TO_TOP": "Back to top",
+        "EMAIL": "Click here to contact us via e-mail",
+        "TELEPHONE": "Click here to contact us by phone",
+        "LOCATION": "Visit our main branch now"
+    },
+    "LINKS": {
+        "FORGOT_PASSWORD": "Forgot Password?",
+        "CONTACT_IT": "PLEASE CONTACT IT",
+        "VIEW_ALL": "view all"
+    },
+    "SHARE_BUTTONS": {
+        "WISHLIST": "It is a tool from Al-Yahya Markets for foodstuffs, so that customers can prepare the monthly homestead in a coordinated and amazing way. You can now go to the Al-Yahya Markets website to collect your purchases, print them, and share them with your loved ones through the link below: \n https://al-yahya.sa"
+    },
+    "BUTTONS": {
+        "SHARE_DATA": "Share Data",
+        "DELETE_ALL": "Delete All",
+        "MY_WISHLIST": "My Wishlist",
+        "DOWNLOAD_OFFERS": "Download Offers",
+        "BROWSE_OFFERS": "Browse Offers",
+        "CATEGORIES": "Categories",
+        "JOIN_US": "Join Us",
+        "ADD_TO_WISHLIST": "Add to wishlist",
+        "ADDED": "<i class=\"mdi mdi-check-bold\"></i> Added",
+        "YES": "Yes",
+        "NO": "No",
+        "EDIT": "Edit",
+        "BLOCK": "Block",
+        "UNBLOCK": "Unblock",
+        "DELETE": "Delete",
+        "RESET": "Reset",
+        "LOGIN": "Login",
+        "CREATE_NEW_ROLE": "Create New Role",
+        "EDITE_ROLE": "Edit Role",
+        "EDITE_USER": "Edit User Info",
+        "CREATE_NEW_USER": "Create New User",
+        "PRINT_DATA": "Print Data",
+        "EXPORT_DATA": "Export Data",
+        "CLOSE": "Close",
+        "PROFILE": {
+            "EDIT_INFORMATION": "Edit Info",
+            "SAVING_CHANGES": "Saving Changes"
+        },
+        "TOOLBAR_BUTTON": {
+            "EXPAND": "Expand Menu",
+            "COLLAPSE": "Collapse Menu"
+        },
+        "CHANGE_LANGUAGE": {
+            "ARABIC_LANGUAGE": "عربي",
+            "ENGLISH_LANGUAGE": "English"
+        },
+        "FULLSCREEN": {
+            "FULLSCREEN": "Fullscreen",
+            "EXIT_FULLSCREEN": "Exit Fullscreen"
+        },
+        "NOTIFICATIONS": "Notifications",
+        "MY_DATA": {
+            "ABOUT_MY_DATA": "About My Data",
+            "MY_PROFILE": "My Profile",
+            "LOGOUT": "Logout"
+        }
+    },
+    "RANGE": {
+        "FROM": "From",
+        "TO": "to",
+        "TOTAL": "total"
+    },
+    "PAGINATOR": {
+        "ITEMS_PER_PAGE_LABEL": "Items per page",
+        "FIRST_PAGE_LABEL": "First Page",
+        "LAST_PAGE_LABEL": "Last Page",
+        "NEXT_PAGE_LABEL": "Next Page",
+        "PREVIOUS_PAGE_LABEL": "Previous Page"
+    },
+    "SEARCH_ENGINE": {
+        "PLACEHOLDER": "Write any thing!",
+        "PLACEHOLDER_USERS": "You can write: (the user's mobile number, employee ID, email)",
+        "PLACEHOLDER_PRIVILEGES": "Write the name of the role in Arabic or English",
+        "BUTTON": "Search"
+    },
+    "PLACEHOLDERS": {
+        "ROLE_NAME": "Ex: المسؤول الخارق",
+        "ENGLISH_ROLE_NAME": "Ex: Super User",
+        "PASSWORD": "Enter Password",
+        "FIRST_NAME": "Ex: Mohammed",
+        "LAST_NAME": "Ex: Alsalem",
+        "JOB_TITLE": "Ex: مهندس برمجيات",
+        "ENGLISH_JOB_TITLE": "Ex: Software Engineer",
+        "EMPLOYEE_ID": "EX: 1115",
+        "EMAIL": "Ex: abc@abc.com",
+        "MOBILE_NO": "Ex: 0508532127"
+    },
+    "SUCCESS": {
+        "CREATE_NEW_USER": "The new user has been added successfully",
+        "EDIT_USER": "User information has been modified successfully",
+        "DELETE_USER": "User has been deleted successfully!",
+        "CREATE_NEW_ROLE": "The role has been added successfully",
+        "EDIT_ROLE": "The role has been modified successfully",
+        "DELETE_ROLE": "Role has been removed successfully!",
+        "FORGOT_PASSWORD": "Password reset email sent, check user inbox."
+    },
+    "ERRORS": {
+        "HACKED": "Please do not tamper with the system",
+        "BLOCKED": "Sorry, your account has been blocked by an administrator",
+        "RE_CLICK_LOGIN": "Please click again on the login button",
+        "REQUIRED": "This field is required",
+        "EMAIL": "The email entered is incorrect!",
+        "VALIDATION": "Please check that all entries are correct!",
+        "WRONG_PASSWORD": "The password entered is incorrect!",
+        "USER_NOT_FOUND": "The entered email is not registered as a user!",
+        "EMAIL_ALREADY_IN_USE": "This Email is used by another user",
+        "DELETE_USER": "This user has already been removed, please contact the administrator!"
+    },
+    "WARNING": {
+        "DELETE_USER": "Warning: If you delete this user, you will not be able to create a new account for him with the same email!"
+    },
+    "SOCIAL_MEDIA": {
+        "WHATSAPP": "Whatsapp",
+        "TELEGRAM": "Telegram",
+        "INSTAGRAM": "instagram",
+        "SNAPCHAT": "snapchat",
+        "TWITTER": "twitter",
+        "FACEBOOK": "Facebook"
+    }
+}
