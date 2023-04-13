@@ -1,4 +1,20 @@
+@import "src/assets/scss/_variables";
 /* You can add global styles to this file, and also import other style files */
+* :not(mat-icon) {
+    font-family: $accent-font !important;
+  }
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.toolbar{
+    background-color: $primary-color !important;
+    color: $basic-color;
+    box-shadow: $box-shadow;
+}
+
+.logo {
+    height: auto;
+    width: 100%;
+  }
