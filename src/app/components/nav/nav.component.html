@@ -2,8 +2,9 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>
+      <a [routerLink]="''">
       <img src="../../../assets/img/logos/logo.png" class="logo" [alt]="'WEBSITE_NAME' | translate"
-        [matTooltip]="'WEBSITE_NAME' | translate">
+        [matTooltip]="'WEBSITE_NAME' | translate"></a>
     </mat-toolbar>
     <mat-nav-list [class]="translateService.currentLang === 'ar'? 'mat-nav-list-ar' : 'mat-nav-list-en'">
       <hr>

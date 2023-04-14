@@ -6,6 +6,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ReportsComponent } from './pages/reports/reports.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'ciphers', component: CiphersComponent },
   { path: 'about-us', component: AboutUsComponent },
