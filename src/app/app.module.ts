@@ -17,6 +17,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DatePipe } from '@angular/common';
 import { LangComponent } from './tools/lang/lang.component';
+import { SocialMediaComponent } from './tools/social-media/social-media.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -27,7 +28,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     NavComponent,
-    LangComponent
+    LangComponent,
+    SocialMediaComponent
   ],
   imports: [
     MaterialModule,

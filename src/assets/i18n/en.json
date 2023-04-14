@@ -15,6 +15,8 @@
     "MAIN_MENU": {
         "HOME": "Home",
         "ABOUT_US": "About Us",
+        "CIPHERS": "Ciphers",
+        "REPORTS": "Reports",
         "BRANCHES": "Store Locator",
         "MEDIA_CENTER": "Media Center",
         "OFFERS": "Offers",

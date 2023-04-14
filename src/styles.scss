@@ -17,4 +17,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .logo {
     height: auto;
     width: 100%;
+    border: $border-color 1px solid;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+  }
+
+  mat-nav-list{
+    margin-top: 1.2rem !important;
+  }
+
+  mat-icon{
+    padding-top: 15px;
   }

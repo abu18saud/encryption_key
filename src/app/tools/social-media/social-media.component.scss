@@ -1,0 +1,12 @@
+@import "src/assets/scss/_variables";
+
+.navItems li:hover a,
+.links a:hover {
+    color: $warn-color;
+}
+
+.links a {
+    font-size: 30px;
+    color: $basic-color;
+    margin: 25px 10px;
+}
