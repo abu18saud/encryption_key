@@ -7,7 +7,8 @@
     </mat-toolbar>
     <mat-nav-list>
       <hr>
-      <a mat-list-item *ngFor="let item of menuItems" [routerLink]="item.router_link"><mat-icon>{{item.icon}}</mat-icon>
+      <a mat-list-item class="text-center" *ngFor="let item of menuItems" [routerLink]="item.router_link">
+        <i [class]="item.icon"></i>
         {{item.ar_name}}</a>
     </mat-nav-list>
   </mat-sidenav>

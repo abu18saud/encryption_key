@@ -24,8 +24,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   mat-nav-list{
     margin-top: 1.2rem !important;
+    a{
+        border: $border-color 1px solid;
+        border-radius: 10px !important;
+        width: 90% !important;
+    }
   }
 
-  mat-icon{
-    padding-top: 15px;
-  }

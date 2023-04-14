@@ -4,27 +4,27 @@
         "ar_name": "الرئيسية",
         "en_name": "Home",
         "router_link": "/home",
-        "icon": "home"
+        "icon": "mdi mdi-home"
     },
     {
         "id": "CIPHERS",
         "ar_name": "الشفرات",
         "en_name": "Ciphers",
         "router_link": "/ciphers",
-        "icon": "text_rotation_none"
+        "icon": "mdi mdi-key-change"
     },
     {
         "id": "ABOUT_US",
         "ar_name": "حولنا",
         "en_name": "About Us",
         "router_link": "/about-us",
-        "icon": "info"
+        "icon": "mdi mdi-information-outline"
     },
     {
         "id": "REPORTS",
         "ar_name": "التقارير",
         "en_name": "Reports",
         "router_link": "/reports",
-        "icon": "summarize"
+        "icon": "mdi mdi-book-open-page-variant"
     }
 ]
