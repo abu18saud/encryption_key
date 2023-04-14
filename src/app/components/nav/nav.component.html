@@ -5,11 +5,20 @@
       <img src="../../../assets/img/logos/logo.png" class="logo" [alt]="'WEBSITE_NAME' | translate"
         [matTooltip]="'WEBSITE_NAME' | translate">
     </mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list [class]="translateService.currentLang === 'ar'? 'mat-nav-list-ar' : 'mat-nav-list-en'">
       <hr>
-      <a mat-list-item class="text-center" *ngFor="let item of menuItems" [routerLink]="item.router_link">
+      <a mat-list-item class="mx-auto d-block" *ngFor="let item of menuItems" [routerLink]="item.router_link" [routerLinkActive]="'bg-warn'">
         <i [class]="item.icon"></i>
-        {{item.ar_name}}</a>
+        {{'MAIN_MENU.' + item.id | translate}}</a>
+    </mat-nav-list>
+    <div class="div-center">
+      <a class="text-center lh-lg" href="https://abdullah-alsalem-cv.netlify.app/" target="_blank"
+        [matTooltip]="'TOOLTIPS.DEVELOPER' | translate" [innerHTML]="'LABELS.DEVELOPER' | translate">
+      </a>
+    </div>
+    <mat-nav-list>
+
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -24,5 +33,6 @@
         [style]="translateService.currentLang === 'ar'? 'margin-right: 2rem;':'margin-left: 2rem;'"></app-social-media>
     </mat-toolbar>
     <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

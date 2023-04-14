@@ -75,7 +75,7 @@
         "NO_DATA_MATCHING_THE_FILTER": "No data matching the filter \"{{words}}\"",
         "PRIVILEGES": "Privileges",
         "LBL_DEVELOPER": "Development",
-        "DEVELOPER": "Development: Eng. Abdullah Al-Salem",
+        "DEVELOPER": "Development:<br> Eng. Abdullah Al-Salem",
         "COPYRIGHT": "Copyright © {{YEAR}}. All rights reserved.",
         "LOGIN": "LOGIN",
         "PASSWORD": "Password",

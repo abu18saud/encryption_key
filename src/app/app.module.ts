@@ -18,6 +18,10 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DatePipe } from '@angular/common';
 import { LangComponent } from './tools/lang/lang.component';
 import { SocialMediaComponent } from './tools/social-media/social-media.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CiphersComponent } from './pages/ciphers/ciphers.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ReportsComponent } from './pages/reports/reports.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,7 +33,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     NavComponent,
     LangComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    HomeComponent,
+    CiphersComponent,
+    AboutUsComponent,
+    ReportsComponent
   ],
   imports: [
     MaterialModule,

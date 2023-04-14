@@ -78,7 +78,7 @@
         "SECURITY_INFORMATION": "معلومات الأمان",
         "PRIVILEGES": "الامتيازات",
         "LBL_DEVELOPER": "المطور",
-        "DEVELOPER": "تطوير: م. عبدالله السالم",
+        "DEVELOPER": "تطوير:<br> م. عبدالله السالم",
         "COPYRIGHT": "حقوق النشر &copy; {{YEAR}} أسواق اليحيى للمواد الغذائية",
         "LOGIN": "تسجيل الدخول",
         "PASSWORD": "كلمة المرور",

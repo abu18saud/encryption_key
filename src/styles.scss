@@ -1,33 +1,110 @@
 @import "src/assets/scss/_variables";
+
 /* You can add global styles to this file, and also import other style files */
 * :not(mat-icon) {
-    font-family: $accent-font !important;
-  }
+  font-family: $accent-font !important;
+}
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
 
-.toolbar{
-    background-color: $primary-color !important;
-    color: $basic-color;
-    box-shadow: $box-shadow;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.toolbar {
+  background-color: $primary-color !important;
+  color: $basic-color;
+  box-shadow: $box-shadow;
 }
 
 .logo {
-    height: auto;
-    width: 100%;
-    border: $border-color 1px solid;
-    border-radius: 10px;
-    margin-top: 1.5rem;
-  }
+  height: auto;
+  width: 100%;
+  border: $border-color 1px solid;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
 
-  mat-nav-list{
-    margin-top: 1.2rem !important;
-    a{
-        border: $border-color 1px solid;
-        border-radius: 10px !important;
-        width: 90% !important;
+.mat-nav-list-ar {
+  margin-top: 1.2rem !important;
+
+  a {
+    i {
+      font-size: x-large;
+      color: $primary-color !important;
+      margin-left: 0.2rem;
     }
-  }
 
+    border: $border-color 1px solid;
+    border-radius: 10px !important;
+    width: 90% !important;
+    vertical-align: middle !important;
+    padding-top: 0.5rem !important;
+    margin-bottom: 0.5rem;
+    color: $primary-color !important;
+  }
+  a:hover {
+    font-size: xx-large;
+    i {
+      font-size: xx-large;
+    }
+    background-color: $warn-color;
+  }
+}
+
+.mat-nav-list-en {
+  margin-top: 1.2rem !important;
+
+  a {
+    i {
+      font-size: x-large;
+      color: $primary-color !important;
+      margin-right: 0.2rem;
+    }
+
+    border: $border-color 1px solid;
+    border-radius: 10px !important;
+    width: 90% !important;
+    vertical-align: middle !important;
+    padding-top: 0.5rem !important;
+    margin-bottom: 0.5rem;
+    color: $primary-color !important;
+  }
+  a:hover {
+    i {
+      font-size: xx-large;
+    }
+    background-color: $warn-color;
+  }
+}
+
+.bg-warn{
+  i {
+    font-size: xx-large !important;
+  }
+  background-color: $warn-color !important;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $border-color;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.div-center {
+  margin-top: 1rem;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}
