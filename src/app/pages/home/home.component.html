@@ -1,1 +1,25 @@
-<p>home works!</p>
+<div class="container">
+    <div class="card main-card">
+        <div class="row">
+            <div class="card container ciphers-card mx-auto d-block">
+                <div class="col-12 header-ciphers">
+
+                    <ul>
+                        <label for="">اختر خوارزمية:</label>
+                        <li *ngFor="let item of items">
+                            <button>{{item.ar_short}}</button>
+                        </li>
+                    </ul>
+
+                </div>
+
+             <div class="col-6">
+                <mat-form-field class="full-width">
+                    <mat-label>Leave a comment</mat-label>
+                    <textarea appearance="fill" class="full-width" matInput placeholder="Ex. It makes me feel..."></textarea>
+                  </mat-form-field>
+             </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -48,11 +48,14 @@ body {
     margin-bottom: 0.5rem;
     color: $primary-color !important;
   }
+
   a:hover {
     font-size: xx-large;
+
     i {
       font-size: xx-large;
     }
+
     background-color: $warn-color;
   }
 }
@@ -75,18 +78,21 @@ body {
     margin-bottom: 0.5rem;
     color: $primary-color !important;
   }
+
   a:hover {
     i {
       font-size: xx-large;
     }
+
     background-color: $warn-color;
   }
 }
 
-.bg-warn{
+.bg-warn {
   i {
     font-size: xx-large !important;
   }
+
   background-color: $warn-color !important;
 }
 
@@ -107,4 +113,52 @@ hr {
     text-decoration: none;
     color: $primary-color;
   }
+}
+
+.main-card {
+  margin-top: 1.5rem;
+  height: 80vh !important;
+  width: 100%;
+}
+
+.ciphers-card {
+  width: 95% !important;
+  margin-top: 1.5rem !important;
+  // margin: 1.5rem !important;
+  height: 200px !important;
+  border-radius: 15px;
+  box-shadow: $box-shadow;
+}
+
+.header-ciphers {
+  border-bottom: $border-color 1px solid;
+  height: 40px;
+  padding: 10px;
+
+  ul {
+    label {
+      margin-left: 10px;
+      display: inline;
+    }
+
+    list-style-type: none;
+
+    li {
+      display: inline;
+      margin-left: 0.5rem;
+      button{
+        border: $border-color 1px solid;
+        border-radius: 10px;
+        padding: 0.1rem 1rem;
+        min-width: 90px;
+        background-color: $primary-color;
+        color: $basic-color;
+      }
+    }
+  }
+}
+
+.full-width{
+  width: 100%;
+  height: auto !important;
 }

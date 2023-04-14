@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "text_id": "CAESAR_CIPHER",
+        "ar_name": "خوارزمية قيصر",        
+        "en_name": "Caesar Cipher",
+        "ar_short": "قيصر",        
+        "en_short": "Caesar",
+        "created_at": "04/14/2023 - 09:50 pm"
+    },
+    {
+        "id": 2,
+        "text_id": "ZIGZAG_CIPHER",
+        "ar_name": "خوارزمية أعمدة السياج",
+        "en_name": "ZigZag Cipher",
+        "ar_short": "أعمدة السياج",        
+        "en_short": "ZigZag",
+        "created_at": "04/14/2023 - 09:50 pm"
+    },
+    {
+        "id": 3,
+        "text_id": "MONO_ALPHAPETIC",
+        "ar_name": "خوارزمية Mono Alphapetic",
+        "en_name": "Mono Alphapetic",
+        "ar_short": "Mono",        
+        "en_short": "Mono",
+        "created_at": "04/14/2023 - 09:50 pm"
+    },
+    {
+        "id": 4,
+        "text_id": "PLAY_FAIR",
+        "ar_name": "خوارزمية Play Fair",
+        "en_name": "Play Fair",
+        "ar_short": "بلاي فير",        
+        "en_short": "Play Fair",
+        "created_at": "04/14/2023 - 09:50 pm"
+    },
+    {
+        "id": 5,
+        "text_id": "AES",
+        "ar_name": "خوارزمية AES",
+        "en_name": "Advanced Encryption Standard (AES)",
+        "ar_short": "AES",        
+        "en_short": "AES",
+        "created_at": "04/14/2023 - 09:50 pm"
+    },
+    {
+        "id": 6,
+        "text_id": "RSA",
+        "ar_name": "خوارزمية RSA (ريفست شامير أدلمان)",
+        "en_name": "RSA (Rivest–Shamir–Adleman)",
+        "ar_short": "RSA",        
+        "en_short": "RSA",
+        "created_at": "04/14/2023 - 09:50 pm"
+    }
+]
