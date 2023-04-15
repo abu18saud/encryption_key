@@ -20,7 +20,7 @@
                 <div class="col-6">
                     <div class="row">
                         <div class="col-10">
-                            <textarea class="full-width" placeholder="اكتب النص الذي تود تشفيره"></textarea>
+                            <textarea class="full-width" [placeholder]="isChecked === true?  'اكتب النص الذي تود تشفيره':'اكتب النص الذي تود فك تشفيره'"></textarea>
                         </div>
                         <div class="col-2 plain-text-row">
                             <i class="mdi mdi-close close-icon" [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
