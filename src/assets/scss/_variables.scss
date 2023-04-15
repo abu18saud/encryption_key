@@ -15,7 +15,13 @@
   /* ../../webfonts/DroidKufi-Regular.ttf */
   src: url('../fonts/beIN Black.ttf') format('truetype');
 }
+
+//Borders
 $border-color: #CCCCCC;
+
+//Backgrounds Colors
+$background-one: #F5F5F5;
+
 
 //New Variables
 $primary-color: #00a4ad; //#3d535f - #3695A1
@@ -23,35 +29,15 @@ $accent-color: #00f1ff; //#7f00ff #A16537 #304FFE
 $warn-color: #c9ee14; //#FCF182
 
 
+//Fonts
 $primay-font: 'Bein-Black';
 $accent-font: 'Bukra-Regular';
 
+//Basices Colors
 $basic-color: #fff;
 $basic-color-2: #000;
 $basic-color-light: lighten($basic-color, 5%);
 $basic-color-dark: darken($basic-color, 15%);
-
-$primary-color-light: lighten($primary-color, 5%);
-$primary-color-dark: darken($primary-color, 15%);
-
-//
-$accent-color-light: lighten($accent-color, 7%);
-$accent-color-dark: darken($accent-color, 7%);
-
-$warn-color-light: lighten($accent-color, 7%);
-$warn-color-dark: darken($accent-color, 7%);
-
-
-$primary-bakery-color: #654530;
-//7f00ff
-
-$overlay: rgba(0, 0, 0, 0.5);
-$body-color: #fafafa;
-$divider-color: #dddddd;
-$font-color-light: #d5d5d5;
-$font-color-dark: #606060;
-$p-color: #606060;
-
 
 $font-weight-thin: 100;
 $font-weight-extra-light: 200;
@@ -64,8 +50,9 @@ $font-weight-extra-bold: 800;
 $font-weight-ultra-bold: 900;
 
 
+//Shadowes
 $hover-box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.16), 0 10px 15px 0 rgba(0, 0, 0, 0.12);
-$navigation-box-shadow: 0px 0px 3px 1px $primary-color-dark;
+$navigation-box-shadow: 0px 0px 3px 1px $primary-color;
 $box-shadow: 0px 1px 5px 2px #7d7d7d;
 $text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
 $card-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);

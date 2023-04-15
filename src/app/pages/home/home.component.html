@@ -13,12 +13,18 @@
 
                 </div>
 
-             <div class="col-6">
-                <mat-form-field class="full-width">
-                    <mat-label>Leave a comment</mat-label>
-                    <textarea appearance="fill" class="full-width" matInput placeholder="Ex. It makes me feel..."></textarea>
-                  </mat-form-field>
-             </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-10">
+                            <textarea class="full-width" placeholder="اكتب النص الذي تود تشفيره"></textarea>
+                        </div>
+                        <div class="col-2 plain-text-row">
+                            <i class="mdi mdi-close close-icon" [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </div>

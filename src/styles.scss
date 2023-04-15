@@ -160,5 +160,25 @@ hr {
 
 .full-width{
   width: 100%;
-  height: auto !important;
+  height: 150px !important;
+  border: none;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
+.plain-text-row{
+margin-top: 1rem;
+}
+.close-icon{
+  font-size: 24px;
+  color: $primary-color;
+  padding: 0 6px;
+}
+.close-icon:hover{
+  font-size: 24px;
+  color: $primary-color;
+  border: none;
+  border-radius: 50%;
+  background-color: $background-one;
+  
 }
