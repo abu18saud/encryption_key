@@ -1,9 +1,13 @@
 <div class="container">
     <div class="card main-card">
         <div class="row">
+            <div class="col-12">
+                <div class="mx-auto text-center">
+                    <mat-slide-toggle [matTooltip]="'يمكنك التبديل بين التشفير وفك التشفير عن طريق هذا الزر بكل بساطة'" [(ngModel)]="isChecked" class="slide-ecode-decode">{{(isChecked === true? 'تشفير':'فك تشفير')}}</mat-slide-toggle>
+                </div>
+            </div>
             <div class="card container ciphers-card mx-auto d-block">
                 <div class="col-12 header-ciphers">
-
                     <ul>
                         <label for="">اختر خوارزمية:</label>
                         <li *ngFor="let item of items">

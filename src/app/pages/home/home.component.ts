@@ -8,6 +8,7 @@ import { CiphersService } from 'src/app/services/ciphers.service';
 })
 export class HomeComponent {
   items: any = [];
+  isChecked = true;
 
 
   constructor(private ciphersService: CiphersService) {

@@ -127,7 +127,7 @@ hr {
   // margin: 1.5rem !important;
   height: 200px !important;
   border-radius: 15px;
-  box-shadow: $box-shadow;
+  box-shadow: $box-shadow-2;
 }
 
 .header-ciphers {
@@ -146,7 +146,8 @@ hr {
     li {
       display: inline;
       margin-left: 0.5rem;
-      button{
+
+      button {
         border: $border-color 1px solid;
         border-radius: 10px;
         padding: 0.1rem 1rem;
@@ -158,7 +159,7 @@ hr {
   }
 }
 
-.full-width{
+.full-width {
   width: 100%;
   height: 150px !important;
   border: none;
@@ -166,19 +167,28 @@ hr {
   margin-top: 3px;
 }
 
-.plain-text-row{
-margin-top: 1rem;
+textarea:focus {
+  outline: none !important;
 }
-.close-icon{
+
+.plain-text-row {
+  margin-top: 1rem;
+}
+
+.close-icon {
   font-size: 24px;
   color: $primary-color;
   padding: 0 6px;
 }
-.close-icon:hover{
+
+.close-icon:hover {
   font-size: 24px;
   color: $primary-color;
   border: none;
   border-radius: 50%;
   background-color: $background-one;
-  
+}
+
+.slide-ecode-decode{
+  margin-top: 1.2rem;
 }
