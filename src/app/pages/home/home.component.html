@@ -3,7 +3,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="mx-auto text-center">
-                    <mat-slide-toggle [matTooltip]="'يمكنك التبديل بين التشفير وفك التشفير عن طريق هذا الزر بكل بساطة'" [(ngModel)]="isChecked" class="slide-ecode-decode">{{(isChecked === true? 'تشفير':'فك تشفير')}}</mat-slide-toggle>
+                    <mat-slide-toggle [matTooltip]="'يمكنك التبديل بين التشفير وفك التشفير عن طريق هذا الزر بكل بساطة'"
+                        [(ngModel)]="isChecked" class="slide-ecode-decode">{{(isChecked === true? 'تشفير':'فك
+                        تشفير')}}</mat-slide-toggle>
                 </div>
             </div>
             <div class="card container ciphers-card mx-auto d-block">
@@ -17,13 +19,20 @@
 
                 </div>
 
-                <div class="col-6">
+                <div class="col-6 right-area">
                     <div class="row">
                         <div class="col-10">
-                            <textarea class="full-width" [placeholder]="isChecked === true?  'اكتب النص الذي تود تشفيره':'اكتب النص الذي تود فك تشفيره'"></textarea>
+                            <textarea #plainText class="full-width"
+                                [placeholder]="isChecked === true?  'اكتب النص الذي تود تشفيره':'اكتب النص الذي تود فك تشفيره'"></textarea>
                         </div>
                         <div class="col-2 plain-text-row">
-                            <i class="mdi mdi-close close-icon" [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
+                            <i class="mdi mdi-close close-icon" (click)="clear()" [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
+                        </div>
+                        <div class="col-12">
+                            <mat-form-field class="text-input">
+                                <mat-label>مفتاح التشفير</mat-label>
+                                <input matInput placeholder="مثلاً: 3" class="text-input">
+                            </mat-form-field>
                         </div>
                     </div>
 

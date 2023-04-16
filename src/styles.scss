@@ -125,7 +125,7 @@ hr {
   width: 95% !important;
   margin-top: 1.5rem !important;
   // margin: 1.5rem !important;
-  height: 200px !important;
+
   border-radius: 15px;
   box-shadow: $box-shadow-2;
 }
@@ -161,10 +161,11 @@ hr {
 
 .full-width {
   width: 100%;
-  height: 150px !important;
+  height: 120px !important;
   border: none;
   border-radius: 5px;
   margin-top: 3px;
+  resize: none;
 }
 
 textarea:focus {
@@ -179,6 +180,7 @@ textarea:focus {
   font-size: 24px;
   color: $primary-color;
   padding: 0 6px;
+  cursor: pointer;
 }
 
 .close-icon:hover {
@@ -189,6 +191,18 @@ textarea:focus {
   background-color: $background-one;
 }
 
-.slide-ecode-decode{
+.slide-ecode-decode {
   margin-top: 1.2rem;
+}
+
+.right-area {
+  border-left: $border-color-2 1px solid;
+}
+
+.text-input {
+  font-size: 12px !important;
+}
+
+.mat-mdc-input-element{
+  font-size: 12px;
 }
