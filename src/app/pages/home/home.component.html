@@ -11,7 +11,7 @@
             <div class="card container ciphers-card mx-auto d-block">
                 <div class="col-12 header-ciphers">
                     <ul>
-                        <label for="">اختر خوارزمية:</label>
+                        <label for="">{{'LABELS.CHOOSE_AN_ALGORITHM' | translate}}:</label>
                         <li *ngFor="let item of items">
                             <button>{{item.ar_short}}</button>
                         </li>
@@ -20,20 +20,25 @@
                 </div>
 
                 <div class="col-6 right-area">
+                    <div class="plain-text-row">
+                        <i class="mdi mdi-close close-icon" *ngIf="this.plainText.value.length !== 0" (click)="clear()" [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
+                    </div>
+                    <div class="length-of-plain-text">
+                        <mat-hint dir="ltr" align="start">{{plainText.value.length}} / 500</mat-hint>
+                    </div>
+                    <div class="encode-key">
+                        <mat-form-field class="text-input">
+                            <mat-label>مفتاح التشفير</mat-label>
+                            <input matInput placeholder="مثلاً: 3" class="text-input">
+                        </mat-form-field>
+                    </div>
                     <div class="row">
-                        <div class="col-10">
-                            <textarea #plainText class="full-width"
+                        <div class="col-11 height-of-encode-box">
+                            <textarea #plainText class="full-width" [(ngModel)]="text1" maxlength="500" style="overflow:hidden"
                                 [placeholder]="isChecked === true?  'اكتب النص الذي تود تشفيره':'اكتب النص الذي تود فك تشفيره'"></textarea>
                         </div>
-                        <div class="col-2 plain-text-row">
-                            <i class="mdi mdi-close close-icon" (click)="clear()" [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
-                        </div>
-                        <div class="col-12">
-                            <mat-form-field class="text-input">
-                                <mat-label>مفتاح التشفير</mat-label>
-                                <input matInput placeholder="مثلاً: 3" class="text-input">
-                            </mat-form-field>
-                        </div>
+
+
                     </div>
 
 

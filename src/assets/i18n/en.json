@@ -44,6 +44,7 @@
         "CONTACT_US": "CONTACT US"
     },
     "LABELS": {
+        "CHOOSE_AN_ALGORITHM":"Choose an algorithm",
         "DELETE_ALL": "Delete all items in the wishlist!",
         "WEBSITE": "Website",
         "TEAM": "Team Work",

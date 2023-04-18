@@ -11,6 +11,7 @@ export class HomeComponent {
 
   items: any = [];
   isChecked = true;
+  text1: string = "";
 
 
   constructor(private ciphersService: CiphersService) {
