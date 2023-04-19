@@ -17,19 +17,18 @@
                                 <button>{{item.ar_short}}</button>
                             </li>
                         </ul>
-
                     </div>
-
+                    <!-- source -->
                     <div class="col-6 right-area">
-                        <div class="plain-text-row">
-                            <i class="mdi mdi-close close-icon" *ngIf="this.plainText.value.length !== 0"
-                                (click)="clear()" [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
+                        <div class="corner-top-left">
+                            <i class="mdi mdi-close icon-x" *ngIf="this.plainText.value.length !== 0" (click)="clear()"
+                                [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
                         </div>
-                        <div class="length-of-plain-text">
+                        <div class="corner-bottom-left">
                             <mat-hint dir="ltr" align="start">{{plainText.value.length}} / 500</mat-hint>
                         </div>
-                        <div class="encode-key">
-                            <mat-form-field class="text-input">
+                        <div class="corner-bottom-right">
+                            <mat-form-field class="text-input mr-2">
                                 <mat-label>مفتاح التشفير</mat-label>
                                 <input matInput placeholder="مثلاً: 3" class="text-input">
                             </mat-form-field>
@@ -41,20 +40,19 @@
                                     [placeholder]="isChecked === true?  'اكتب النص الذي تود تشفيره':'اكتب النص الذي تود فك تشفيره'"></textarea>
                             </div>
                         </div>
-
-
                     </div>
-                    <div class="col-6 bg-F5">
-                        <div class="mt-3 font-24"> سيظهر هنا النص المشفر
+
+                    <!-- destination -->
+                    <div class="col-6 bg-F5 left-area">
+
+                            <mat-icon class="icon material-icons-outlined corner-bottom-left">share</mat-icon>
+                            <mat-icon class="icon material-icons-outlined corner-bottom-left ml-5">copy</mat-icon>
+
+                        <div class="mt-3 font-24">
+                             سيظهر هنا النص المشفر
                         </div>
                     </div>
-
-
-
                 </div>
-
-
-
 
             </div>
         </div>

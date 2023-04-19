@@ -1,4 +1,6 @@
 @import "src/assets/scss/_variables";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
 
 /* You can add global styles to this file, and also import other style files */
 * :not(mat-icon) {
@@ -116,7 +118,8 @@ body {
   i {
     font-size: xx-large !important;
   }
-border-radius: 0 0 0 9px;
+
+  border-radius: 0 0 0 9px;
   background-color: #F5F5F5 !important;
 }
 
@@ -187,33 +190,32 @@ textarea:focus {
   outline: none !important;
 }
 
-.plain-text-row {
+.corner-top-left {
   position: absolute;
   left: 0;
-  margin-top: 0.7rem;
+  margin-top: 1.5rem;
+  margin-left: 0.5rem;
+
+  i {
+    font-size: 35px !important;
+  }
 }
 
-.length-of-plain-text {
+.corner-bottom-left {
   position: absolute;
   left: 0;
   bottom: 0;
   margin-bottom: 2rem;
   margin-left: 0.5rem;
-
-  mat-hint {
-    color: rgb(95, 99, 104);
-    direction: ltr;
-    font-size: 12px;
-    margin-top: 4px;
-    margin-right: auto;
-  }
 }
 
-.encode-key {
+.corner-bottom-right {
   position: absolute;
   right: 0;
   bottom: 0;
 }
+
+
 
 .height-of-encode-box {
   min-height: 340px !important;
@@ -228,15 +230,23 @@ textarea:focus {
   }
 }
 
+.icon {
+  color: $icon-color;
+  cursor: pointer;
+}
 
-.close-icon {
+.icon:hover {
+  color: $accent-color;
+}
+
+.icon-x {
   font-size: 24px;
-  color: $primary-color;
+  color: $icon-color;
   padding: 0 6px;
   cursor: pointer;
 }
 
-.close-icon:hover {
+.icon-x:hover {
   font-size: 24px;
   color: $primary-color;
   border: none;
@@ -253,6 +263,10 @@ textarea:focus {
   border-left: $border-color-2 1px solid;
 }
 
+.left-area {
+  position: relative;
+}
+
 .text-input {
   font-size: 12px !important;
 }
@@ -261,6 +275,16 @@ textarea:focus {
   font-size: 12px;
 }
 
-.font-24{
+.font-24 {
   font-size: 24px !important;
+}
+
+.mr-2 {
+  margin-right: 0.8rem !important;
+  border: solid 1px $border-color-2;
+  margin-bottom: 0.8rem !important;
+}
+
+.ml-5 {
+  margin-left: 3rem !important;
 }
