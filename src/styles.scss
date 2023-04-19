@@ -88,12 +88,36 @@ body {
   }
 }
 
+.bg-primary {
+  i {
+    font-size: xx-large !important;
+  }
+
+  background-color: $primary-color !important;
+}
+
+.bg-accent {
+  i {
+    font-size: xx-large !important;
+  }
+
+  background-color: $warn-color !important;
+}
+
 .bg-warn {
   i {
     font-size: xx-large !important;
   }
 
   background-color: $warn-color !important;
+}
+
+.bg-F5 {
+  i {
+    font-size: xx-large !important;
+  }
+border-radius: 0 0 0 9px;
+  background-color: #F5F5F5 !important;
 }
 
 hr {
@@ -169,14 +193,15 @@ textarea:focus {
   margin-top: 0.7rem;
 }
 
-.length-of-plain-text{
+.length-of-plain-text {
   position: absolute;
   left: 0;
   bottom: 0;
   margin-bottom: 2rem;
   margin-left: 0.5rem;
-  mat-hint{
-    color: rgb(95,99,104);
+
+  mat-hint {
+    color: rgb(95, 99, 104);
     direction: ltr;
     font-size: 12px;
     margin-top: 4px;
@@ -184,13 +209,13 @@ textarea:focus {
   }
 }
 
-.encode-key{
+.encode-key {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-.height-of-encode-box{
+.height-of-encode-box {
   min-height: 340px !important;
 
   .full-width {
@@ -232,6 +257,10 @@ textarea:focus {
   font-size: 12px !important;
 }
 
-.mat-mdc-input-element{
+.mat-mdc-input-element {
   font-size: 12px;
+}
+
+.font-24{
+  font-size: 24px !important;
 }
