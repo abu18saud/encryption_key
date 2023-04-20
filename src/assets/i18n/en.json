@@ -136,6 +136,8 @@
         "WISHLIST": "It is a tool from Al-Yahya Markets for foodstuffs, so that customers can prepare the monthly homestead in a coordinated and amazing way. You can now go to the Al-Yahya Markets website to collect your purchases, print them, and share them with your loved ones through the link below: \n https://al-yahya.sa"
     },
     "BUTTONS": {
+        "COPY":"Copy process",
+        "SHARE_PROCESS": "Share Process",
         "CLEAR":"Clear the source text",
         "SHARE_DATA": "Share Data",
         "DELETE_ALL": "Delete All",
