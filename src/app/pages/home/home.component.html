@@ -26,9 +26,10 @@
                             <i class="mdi mdi-close icon-x" *ngIf="this.plainText.value.length !== 0" (click)="clear()"
                                 [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
                         </div>
-                        <div [class]="(translateService.currentLang === 'ar')? 'corner-top-left mt-5': 'corner-top-right mt-5'">
-                            <i class="mdi mdi-refresh icon-x" *ngIf="this.plainText.value.length !== 0" (click)="clear()"
-                                [matTooltip]="'BUTTONS.CLEAR' | translate"></i>
+                        <div [class]="(translateService.currentLang === 'ar')? 'corner-top-left mt-7': 'corner-top-right mt-7'">
+                            <i class="mdi mdi-refresh icon-x" *ngIf="this.plainText.value.length !== 0" (click)="decrypt()"
+                                [matTooltip]="(isChecked === true)?('LABELS.ENCRYPTION' |
+                                translate):('LABELS.DECRYPTION' | translate)"></i>
                         </div>
                         <div
                             [class]="(translateService.currentLang === 'ar')? 'corner-bottom-left mb-3':'corner-bottom-right mb-3'">
@@ -38,13 +39,13 @@
                             [class]="(translateService.currentLang === 'ar')? 'corner-bottom-right':'corner-bottom-left'">
                             <mat-form-field class="text-input mr-2">
                                 <mat-label>{{'LABELS.ENCRYPTION_KEY' | translate}}</mat-label>
-                                <input matInput [placeholder]="'PLACEHOLDERS.ENCRYPTION_KEY' | translate"
-                                    class="text-input">
+                                <input matInput (change)="decrypt()" type="number" [placeholder]="'PLACEHOLDERS.ENCRYPTION_KEY' | translate"
+                                    class="text-input" [(ngModel)]="key">
                             </mat-form-field>
                         </div>
                         <div class="row">
                             <div class="col-11 height-of-encode-box" >
-                                <textarea (ngModelChange)="decrypt()" #plainText class="full-width lh-lg font-24 mt-3" [(ngModel)]="source"
+                                <textarea (keyup)="decrypt()" #plainText class="full-width lh-lg font-24 mt-3" [(ngModel)]="source"
                                     maxlength="500" style="overflow:hidden"
                                     [placeholder]="isChecked === true? ('PLACEHOLDERS.ENCRYPTION' | translate):('PLACEHOLDERS.DECRYPTION' | translate)"></textarea>
                             </div>

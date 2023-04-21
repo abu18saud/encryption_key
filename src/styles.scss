@@ -213,7 +213,7 @@ textarea:focus {
   position: absolute;
   right: 0;
   margin-top: 1.5rem;
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 
   i {
     font-size: 35px !important;
@@ -328,4 +328,8 @@ textarea:focus {
 
 .text-f5{
   color: $icon-color;
+}
+
+.mt-7{
+  margin-top: 4.5rem;
 }

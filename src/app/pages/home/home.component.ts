@@ -16,6 +16,7 @@ export class HomeComponent {
 
   source: string = '';
   destination: string = 'جار فك التشفير ...';
+  key: number = 1;
 
 
   constructor(private ciphersService: CiphersService,
@@ -27,7 +28,7 @@ export class HomeComponent {
   }
 
   decrypt() {
-    this.destination = this.algorithmsService.caesarCipher(this.source);
+    this.destination = this.algorithmsService.caesarCipher(this.source, this.key);
   }
 
   clear() {

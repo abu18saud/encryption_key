@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AlgorithmsService {
-  resultStr:any = [];
+  alphabets: string[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];//, " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"
+
   constructor() { }
 
   caesarCipherFaild(str: string): string {
@@ -26,18 +27,27 @@ export class AlgorithmsService {
     return resultStr.join('');
   };
 
-  caesarCipher(str: string): string {
+  caesarCipher(str: string, key: number): string {
+    let resultStr: string[] = [];
     str = str.toLocaleUpperCase();
-    let key = 3;
+    let newAlphabets: string[] = [];
+    let cutAlphabets: string[] = this.alphabets.slice(0, key)
+    newAlphabets = this.alphabets.slice(key, this.alphabets.length);
+    cutAlphabets.forEach(element => {
+      newAlphabets.push(element);
+    })
+    console.log(newAlphabets);
 
-    let alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];//, " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"
+    str.split('').forEach(element => {
+      console.log(newAlphabets[newAlphabets.indexOf(element)]);
+      resultStr.push(newAlphabets[this.alphabets.indexOf(element)]);
+    });
 
-
-this.resultStr = [];
-    for (let i = 0; i <= str.length; ++i) {
-      this.resultStr.push(alphabets[alphabets.indexOf(str[i])]);
-    }
-    return this.resultStr.join('');
+    // for (let i = 0; i <= str.length; ++i) {
+    //   console.log(str[i]);
+    //   resultStr.push(newAlphabets[newAlphabets.indexOf(str[i])]);
+    // }
+    return resultStr.join('');
   };
 
 }
