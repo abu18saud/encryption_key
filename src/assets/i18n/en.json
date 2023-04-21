@@ -44,7 +44,10 @@
         "CONTACT_US": "CONTACT US"
     },
     "LABELS": {
-        "CHOOSE_AN_ALGORITHM":"Choose an algorithm",
+        "ENCRYPTION_KEY": "Encryption Key",
+        "ENCRYPTION": "Encryption",
+        "DECRYPTION": "Decryption",
+        "CHOOSE_AN_ALGORITHM": "Choose an algorithm",
         "DELETE_ALL": "Delete all items in the wishlist!",
         "WEBSITE": "Website",
         "TEAM": "Team Work",
@@ -119,6 +122,7 @@
         "UNIT_PRICE": "Unit Price"
     },
     "TOOLTIPS": {
+        "SWITCH_ENCRYPTION_AND_DECRYPTION": "You can switch between encoding and decoding by simply clicking this button",
         "EDIT_QUANTITY": "You can adjust the quantity after adding through the wish list",
         "DEVELOPER": "Click here to view the engineer's CV",
         "RESET": "When this button is pressed, the user will receive a password recovery email",
@@ -136,9 +140,10 @@
         "WISHLIST": "It is a tool from Al-Yahya Markets for foodstuffs, so that customers can prepare the monthly homestead in a coordinated and amazing way. You can now go to the Al-Yahya Markets website to collect your purchases, print them, and share them with your loved ones through the link below: \n https://al-yahya.sa"
     },
     "BUTTONS": {
-        "COPY":"Copy process",
+        "COPY_PROCESS": "Copy Process",
         "SHARE_PROCESS": "Share Process",
-        "CLEAR":"Clear the source text",
+        "SAVE_PROCESS": "Save Process",
+        "CLEAR": "Clear the source text",
         "SHARE_DATA": "Share Data",
         "DELETE_ALL": "Delete All",
         "MY_WISHLIST": "My Wishlist",
@@ -205,6 +210,11 @@
         "BUTTON": "Search"
     },
     "PLACEHOLDERS": {
+        "ENCRYPTION_DESTINATION": "The ciphertext will appear here",
+        "DECRYPTION_DESTINATION": "The text will appear here after it has been decrypt",
+        "ENCRYPTION": "Type the text you want to encrypt",
+        "DECRYPTION": "Type the text you want to decrypt",
+        "ENCRYPTION_KEY": "Ex: 3",
         "ROLE_NAME": "Ex: المسؤول الخارق",
         "ENGLISH_ROLE_NAME": "Ex: Super User",
         "PASSWORD": "Enter Password",

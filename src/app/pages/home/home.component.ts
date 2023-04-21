@@ -1,4 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { AlgorithmsService } from 'src/app/services/algorithms.service';
 import { CiphersService } from 'src/app/services/ciphers.service';
 
 @Component({
@@ -11,13 +13,21 @@ export class HomeComponent {
 
   items: any = [];
   isChecked = true;
-  text1: string = "";
+
+  source: string = '';
+  destination: string = 'جار فك التشفير ...';
 
 
-  constructor(private ciphersService: CiphersService) {
+  constructor(private ciphersService: CiphersService,
+    private algorithmsService: AlgorithmsService,
+    public translateService: TranslateService) {
     this.ciphersService.getItems().subscribe(res => {
       this.items = res;
     });
+  }
+
+  decrypt() {
+    this.destination = this.algorithmsService.caesarCipher(this.source);
   }
 
   clear() {

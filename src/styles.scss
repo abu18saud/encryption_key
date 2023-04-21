@@ -123,6 +123,15 @@ body {
   background-color: #F5F5F5 !important;
 }
 
+.bg-F5-en {
+  i {
+    font-size: xx-large !important;
+  }
+
+  border-radius: 0 0 9px 0;
+  background-color: #F5F5F5 !important;
+}
+
 hr {
   display: block;
   height: 1px;
@@ -200,12 +209,21 @@ textarea:focus {
     font-size: 35px !important;
   }
 }
+.corner-top-right {
+  position: absolute;
+  right: 0;
+  margin-top: 1.5rem;
+  margin-left: 0.5rem;
 
+  i {
+    font-size: 35px !important;
+  }
+}
 .corner-bottom-left {
   position: absolute;
   left: 0;
   bottom: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 0.2rem;
   margin-left: 0.5rem;
 }
 
@@ -213,6 +231,8 @@ textarea:focus {
   position: absolute;
   right: 0;
   bottom: 0;
+  margin-bottom: 0.2rem;
+  margin-right: 0.5rem;
 }
 
 
@@ -233,6 +253,10 @@ textarea:focus {
 .icon {
   color: $icon-color;
   cursor: pointer;
+  font-size: 35px;
+  height: 48px !important;
+  width: 48px !important;
+  // transform: translate(-50%,-50%);
 }
 
 .icon:hover {
@@ -268,6 +292,8 @@ textarea:focus {
 }
 
 .text-input {
+  border: solid 1px $border-color-2;
+  border-radius: 10px;
   font-size: 12px !important;
 }
 
@@ -281,10 +307,25 @@ textarea:focus {
 
 .mr-2 {
   margin-right: 0.8rem !important;
-  border: solid 1px $border-color-2;
   margin-bottom: 0.8rem !important;
 }
 
 .ml-5 {
-  margin-left: 3rem !important;
+  margin-left: 1.2rem !important;
+}
+
+.ml-10 {
+  margin-left: 5rem !important;
+}
+
+.mr-5 {
+  margin-right: 1.2rem !important;
+}
+
+.mr-10 {
+  margin-right: 5rem !important;
+}
+
+.text-f5{
+  color: $icon-color;
 }

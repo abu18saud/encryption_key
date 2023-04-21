@@ -44,6 +44,9 @@
         "CONTACT_US": "اتصل بنا"
     },
     "LABELS": {
+        "ENCRYPTION_KEY": "مفتاح التشفير",
+        "ENCRYPTION": "التشفير",
+        "DECRYPTION": "فك التشفير",
         "CHOOSE_AN_ALGORITHM": "اختر خوارزمية",
         "DELETE_ALL": "حذف كافة العناصر الموجودة في قائمة الرغبات!",
         "WEBSITE": "الموقع الإلكتروني",
@@ -119,6 +122,7 @@
         "UNIT_PRICE": "سعر الوحدة"
     },
     "TOOLTIPS": {
+        "SWITCH_ENCRYPTION_AND_DECRYPTION": "يمكنك التبديل بين التشفير وفك التشفير عن طريق هذا الزر بكل بساطة",
         "EDIT_QUANTITY": "يمكنك تعديل الكمية بعد الإضافة من خلال قائمة الرغبات",
         "DEVELOPER": "اضغط هنا لمعاينة السيرة الذاتية للمهندس",
         "RESET": "عند الضغط على هذا الزر سيتلقى المستخدم بريداً إلكترونياً لاستعادة كلمة المرور",
@@ -138,6 +142,7 @@
     "BUTTONS": {
         "COPY_PROCESS": "نسخ العملية",
         "SHARE_PROCESS": "مشاركة العملية",
+        "SAVE_PROCESS": "حفظ العملية",
         "CLEAR": "محو النص المصدر",
         "SHARE_DATA": "مشاركة البيانات",
         "DELETE_ALL": "حذف الكل",
@@ -205,6 +210,11 @@
         "BUTTON": "بحث"
     },
     "PLACEHOLDERS": {
+        "ENCRYPTION_DESTINATION": "سيظهر هنا النص المشفر",
+        "DECRYPTION_DESTINATION":"سيظهر هنا النص بعد فك تشفيره",
+        "ENCRYPTION": "اكتب النص الذي تود تشفيره",
+        "DECRYPTION": "اكتب النص الذي تود فك تشفيره",
+        "ENCRYPTION_KEY": "مثلاً: 3",
         "ROLE_NAME": "مثلاً: المسؤول الخارق",
         "ENGLISH_ROLE_NAME": "مثلاً: Super User",
         "PASSWORD": "أدخل كلمة المرور",
