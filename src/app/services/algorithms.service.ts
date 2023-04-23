@@ -36,11 +36,13 @@ export class AlgorithmsService {
     cutAlphabets.forEach(element => {
       newAlphabets.push(element);
     })
-    console.log(newAlphabets);
 
     str.split('').forEach(element => {
-      console.log(newAlphabets[newAlphabets.indexOf(element)]);
-      resultStr.push(newAlphabets[this.alphabets.indexOf(element)]);
+      if(this.alphabets.indexOf(element) !== -1){
+        resultStr.push(newAlphabets[this.alphabets.indexOf(element)]);
+      }else{
+        resultStr.push(element);
+      }
     });
 
     // for (let i = 0; i <= str.length; ++i) {

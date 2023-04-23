@@ -17,6 +17,7 @@ export class HomeComponent {
   source: string = '';
   destination: string = 'جار فك التشفير ...';
   key: number = 1;
+  upper:boolean = true;
 
 
   constructor(private ciphersService: CiphersService,
