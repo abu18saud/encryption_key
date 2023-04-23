@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,25 +7,20 @@ import { Injectable } from '@angular/core';
 export class AlgorithmsService {
   alphabets: string[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];//, " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"
 
-  constructor() { }
+  constructor(private translateService: TranslateService) { }
 
-  caesarCipherFaild(str: string): string {
-    str = str.toLocaleUpperCase();
-    str = str + 'd';
-
-    let alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"];
-
-    let alphabets13 = ['N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"];
-
-    let resultStr = [];
-    for (let i = 0; i <= str.length; i++) {
-      for (let j = 0; j <= alphabets.length; j++) {
-        if (str[i] === alphabets[j]) {
-          resultStr.push(alphabets13[j]);
-        }
+  checkRtl(characters: string) {
+    if (characters.trim() !== '') {
+      let lastChar = characters.slice(characters.length - 1, characters.length);
+      var RTL = ['ا','أ','آ','إ', 'ب','ث', 'پ', 'ت', 'س', 'ج', 'چ', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ','ك', 'ل', 'م', 'ن', 'و','ؤ','ء','ئ', 'ه', 'ی','ي','ـ','ى','ة'];
+      return RTL.indexOf(lastChar) > -1;
+    } else {
+      if(this.translateService.currentLang === 'ar'){
+        return true;
+      }else{
+        return false;
       }
     }
-    return resultStr.join('');
   };
 
   caesarCipher(str: string, key: number): string {
@@ -38,9 +34,9 @@ export class AlgorithmsService {
     })
 
     str.split('').forEach(element => {
-      if(this.alphabets.indexOf(element) !== -1){
+      if (this.alphabets.indexOf(element) !== -1) {
         resultStr.push(newAlphabets[this.alphabets.indexOf(element)]);
-      }else{
+      } else {
         resultStr.push(element);
       }
     });

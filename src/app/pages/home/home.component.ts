@@ -21,7 +21,7 @@ export class HomeComponent {
 
 
   constructor(private ciphersService: CiphersService,
-    private algorithmsService: AlgorithmsService,
+    public algorithmsService: AlgorithmsService,
     public translateService: TranslateService) {
     this.ciphersService.getItems().subscribe(res => {
       this.items = res;
