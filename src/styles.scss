@@ -153,7 +153,7 @@ hr {
 
 .main-card {
   margin-top: 1.5rem;
-  height: 80vh !important;
+  min-height: 80vh !important;
   width: 100%;
 }
 
@@ -397,4 +397,20 @@ textarea:focus {
     }
 
   }
+}
+
+.mr-3{
+  margin-right: 1.5rem !important;
+}
+
+.ml-3{
+  margin-left: 1.5rem !important;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.additions-cards{
+  min-height: 500px !important;
 }
