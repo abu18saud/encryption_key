@@ -44,6 +44,7 @@
         "CONTACT_US": "CONTACT US"
     },
     "LABELS": {
+        "SEND_FEEDBACK": "Send feedback",
         "ENCRYPTION_KEY": "Encryption Key",
         "ENCRYPTION": "Encryption",
         "DECRYPTION": "Decryption",
@@ -140,7 +141,10 @@
         "WISHLIST": "It is a tool from Al-Yahya Markets for foodstuffs, so that customers can prepare the monthly homestead in a coordinated and amazing way. You can now go to the Al-Yahya Markets website to collect your purchases, print them, and share them with your loved ones through the link below: \n https://al-yahya.sa"
     },
     "BUTTONS": {
-        "SWITCH_CASE":"Switch case",
+        "TRAINING_CURRICULUM": "Training curriculum",
+        "SAVED_OPERATIONS": "Saved operations",
+        "HISTORY": "History",
+        "SWITCH_CASE": "Switch case",
         "COPY_PROCESS": "Copy Process",
         "SHARE_PROCESS": "Share Process",
         "SAVE_PROCESS": "Save Process",

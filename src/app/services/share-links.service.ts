@@ -122,6 +122,8 @@ export class ShareLinksService {
       window.open(link.replace("{{message}}", r.replaceAll(this.line, '').replaceAll('<b>', '').replaceAll('</b>', '').replaceAll('<i>', '').replaceAll('</i>', '').replaceAll(this.newLine, "\n")));//
     });
   }
-  
 
+  contactWithSupport() {
+    window.open('https://wa.me/966508532127', '_blank');
+  }
 }

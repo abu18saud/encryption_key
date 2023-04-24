@@ -209,6 +209,7 @@ textarea:focus {
     font-size: 35px !important;
   }
 }
+
 .corner-top-right {
   position: absolute;
   right: 0;
@@ -219,6 +220,7 @@ textarea:focus {
     font-size: 35px !important;
   }
 }
+
 .corner-bottom-left {
   position: absolute;
   left: 0;
@@ -326,14 +328,73 @@ textarea:focus {
   margin-right: 5rem !important;
 }
 
-.text-f5{
+.text-f5 {
   color: $icon-color;
 }
 
-.mt-7{
+.mt-7 {
   margin-top: 4.5rem;
 }
 
-.pl-10{
+.pl-10 {
   padding-left: 3rem !important;
+}
+
+.feedback-ar {
+  position: absolute;
+  left: 0;
+  padding-left: 1.2rem !important;
+  color: rgb(95, 99, 104);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 8px 12px 0;
+  text-decoration: none;
+}
+
+.feedback-en {
+  position: absolute;
+  right: 0;
+  padding-right: 1.2rem !important;
+  color: rgb(95, 99, 104);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 8px 12px 0;
+  text-decoration: none;
+}
+
+.all-actions {
+  margin-top: 10rem !important;
+  margin-bottom: 10rem !important;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .action-icon {
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 18px;
+    margin-right: 3rem !important;
+    text-align: center;
+
+    i {
+      border: 1px solid $border-color;
+      border-radius: 40px;
+      padding: 1rem !important;
+      color: $icon-color;
+      font-size: 30px;
+    }
+
+    .title{
+      margin-top: 2rem !important;
+      color: $icon-color;
+      font-size: xx-small !important;
+    }
+
+  }
 }

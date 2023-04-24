@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AlgorithmsService } from 'src/app/services/algorithms.service';
 import { CiphersService } from 'src/app/services/ciphers.service';
+import { ShareLinksService } from 'src/app/services/share-links.service';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +23,7 @@ export class HomeComponent {
 
   constructor(private ciphersService: CiphersService,
     public algorithmsService: AlgorithmsService,
+    public shareLinkService: ShareLinksService,
     public translateService: TranslateService) {
     this.ciphersService.getItems().subscribe(res => {
       this.items = res;
@@ -35,5 +37,7 @@ export class HomeComponent {
   clear() {
     this.plainText.nativeElement.value = '';
   }
+
+
 
 }

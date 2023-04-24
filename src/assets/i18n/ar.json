@@ -44,6 +44,7 @@
         "CONTACT_US": "اتصل بنا"
     },
     "LABELS": {
+        "SEND_FEEDBACK": "إرسال التعليقات",
         "ENCRYPTION_KEY": "مفتاح التشفير",
         "ENCRYPTION": "التشفير",
         "DECRYPTION": "فك التشفير",
@@ -140,7 +141,10 @@
         "WISHLIST": "هي أداة من أسواق اليحيى للمواد الغذائية ليتمكن العملاء من إعداد العزبة الشهرية بطريقة منسقة ومذهلة، يمكنك الآن الانتقال إلى موقع أسواق اليحيى لجمع مشترياتك وطباعتها ومشاركتها مع أحبابك من خلال الرابط أدناه: \n https://al-yahya.sa"
     },
     "BUTTONS": {
-        "SWITCH_CASE":"تبديل حالة الأحرف",
+        "TRAINING_CURRICULUM": "المنهج التدريبي",
+        "SAVED_OPERATIONS": "العمليات المحفوظة",
+        "HISTORY": "السجلّ",
+        "SWITCH_CASE": "تبديل حالة الأحرف",
         "COPY_PROCESS": "نسخ العملية",
         "SHARE_PROCESS": "مشاركة العملية",
         "SAVE_PROCESS": "حفظ العملية",
@@ -212,7 +216,7 @@
     },
     "PLACEHOLDERS": {
         "ENCRYPTION_DESTINATION": "سيظهر هنا النص المشفر",
-        "DECRYPTION_DESTINATION":"سيظهر هنا النص بعد فك تشفيره",
+        "DECRYPTION_DESTINATION": "سيظهر هنا النص بعد فك تشفيره",
         "ENCRYPTION": "اكتب النص الذي تود تشفيره",
         "DECRYPTION": "اكتب النص الذي تود فك تشفيره",
         "ENCRYPTION_KEY": "مثلاً: 3",
