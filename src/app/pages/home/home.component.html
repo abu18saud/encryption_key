@@ -31,7 +31,7 @@
                         <div
                             [class]="(translateService.currentLang === 'ar')? 'corner-top-left mt-7': 'corner-top-right mt-7'">
                             <i class="mdi mdi-refresh icon-x" *ngIf="this.plainText.value.length !== 0"
-                                (click)="decrypt()" [matTooltip]="(isChecked === true)?('LABELS.ENCRYPTION' |
+                                (click)="encrypt()" [matTooltip]="(isChecked === true)?('LABELS.ENCRYPTION' |
                                 translate):('LABELS.DECRYPTION' | translate)"></i>
                         </div>
                         <div
@@ -42,15 +42,15 @@
                             [class]="(translateService.currentLang === 'ar')? 'corner-bottom-right':'corner-bottom-left'">
                             <mat-form-field class="text-input mr-2">
                                 <mat-label>{{'LABELS.ENCRYPTION_KEY' | translate}}</mat-label>
-                                <input matInput (change)="decrypt()" type="number"
-                                    [placeholder]="'PLACEHOLDERS.ENCRYPTION_KEY' | translate" class="text-input"
+                                <input matInput type="number" [placeholder]="'PLACEHOLDERS.ENCRYPTION_KEY' | translate"
+                                    class="text-input" min="0" max="25" (change)="encrypt()" (keyup)="encrypt()"
                                     [(ngModel)]="key">
                             </mat-form-field>
                         </div>
                         <div class="row">
                             <div class="col-11 height-of-encode-box">
                                 <textarea [dir]="algorithmsService.checkRtl(plainText.value) === true? 'rtl':'ltr'"
-                                    (keyup)="decrypt()" #plainText class="full-width lh-lg font-24 mt-3"
+                                    (keyup)="encrypt()" #plainText class="full-width lh-lg font-24 mt-3"
                                     [(ngModel)]="source" maxlength="500" style="overflow:hidden"
                                     [placeholder]="isChecked === true? ('PLACEHOLDERS.ENCRYPTION' | translate):('PLACEHOLDERS.DECRYPTION' | translate)"></textarea>
                             </div>
@@ -95,7 +95,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <div class="card additions-cards mr-3 mt-3 p-2">
+                        <div class="card additions-cards mr-3 mt-3 p-4">
                             <h1>ماذا تعرف عن خورزمية قيصر؟</h1>
 
                             <p class="text-justify lh-lg">شفرة قيصر ، تسمى أيضا تشفير قيصر أو تشفير الإزاحة، هي طريقة من
@@ -135,7 +135,43 @@
                             <span>
                                 الترتيب الأساسي لأحرف الهجاء يكون بهذا النحو:
                             </span>
+                            <table>
+                                <tr>
+                                    <th *ngFor="let item of algorithmsService.getPrimaryAlphabets()"
+                                        [class]="(source.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
+                                        {{item}}</th>
+                                </tr>
+                                <tr>
+                                    <th *ngFor="let item of algorithmsService.getPrimaryAlphabets()"
+                                        [class]="(source.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
+                                        {{algorithmsService.getPrimaryAlphabets().indexOf(item)}}</th>
+                                </tr>
+                            </table>
 
+                            <span>
+                                عند استخدام المفتاح رقم {{key}} سيكون الترتيب بهذا النحو:
+                            </span>
+                            <table>
+                                <tr>
+                                    <th *ngFor="let item of algorithmsService.getPrimaryAlphabets()"
+                                        [class]="(source === '')?'bg-white':(source.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
+                                        {{item}}</th>
+                                </tr>
+                                <tr>
+                                    <th *ngFor="let item of algorithmsService.getNewAlphabets(key)"
+                                        [class]="(destination.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
+                                        {{item}}</th>
+                                </tr>
+                            </table>
+
+                            <span>
+                                كيف حصلنا على النتيجة؟
+                            </span>
+
+                            <ul dir="ltr" class="lh-lg mt-3">
+                                <li *ngFor="let item of source.toUpperCase().split('')">{{(item.trim() !== '')?  ('C =
+                                    ('+ item + ' + ' + key +')mod('+ algorithmsService.getPrimaryAlphabets().length +') = ('+ algorithmsService.getPrimaryAlphabets().indexOf(item) +' + '+ key+ ')mod('+ algorithmsService.getPrimaryAlphabets().length +') = '+ (algorithmsService.getPrimaryAlphabets().indexOf(item) + key) +' == '+ algorithmsService.getPrimaryAlphabets()[keyAfterMaximum(item)]) : 'مسافة'}} </li>
+                            </ul>
                         </div>
 
                     </div>

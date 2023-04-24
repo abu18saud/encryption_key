@@ -414,3 +414,14 @@ textarea:focus {
 .additions-cards{
   min-height: 500px !important;
 }
+
+table{
+  margin: 1rem 0;
+  width: 100%;
+
+  th, td{
+    border: 1px solid $border-color;
+    padding: 1px;
+    text-align: center;
+  }
+}

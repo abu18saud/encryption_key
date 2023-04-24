@@ -12,12 +12,12 @@ export class AlgorithmsService {
   checkRtl(characters: string) {
     if (characters.trim() !== '') {
       let lastChar = characters.slice(characters.length - 1, characters.length);
-      var RTL = ['ا','أ','آ','إ', 'ب','ث', 'پ', 'ت', 'س', 'ج', 'چ', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ','ك', 'ل', 'م', 'ن', 'و','ؤ','ء','ئ', 'ه', 'ی','ي','ـ','ى','ة'];
+      var RTL = ['ا', 'أ', 'آ', 'إ', 'ب', 'ث', 'پ', 'ت', 'س', 'ج', 'چ', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ', 'ك', 'ل', 'م', 'ن', 'و', 'ؤ', 'ء', 'ئ', 'ه', 'ی', 'ي', 'ـ', 'ى', 'ة'];
       return RTL.indexOf(lastChar) > -1;
     } else {
-      if(this.translateService.currentLang === 'ar'){
+      if (this.translateService.currentLang === 'ar') {
         return true;
-      }else{
+      } else {
         return false;
       }
     }
@@ -41,11 +41,21 @@ export class AlgorithmsService {
       }
     });
 
-    // for (let i = 0; i <= str.length; ++i) {
-    //   console.log(str[i]);
-    //   resultStr.push(newAlphabets[newAlphabets.indexOf(str[i])]);
-    // }
     return resultStr.join('');
   };
+
+  getPrimaryAlphabets(): string[] {
+    return this.alphabets;
+  }
+
+  getNewAlphabets(key: number): string[] {
+    let newAlphabets: string[] = [];
+    let cutAlphabets: string[] = this.alphabets.slice(0, key)
+    newAlphabets = this.alphabets.slice(key, this.alphabets.length);
+    cutAlphabets.forEach(element => {
+      newAlphabets.push(element);
+    });
+    return newAlphabets;
+  }
 
 }
