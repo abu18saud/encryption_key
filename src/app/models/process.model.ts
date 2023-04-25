@@ -1,7 +1,7 @@
 export class Process {
     id: number = 1;
     plain_text: string = '';
-    cipher_text: string = '';
+    cipher_text: string = 'جار فك التشفير ...';
     saved: boolean = false;
     switch_case: boolean = true; //True: Uppercase; False: Lowercase
     encryption_key: number = 1;

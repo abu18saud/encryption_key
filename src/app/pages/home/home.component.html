@@ -4,7 +4,7 @@
             <div class="col-12">
                 <div class="mx-auto text-center">
                     <mat-slide-toggle [matTooltip]="'TOOLTIPS.SWITCH_ENCRYPTION_AND_DECRYPTION' | translate"
-                        [(ngModel)]="isChecked" class="slide-ecode-decode">{{(isChecked === true)?('LABELS.ENCRYPTION' |
+                        [(ngModel)]="process.status" class="slide-ecode-decode">{{(process.status === true)?('LABELS.ENCRYPTION' |
                         translate):('LABELS.DECRYPTION' | translate)}}</mat-slide-toggle>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                         <div
                             [class]="(translateService.currentLang === 'ar')? 'corner-top-left mt-7': 'corner-top-right mt-7'">
                             <i class="mdi mdi-refresh icon-x" *ngIf="this.plainText.value.length !== 0"
-                                (click)="encrypt()" [matTooltip]="(isChecked === true)?('LABELS.ENCRYPTION' |
+                                (click)="encrypt()" [matTooltip]="(process.status === true)?('LABELS.ENCRYPTION' |
                                 translate):('LABELS.DECRYPTION' | translate)"></i>
                         </div>
                         <div
@@ -44,7 +44,7 @@
                                 <mat-label>{{'LABELS.ENCRYPTION_KEY' | translate}}</mat-label>
                                 <input matInput type="number" [placeholder]="'PLACEHOLDERS.ENCRYPTION_KEY' | translate"
                                     class="text-input" min="0" max="25" (change)="encrypt()" (keyup)="encrypt()"
-                                    [(ngModel)]="key">
+                                    [(ngModel)]="process.encryption_key">
                                 <mat-error align="start">
                                     {{'ERRORS.ENCRYPTION_KEY' | translate}}
                                 </mat-error>
@@ -54,8 +54,8 @@
                             <div class="col-11 height-of-encode-box">
                                 <textarea [dir]="algorithmsService.checkRtl(plainText.value) === true? 'rtl':'ltr'"
                                     (keyup)="encrypt()" #plainText class="full-width lh-lg font-24 mt-3"
-                                    [(ngModel)]="source" maxlength="500" style="overflow:hidden"
-                                    [placeholder]="isChecked === true? ('PLACEHOLDERS.ENCRYPTION' | translate):('PLACEHOLDERS.DECRYPTION' | translate)"></textarea>
+                                    [(ngModel)]="process.plain_text" maxlength="500" style="overflow:hidden"
+                                    [placeholder]="process.status === true? ('PLACEHOLDERS.ENCRYPTION' | translate):('PLACEHOLDERS.DECRYPTION' | translate)"></textarea>
                             </div>
                         </div>
                     </div>
@@ -74,18 +74,18 @@
                             [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-top-left ml-5' :'icon material-icons-outlined corner-top-right mr-5'"
                             [matTooltip]="'BUTTONS.SAVE_PROCESS' | translate">star_border</mat-icon>
                         <i *ngIf="algorithmsService.checkRtl(plainText.value) !== true? (this.plainText.value.length !== 0): false"
-                            (click)="upper=!upper" [matTooltip]="'BUTTONS.SWITCH_CASE' | translate"
-                            [class]="translateService.currentLang === 'ar'? (upper === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5') : (upper === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5')"></i>
+                            (click)="process.switch_case=!process.switch_case" [matTooltip]="'BUTTONS.SWITCH_CASE' | translate"
+                            [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5')"></i>
 
                         <div class="mt-4 font-24 text-f5 text-justify lh-lg pl-10">
                             <div *ngIf="this.plainText.value.length === 0">
-                                {{(isChecked === true)? ('PLACEHOLDERS.ENCRYPTION_DESTINATION' | translate) :
+                                {{(process.status === true)? ('PLACEHOLDERS.ENCRYPTION_DESTINATION' | translate) :
                                 ('PLACEHOLDERS.DECRYPTION_DESTINATION' | translate)}}
                             </div>
                             <div [dir]="algorithmsService.checkRtl(plainText.value) === true? 'rtl':'ltr'"
                                 *ngIf="this.plainText.value.length !== 0"
-                                [class]="upper === true?'text-uppercase':'text-lowercase'">
-                                {{destination}}
+                                [class]="process.switch_case === true?'text-uppercase':'text-lowercase'">
+                                {{process.cipher_text}}
                             </div>
 
                         </div>
@@ -121,27 +121,44 @@
                             <table>
                                 <tr>
                                     <th *ngFor="let item of algorithmsService.getPrimaryAlphabets()"
-                                        [class]="(source.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
+                                        [class]="(process.plain_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
                                         {{item}}</th>
                                 </tr>
                                 <tr>
                                     <th *ngFor="let item of algorithmsService.getPrimaryAlphabets()"
-                                        [class]="(source.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
+                                        [class]="(process.plain_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
                                         {{algorithmsService.getPrimaryAlphabets().indexOf(item)}}</th>
                                 </tr>
                             </table>
 
-                            <span [innerHtml]="('LABELS.ENCRYPTION_KEY_LABEL' | translate).replaceAll('{{KEY}}', key)">
+
+                            <span>
+                                الترتيب بعد الإزاحة:
+                            </span>
+                            <table>
+                                <tr>
+                                    <th *ngFor="let item of algorithmsService.getNewAlphabets(process.encryption_key)"
+                                        [class]="(process.cipher_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
+                                        {{item}}</th>
+                                </tr>
+                                <tr>
+                                    <th *ngFor="let item of algorithmsService.getNewAlphabets(process.encryption_key)"
+                                        [class]="(process.cipher_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
+                                        {{algorithmsService.getPrimaryAlphabets().indexOf(item)}}</th>
+                                </tr>
+                            </table>
+
+                            <span [innerHtml]="('LABELS.ENCRYPTION_KEY_LABEL' | translate).replaceAll('{{KEY}}', process.encryption_key)">
                             </span>
                             <table>
                                 <tr>
                                     <th *ngFor="let item of algorithmsService.getPrimaryAlphabets()"
-                                        [class]="(source === '')?'bg-white':(source.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
+                                        [class]="(process.plain_text === '')?'bg-white':(process.plain_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
                                         {{item}}</th>
                                 </tr>
                                 <tr>
-                                    <th *ngFor="let item of algorithmsService.getNewAlphabets(key)"
-                                        [class]="(destination.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
+                                    <th *ngFor="let item of algorithmsService.getNewAlphabets(process.encryption_key)"
+                                        [class]="(process.cipher_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
                                         {{item}}</th>
                                 </tr>
                             </table>
@@ -151,11 +168,11 @@
                             </span>
 
                             <ul dir="ltr" class="lh-lg mt-3">
-                                <li *ngFor="let item of source.toUpperCase().split('')">{{(item.trim() !== '')? ('C =
-                                    ('+ item + ' + ' + key +')mod('+ algorithmsService.getPrimaryAlphabets().length +')
-                                    = ('+ algorithmsService.getPrimaryAlphabets().indexOf(item) +' + '+ key+ ')mod('+
+                                <li *ngFor="let item of process.plain_text.toUpperCase().split('')">{{(item.trim() !== '')? ('C =
+                                    ('+ item + ' + ' + process.encryption_key +')mod('+ algorithmsService.getPrimaryAlphabets().length +')
+                                    = ('+ algorithmsService.getPrimaryAlphabets().indexOf(item) +' + '+ process.encryption_key+ ')mod('+
                                     algorithmsService.getPrimaryAlphabets().length +') = '+
-                                    (algorithmsService.getPrimaryAlphabets().indexOf(item) + key) +' == '+
+                                    (algorithmsService.getPrimaryAlphabets().indexOf(item) + process.encryption_key) +' == '+
                                     algorithmsService.getPrimaryAlphabets()[keyAfterMaximum(item)]) : 'مسافة'}} </li>
                             </ul>
                         </div>

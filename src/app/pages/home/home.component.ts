@@ -14,20 +14,8 @@ import { ShareLinksService } from 'src/app/services/share-links.service';
 export class HomeComponent {
   @ViewChild('plainText') plainText: ElementRef<HTMLInputElement>;
   process: Process = new Process();
-
-
-
-
   items: any = [];
-  isChecked = true;
-
-  source: string = '';
-  destination: string = 'جار فك التشفير ...';
-  key: number = 1;
-  upper: boolean = true;
-
   keyAfterMax: number = 0;
-
 
   constructor(private ciphersService: CiphersService,
     public algorithmsService: AlgorithmsService,
@@ -39,12 +27,12 @@ export class HomeComponent {
   }
 
   encrypt() {
-    this.destination = this.algorithmsService.caesarCipher(this.source, this.key);
+    this.process.cipher_text = this.algorithmsService.caesarCipher(this.process.plain_text, this.process.encryption_key);
   }
 
   keyAfterMaximum(item: any) {
 
-    this.keyAfterMax = this.algorithmsService.getPrimaryAlphabets().indexOf(item) + this.key;
+    this.keyAfterMax = this.algorithmsService.getPrimaryAlphabets().indexOf(item) + this.process.encryption_key;
     if (this.keyAfterMax > 25) {
       this.keyAfterMax = this.keyAfterMax - 26;
     }
@@ -54,10 +42,7 @@ export class HomeComponent {
 
   clear() {
     this.plainText.nativeElement.value = '';
-    this.source = '';
-    this.destination = '';
+    this.process.plain_text = '';
+    this.process.cipher_text = '';
   }
-
-
-
 }
