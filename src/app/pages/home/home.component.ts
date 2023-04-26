@@ -4,6 +4,7 @@ import { retry } from 'rxjs';
 import { Process } from 'src/app/models/process.model';
 import { AlgorithmsService } from 'src/app/services/algorithms.service';
 import { CiphersService } from 'src/app/services/ciphers.service';
+import { ProcessService } from 'src/app/services/process.service';
 import { ShareLinksService } from 'src/app/services/share-links.service';
 
 @Component({
@@ -20,6 +21,7 @@ export class HomeComponent {
   constructor(private ciphersService: CiphersService,
     public algorithmsService: AlgorithmsService,
     public shareLinkService: ShareLinksService,
+    public processService: ProcessService,
     public translateService: TranslateService) {
     this.ciphersService.getItems().subscribe(res => {
       this.items = res;
@@ -30,13 +32,16 @@ export class HomeComponent {
     this.process.cipher_text = this.algorithmsService.caesarCipher(this.process.plain_text, this.process.encryption_key);
   }
 
-  keyAfterMaximum(item: any) {
+  encryptWithAddToHistory() {
+    this.encrypt();
+    this.processService.addNewItem(this.process);
+  }
 
+  keyAfterMaximum(item: any) {
     this.keyAfterMax = this.algorithmsService.getPrimaryAlphabets().indexOf(item) + this.process.encryption_key;
     if (this.keyAfterMax > 25) {
       this.keyAfterMax = this.keyAfterMax - 26;
     }
-
     return this.keyAfterMax;
   }
 

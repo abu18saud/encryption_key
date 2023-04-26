@@ -44,6 +44,7 @@
         "CONTACT_US": "CONTACT US"
     },
     "LABELS": {
+        "SORT_AFTER_OFFSET":"Sort after offset",
         "HOW_GET_THIS_RESULT": "How did we get this result?",
         "ENCRYPTION_KEY_LABEL": "When using key <b>#{{KEY}}</b> the order will be like this:",
         "PRIMARY_ALPHABETS": "The basic order of the letters of the alphabet is as follows",

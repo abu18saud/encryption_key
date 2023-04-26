@@ -44,6 +44,7 @@
         "CONTACT_US": "اتصل بنا"
     },
     "LABELS": {
+        "SORT_AFTER_OFFSET":"الترتيب بعد الإزاحة",
         "HOW_GET_THIS_RESULT": "كيف حصلنا على هذه النتيجة؟",
         "ENCRYPTION_KEY_LABEL": "عند استخدام المفتاح رقم <b>{{KEY}}</b> سيكون الترتيب بهذا النحو:",
         "PRIMARY_ALPHABETS": "الترتيب الأساسي لحروف الهجاء يكون بهذا النحو",

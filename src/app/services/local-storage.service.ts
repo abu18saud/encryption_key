@@ -32,16 +32,16 @@ export class LocalStorageService {
     }
   }
   //---------------------------------------
-  public setWishlist(items: any) {
-    localStorage.setItem('wishlist', JSON.stringify(items));
+  public setPocesses(items: any) {
+    localStorage.setItem('pocesses', JSON.stringify(items));
   }
 
-  public getWishlist(): any {
-    return JSON.parse(localStorage.getItem('wishlist') || '{}');
+  public getPocesses(): any {
+    return JSON.parse(localStorage.getItem('pocesses') || '{}');
   }
 
-  public removeWithlist() {
-    localStorage.removeItem('wishlist');
+  public removePocesses() {
+    localStorage.removeItem('pocesses');
   }
 
 }

@@ -425,3 +425,13 @@ table{
     text-align: center;
   }
 }
+
+.header-offcanvas{
+  position: relative;
+
+  .close{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
