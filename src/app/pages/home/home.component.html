@@ -93,7 +93,7 @@
                                         <mat-icon>file_copy</mat-icon>
                                         <span>{{'BUTTONS.COPY_RESULT' | translate}}</span>
                                     </button>
-                                    <button mat-menu-item>
+                                    <button mat-menu-item (click)="copyService.copyCipherTextProcess(process, 'COPY_PROCESS')">
                                         <mat-icon>copy_all</mat-icon>
                                         <span>{{'BUTTONS.COPY_PROCESS' | translate}}</span>
                                     </button>

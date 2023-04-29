@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Process } from '../models/process.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlgorithmsService {
+  keyAfterMax: any;
   alphabets: string[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];//, " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"
 
   constructor(private translateService: TranslateService) { }
@@ -56,6 +58,14 @@ export class AlgorithmsService {
       newAlphabets.push(element);
     });
     return newAlphabets;
+  }
+
+  keyAfterMaximum(item: any, process: Process) {
+    this.keyAfterMax = this.getPrimaryAlphabets().indexOf(item) + process.encryption_key;
+    if (this.keyAfterMax > 25) {
+      this.keyAfterMax = this.keyAfterMax - 26;
+    }
+    return this.keyAfterMax;
   }
 
 }

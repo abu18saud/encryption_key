@@ -44,7 +44,7 @@
         "CONTACT_US": "CONTACT US"
     },
     "LABELS": {
-        "SORT_AFTER_OFFSET":"Sort after offset",
+        "SORT_AFTER_OFFSET": "Sort after offset",
         "HOW_GET_THIS_RESULT": "How did we get this result?",
         "ENCRYPTION_KEY_LABEL": "When using key <b>#{{KEY}}</b> the order will be like this:",
         "PRIMARY_ALPHABETS": "The basic order of the letters of the alphabet is as follows",
@@ -150,7 +150,7 @@
     },
     "BUTTONS": {
         "COPY_PROCESS": "Copy Process",
-        "COPY_RESULT":"Copy result",
+        "COPY_RESULT": "Copy result",
         "TRAINING_CURRICULUM": "Training curriculum",
         "SAVED_OPERATIONS": "Saved operations",
         "HISTORY": "History",
@@ -241,8 +241,8 @@
         "MOBILE_NO": "Ex: 0508532127"
     },
     "SUCCESS": {
-        "COPY_PROCESS":"The process has been copied",
-        "COPY_RESULT":"The result has been copied",
+        "COPY_PROCESS": "The process has been copied",
+        "COPY_RESULT": "The result has been copied",
         "CREATE_NEW_USER": "The new user has been added successfully",
         "EDIT_USER": "User information has been modified successfully",
         "DELETE_USER": "User has been deleted successfully!",
@@ -274,5 +274,13 @@
         "SNAPCHAT": "snapchat",
         "TWITTER": "twitter",
         "FACEBOOK": "Facebook"
+    },
+    "CIPHERS": {
+        "CAESAR_CIPHER": "Caesar Cipher",
+        "ZIGZAG_CIPHER": "ZigZag Cipher",
+        "MONO_ALPHAPETIC": "Mono Alphapetic",
+        "PLAY_FAIR": "Play Fair",
+        "AES": "Advanced Encryption Standard (AES)",
+        "RSA": "RSA (Rivest–Shamir–Adleman)"
     }
 }

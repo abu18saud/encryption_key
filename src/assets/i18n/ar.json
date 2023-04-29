@@ -274,5 +274,13 @@
         "SNAPCHAT": "سناب شات",
         "TWITTER": "تويتر",
         "FACEBOOK": "فيسبوك"
+    },
+    "CIPHERS": {
+        "CAESAR_CIPHER": "خوارزمية قيصر",
+        "ZIGZAG_CIPHER": "خوارزمية أعمدة السياج",
+        "MONO_ALPHAPETIC": "خوارزمية Mono Alphapetic",
+        "PLAY_FAIR": "خوارزمية Play Fair",
+        "AES": "خوارزمية AES",
+        "RSA": "خوارزمية RSA (ريفست شامير أدلمان)"
     }
 }
