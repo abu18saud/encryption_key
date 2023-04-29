@@ -6,13 +6,7 @@
                     <mat-icon class="close">close</mat-icon>
                 </div>
             </div>
-
-
         </div>
-
-
-
-
     </mat-drawer>
     <mat-drawer-content>
 
@@ -90,9 +84,22 @@
                                 <mat-icon *ngIf="this.plainText.value.length !== 0"
                                     [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-5' : 'icon material-icons-outlined corner-bottom-right mr-5'"
                                     [matTooltip]="'BUTTONS.SHARE_PROCESS' | translate">share</mat-icon>
-                                <mat-icon *ngIf="this.plainText.value.length !== 0"
+                                <mat-icon [matMenuTriggerFor]="menu" *ngIf="this.plainText.value.length !== 0"
                                     [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-10' : 'icon material-icons-outlined corner-bottom-right mr-10'"
                                     [matTooltip]="'BUTTONS.COPY_PROCESS' | translate">copy</mat-icon>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item
+                                        (click)="copyService.copyCipherTextResult((process.switch_case === true)? process.cipher_text.toUpperCase():process.cipher_text.toLowerCase(), 'COPY_RESULT')">
+                                        <mat-icon>file_copy</mat-icon>
+                                        <span>{{'BUTTONS.COPY_RESULT' | translate}}</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <mat-icon>copy_all</mat-icon>
+                                        <span>{{'BUTTONS.COPY_PROCESS' | translate}}</span>
+                                    </button>
+                                </mat-menu>
+
+
                                 <mat-icon *ngIf="this.plainText.value.length !== 0"
                                     [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-top-left ml-5' :'icon material-icons-outlined corner-top-right mr-5'"
                                     [matTooltip]="'BUTTONS.SAVE_PROCESS' | translate">star_border</mat-icon>
@@ -243,7 +250,6 @@
                             <div class="title" [innerHtml]="'BUTTONS.TRAINING_CURRICULUM' | translate"></div>
                         </a>
                     </nav>
-
 
 
                 </div>

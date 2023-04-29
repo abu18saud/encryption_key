@@ -149,11 +149,12 @@
         "WISHLIST": "It is a tool from Al-Yahya Markets for foodstuffs, so that customers can prepare the monthly homestead in a coordinated and amazing way. You can now go to the Al-Yahya Markets website to collect your purchases, print them, and share them with your loved ones through the link below: \n https://al-yahya.sa"
     },
     "BUTTONS": {
+        "COPY_PROCESS": "Copy Process",
+        "COPY_RESULT":"Copy result",
         "TRAINING_CURRICULUM": "Training curriculum",
         "SAVED_OPERATIONS": "Saved operations",
         "HISTORY": "History",
         "SWITCH_CASE": "Switch case",
-        "COPY_PROCESS": "Copy Process",
         "SHARE_PROCESS": "Share Process",
         "SAVE_PROCESS": "Save Process",
         "CLEAR": "Clear the source text",
@@ -240,6 +241,8 @@
         "MOBILE_NO": "Ex: 0508532127"
     },
     "SUCCESS": {
+        "COPY_PROCESS":"The process has been copied",
+        "COPY_RESULT":"The result has been copied",
         "CREATE_NEW_USER": "The new user has been added successfully",
         "EDIT_USER": "User information has been modified successfully",
         "DELETE_USER": "User has been deleted successfully!",

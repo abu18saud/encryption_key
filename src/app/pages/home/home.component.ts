@@ -4,6 +4,7 @@ import { retry } from 'rxjs';
 import { Process } from 'src/app/models/process.model';
 import { AlgorithmsService } from 'src/app/services/algorithms.service';
 import { CiphersService } from 'src/app/services/ciphers.service';
+import { CopyService } from 'src/app/services/copy.service';
 import { ProcessService } from 'src/app/services/process.service';
 import { ShareLinksService } from 'src/app/services/share-links.service';
 
@@ -14,11 +15,18 @@ import { ShareLinksService } from 'src/app/services/share-links.service';
 })
 export class HomeComponent {
   @ViewChild('plainText') plainText: ElementRef<HTMLInputElement>;
+  @ViewChild('copyProcess') copyProcess: ElementRef<HTMLInputElement>;
+  @ViewChild('copyResult') copyResult: ElementRef<HTMLInputElement>;
+
+
+
+
   process: Process = new Process();
   items: any = [];
   keyAfterMax: number = 0;
 
   constructor(private ciphersService: CiphersService,
+    public copyService: CopyService,
     public algorithmsService: AlgorithmsService,
     public shareLinkService: ShareLinksService,
     public processService: ProcessService,

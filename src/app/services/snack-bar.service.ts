@@ -9,15 +9,22 @@ export class SnackBarService {
   constructor(private _snackBar: MatSnackBar) { }
 
 
-  openSnackBar(message: string, action: string) {
+  openSnackBarAr(message: string, action: string) {
     this._snackBar.open(message, action, {
+      duration: 2000,
+      horizontalPosition: 'end',
+      verticalPosition: 'bottom',
       panelClass: 'my-custom-snackbar'
     });
   }
 
 
-  open(msg: any, btn: any) {
-    this.openSnackBar(msg, btn);//"يرجى التحقق من أنّ جميع المدخلات صحيحة!"
+  openSnackBarEn(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+      horizontalPosition: 'start',
+      verticalPosition: 'bottom'
+    });
   }
 
 
