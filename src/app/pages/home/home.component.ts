@@ -18,9 +18,6 @@ export class HomeComponent {
   @ViewChild('copyProcess') copyProcess: ElementRef<HTMLInputElement>;
   @ViewChild('copyResult') copyResult: ElementRef<HTMLInputElement>;
 
-
-
-
   process: Process = new Process();
   items: any = [];
   keyAfterMax: number = 0;
@@ -34,6 +31,7 @@ export class HomeComponent {
     this.ciphersService.getItems().subscribe(res => {
       this.items = res;
     });
+    this.copyService.copyCipherTextProcess(this.process, '');
   }
 
   encrypt() {

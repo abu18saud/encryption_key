@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Process } from '../models/process.model';
 import { HandleTranslateService } from './handle-translate.service';
 import { AlgorithmsService } from './algorithms.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -9,22 +10,33 @@ import { AlgorithmsService } from './algorithms.service';
 export class ContentsTextService {
   langVar: any = [];
   constructor(private handleTranslateService: HandleTranslateService,
+    private translateService: TranslateService,
     private algorithmsService: AlgorithmsService) { }
 
   processText(process: Process): string {
-    this.handleTranslateService.getArLangFile().subscribe(res => {
-      this.langVar = res;
-    });
+    if (this.translateService.currentLang === "ar") {
+      this.handleTranslateService.getArLangFile().subscribe(res => {
+        this.langVar = res;
+      });
+    } else {
+      this.handleTranslateService.getEnLangFile().subscribe(res => {
+        this.langVar = res;
+      });
+    }
+
 
     let labels = this.langVar['LABELS'];
     let ciphers = this.langVar['CIPHERS'];
     let currentCipher = ciphers[process.algorithm];
     let i = 0;
 
-    let contents = 'النص العادي: *' + process.plain_text + '* \n';
-    contents += 'النص بعد التشفير: *' + process.cipher_text + '* \n';
-    contents += 'مفتاح التشفير: *' + process.encryption_key + '* \n'
-    contents += 'الخوارزمية المستخدمة: *' + currentCipher + '* \n\n';
+    let plainText = (process.switch_case === true) ? process.plain_text.toLocaleUpperCase() : process.plain_text.toLocaleLowerCase();
+    let cipherText = (process.switch_case === true) ? process.cipher_text.toLocaleUpperCase() : process.cipher_text.toLocaleLowerCase();
+
+    let contents = labels['PLAIN_TEXT'] + ': *' + plainText + '* \n';
+    contents += labels['TEXT_AFTER_ENCRYPTION'] + ': *' + cipherText + '* \n';
+    contents += labels['ENCRYPTION_KEY'] + ': *' + process.encryption_key + '* \n'
+    contents += labels['THE_ALGORITHM_USED'] + ': *' + currentCipher + '* \n\n';
     contents += '*' + labels.CURRENT_PROCESS_DETAILS + ":* \n\n\n"
     contents += labels.PRIMARY_ALPHABETS + ": \n\n"
     for (let item of this.algorithmsService.getPrimaryAlphabets()) {
@@ -67,10 +79,19 @@ export class ContentsTextService {
             process.encryption_key) + ' == ' +
           this.algorithmsService.getPrimaryAlphabets()[this.algorithmsService.keyAfterMaximum(item, process)] + '\n';
       } else {
-        contents += 'مسافة' + '\n';
+        contents += labels['SPACE'] + '\n';
       }
     }
+    contents += "\n\n";
+    contents += this.footerOfContents(this.langVar);
+    return contents;
+  }
 
+  footerOfContents(langVar: any): string {
+    let labels = langVar['LABELS'];
+    let contents = labels["VISIT_OUR_WEBSITE"] + ":\n https://encryption-key.netlify.app \n\n";
+    contents += labels["GREETINGS"] + ":\n";
+    contents += "*" + labels["TEAM"] + " " + langVar["WEBSITE_NAME"] + "*";
     return contents;
   }
 }

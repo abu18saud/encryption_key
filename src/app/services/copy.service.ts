@@ -9,11 +9,11 @@ import { ContentsTextService } from './contents-text.service';
   providedIn: 'root'
 })
 export class CopyService {
-
+  value: string = "";
   constructor(private snackBarService: SnackBarService,
     private translateService: TranslateService,
     private handleTranslateService: HandleTranslateService,
-    private contentsTextService:ContentsTextService) { }
+    private contentsTextService: ContentsTextService) { }
 
   copyCipherTextResult(val: string, successMessageKey: string) {
     const selBox = document.createElement('textarea');
@@ -43,16 +43,14 @@ export class CopyService {
     }
   }
 
-
-
-  copyCipherTextProcess(process: Process, successMessageKey: string) {
-    let val = this.contentsTextService.processText(process);
+  async copyCipherTextProcess(process: Process, successMessageKey: string) {
+    this.value = await this.contentsTextService.processText(process);
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    selBox.value = val;
+    selBox.value = this.value;
     document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();

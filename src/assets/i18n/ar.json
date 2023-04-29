@@ -44,7 +44,12 @@
         "CONTACT_US": "اتصل بنا"
     },
     "LABELS": {
-        "SORT_AFTER_OFFSET":"الترتيب بعد الإزاحة",
+        "THE_ALGORITHM_USED": "الخوارزمية المستخدمة",
+        "TEXT_AFTER_ENCRYPTION": "النص بعد التشفير",
+        "PLAIN_TEXT": "النص العادي",
+        "SPACE": "مسافة",
+        "VISIT_OUR_WEBSITE": "قم بزيارة موقعنا من خلال الرابط أدناه",
+        "SORT_AFTER_OFFSET": "الترتيب بعد الإزاحة",
         "HOW_GET_THIS_RESULT": "كيف حصلنا على هذه النتيجة؟",
         "ENCRYPTION_KEY_LABEL": "عند استخدام المفتاح رقم <b>{{KEY}}</b> سيكون الترتيب بهذا النحو:",
         "PRIMARY_ALPHABETS": "الترتيب الأساسي لحروف الهجاء يكون بهذا النحو",
@@ -150,7 +155,7 @@
     },
     "BUTTONS": {
         "COPY_PROCESS": "نسخ العملية",
-        "COPY_RESULT":"نسخ النتيجة",
+        "COPY_RESULT": "نسخ النتيجة",
         "TRAINING_CURRICULUM": "المنهج التدريبي",
         "SAVED_OPERATIONS": "العمليات المحفوظة",
         "HISTORY": "السجلّ",
@@ -241,8 +246,8 @@
         "MOBILE_NO": "مثلاً: 0508532127"
     },
     "SUCCESS": {
-        "COPY_PROCESS":"لقد تم نسخ العملية",
-        "COPY_RESULT":"لقد تم نسخ النتيجة",
+        "COPY_PROCESS": "لقد تم نسخ العملية",
+        "COPY_RESULT": "لقد تم نسخ النتيجة",
         "CREATE_NEW_USER": "لقد تمت إضافة المستخدم الجديد بنجاح",
         "EDIT_USER": "لقد تم تعديل معلومات المستخدم بنجاح",
         "DELETE_USER": "لقد تم حذف المستخدم بنجاح!",

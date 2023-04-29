@@ -44,6 +44,11 @@
         "CONTACT_US": "CONTACT US"
     },
     "LABELS": {
+        "THE_ALGORITHM_USED": "The Algorithm Used",
+        "TEXT_AFTER_ENCRYPTION": "Text After Encryption",
+        "PLAIN_TEXT": "Plain Text",
+        "SPACE": "Space",
+        "VISIT_OUR_WEBSITE": "Visit our website through the link below",
         "SORT_AFTER_OFFSET": "Sort after offset",
         "HOW_GET_THIS_RESULT": "How did we get this result?",
         "ENCRYPTION_KEY_LABEL": "When using key <b>#{{KEY}}</b> the order will be like this:",
