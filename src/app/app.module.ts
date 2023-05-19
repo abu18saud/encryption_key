@@ -23,6 +23,8 @@ import { CiphersComponent } from './pages/ciphers/ciphers.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ReportsComponent } from './pages/reports/reports.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EncriptionCaesarComponent } from './components/actions/encription-caesar/encription-caesar.component';
+import { DecryptionCaesarComponent } from './components/actions/decryption-caesar/decryption-caesar.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -38,7 +40,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     CiphersComponent,
     AboutUsComponent,
-    ReportsComponent
+    ReportsComponent,
+    EncriptionCaesarComponent,
+    DecryptionCaesarComponent
   ],
   imports: [
     FormsModule,
