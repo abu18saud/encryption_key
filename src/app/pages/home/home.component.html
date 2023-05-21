@@ -26,15 +26,41 @@
                         <ul>
                             <label for="">{{'LABELS.CHOOSE_AN_ALGORITHM' | translate}}:</label>
                             <li *ngFor="let item of items">
-                                <button
+                                <button (click)="process.algorithm = item.text_id"
+                                [class.bg-warn]="item.text_id === process.algorithm"
                                     [matTooltip]="(translateService.currentLang === 'ar')? item.ar_name: item.en_name">{{(translateService.currentLang
                                     === 'ar')? item.ar_short: item.en_short}}</button>
                             </li>
                         </ul>
                     </div>
 
-                    
-                    <app-encription-caesar></app-encription-caesar>
+
+                    <container-element [ngSwitch]="process.algorithm">
+                        <!-- the same view can be shown in more than one case -->
+                        <some-element *ngSwitchCase="'CAESAR_CIPHER'">
+                            
+
+                            <div *ngIf="process.status === true; else elseBlock">
+                                <app-encription-caesar></app-encription-caesar>
+                            </div>
+                            <ng-template #elseBlock>
+                                <app-decryption-caesar></app-decryption-caesar>
+                            </ng-template>
+                        
+                        
+                        
+                        </some-element>
+                        <some-element *ngSwitchCase="'ZIGZAG_CIPHER'">ZIGZAG_CIPHER</some-element>
+                        <some-other-element *ngSwitchCase="'MONO_ALPHAPETIC'">MONO_ALPHAPETIC</some-other-element>
+                        <some-other-element *ngSwitchCase="'PLAY_FAIR'">PLAY_FAIR</some-other-element>
+                        <some-other-element *ngSwitchCase="'AES'">AES</some-other-element>
+                        <some-other-element *ngSwitchCase="'RSA'">RSA</some-other-element>
+                        <!--default case when there are no matches -->
+                        <some-element *ngSwitchDefault>...</some-element>
+                      </container-element>
+
+
+
 
 
 
