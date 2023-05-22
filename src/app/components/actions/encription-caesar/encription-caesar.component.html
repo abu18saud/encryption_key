@@ -40,21 +40,35 @@
 
         <!-- destination -->
         <div [class]="translateService.currentLang === 'ar'? 'col-6 bg-F5 left-area' : 'col-6 bg-F5-en left-area'">
-
             <mat-icon [matMenuTriggerFor]="menu" *ngIf="this.plainText.value.length !== 0"
                 [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-5' : 'icon material-icons-outlined corner-bottom-right mr-5'"
                 [matTooltip]="'BUTTONS.SHARE_PROCESS' | translate">share</mat-icon>
             <mat-menu #menu="matMenu">
-                <div class="row">
-                    <div class="col-6">
-                        <mat-icon>star</mat-icon>
-                    </div>
-                </div>
+                <button mat-menu-item
+                    (click)="shareLinkService.shareByWhatsapp(contentsTextService.processText(process))">
+                    <i class="mdi mdi-whatsapp icon-x"></i>
+                    <span>{{'SOCIAL_MEDIA.WHATSAPP' | translate}}</span>
+                </button>
+                <button mat-menu-item
+                    (click)="shareLinkService.shareByTelegram(contentsTextService.processText(process))">
+                    <i class="mdi mdi-telegram icon-x"></i>
+                    <span>{{'SOCIAL_MEDIA.TELEGRAM' | translate}}</span>
+                </button>
+                <button mat-menu-item
+                    (click)="shareLinkService.shareByTwitter(contentsTextService.processShortText(process))">
+                    <i class="mdi mdi-twitter icon-x"></i>
+                    <span>{{'SOCIAL_MEDIA.TWITTER' | translate}}</span>
+                </button>        
+                <button mat-menu-item
+                    (click)="shareLinkService.shareByFacebook(contentsTextService.processShortText(process))">
+                    <i class="mdi mdi-facebook icon-x"></i>
+                    <span>{{'SOCIAL_MEDIA.FACEBOOK' | translate}}</span>
+                </button>
             </mat-menu>
-            <mat-icon [matMenuTriggerFor]="menu" *ngIf="this.plainText.value.length !== 0"
+            <mat-icon [matMenuTriggerFor]="copyMenu" *ngIf="this.plainText.value.length !== 0"
                 [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-10' : 'icon material-icons-outlined corner-bottom-right mr-10'"
                 [matTooltip]="'BUTTONS.COPY_PROCESS' | translate">copy</mat-icon>
-            <mat-menu #menu="matMenu">
+            <mat-menu #copyMenu="matMenu">
                 <button mat-menu-item
                     (click)="copyService.copyCipherTextResult((process.switch_case === true)? process.cipher_text.toUpperCase():process.cipher_text.toLowerCase(), 'COPY_RESULT')">
                     <mat-icon>file_copy</mat-icon>

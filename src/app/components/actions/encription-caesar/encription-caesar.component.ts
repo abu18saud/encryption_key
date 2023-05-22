@@ -6,6 +6,7 @@ import { ProcessService } from 'src/app/services/process.service';
 import { ShareLinksService } from 'src/app/services/share-links.service';
 import { AlgorithmsService } from 'src/app/services/algorithms.service';
 import { TranslateService } from '@ngx-translate/core';
+import { ContentsTextService } from 'src/app/services/contents-text.service';
 
 @Component({
   selector: 'app-encription-caesar',
@@ -23,13 +24,14 @@ export class EncriptionCaesarComponent {
 
 
   constructor(
+    public contentsTextService: ContentsTextService,
     private ciphersService: CiphersService,
     public copyService: CopyService,
     public algorithmsService: AlgorithmsService,
     public shareLinkService: ShareLinksService,
     public processService: ProcessService,
     public translateService: TranslateService
-    ) {
+  ) {
     this.ciphersService.getItems().subscribe(res => {
       this.items = res;
     });
@@ -59,5 +61,5 @@ export class EncriptionCaesarComponent {
     this.process.cipher_text = '';
   }
 
-  
+
 }

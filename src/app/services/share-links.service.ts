@@ -98,22 +98,26 @@ export class ShareLinksService {
   //   });
   // }
 
-  shareWishlistTelegram() {
-    let link = "https://t.me/share/url?url=al-yahya.sa&text={{message}}";
-    // let link = "tg://msg?text={{message}}&to=+966508532127";
-
-    this.getShareInfo().subscribe((r) => {
-      window.open(link.replace("{{message}}", r));//.replaceAll('<b>', '').replaceAll('</b>', '').replaceAll('<i>', '').replaceAll('</i>', '').replaceAll(this.newLine, "\n")
-    });
+  shareByWhatsapp(contents: string) {
+    let link = "https://api.whatsapp.com/send?text=";
+    window.open(link + contents.replaceAll('<b>', '*').replaceAll('</b>', '*').replaceAll('<i>', '_').replaceAll('</i>', '_'), '_blank');
   }
 
-  shareWishlistTwitter() {
+  shareByTelegram(contents: string) {
+    let link = "https://t.me/share/url?url=https://encryption-key.netlify.app&text={{message}}";
+    window.open(link.replace("{{message}}", contents));
+  }
+
+  shareByTwitter(contents: string) {
     let link = "https://twitter.com/intent/tweet?text={{message}}";
-
-    this.getShareInfo().subscribe((r) => {
-      window.open(link.replace("{{message}}", r.replaceAll(this.line, '').replaceAll('<b>', '').replaceAll('</b>', '').replaceAll('<i>', '').replaceAll('</i>', '').replaceAll(this.newLine, "\n")));//
-    });
+    window.open(link.replace("{{message}}", contents.replaceAll("\n", this.newLine)));
   }
+  shareByFacebook(contents: string) {
+    let link = "https://www.facebook.com/sharer/sharer.php?u=https://encryption-key.netlify.app&t={{message}}";
+    window.open(link.replace("{{message}}", contents.replaceAll("\n", this.newLine)));
+  }
+
+
 
   shareWishlistFacebook() {
     let link = "https://www.facebook.com/sharer/sharer.php?u=https://al-yahya.sa&t={{message}}";
