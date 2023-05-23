@@ -6,6 +6,8 @@
         "en_name": "Caesar Cipher",
         "ar_short": "قيصر",        
         "en_short": "Caesar",
+        "ar_description":"<ol><li>شيفرة قيصر ، التي استخدمها يوليوس قيصر حوالي عام 58 قبل الميلاد ، هي شفرة بديلة تنقل الحروف في رسالة لجعلها غير قابلة للقراءة إذا تم اعتراضها.</li><li>تشفير قيصر هو طريقة بسيطة لتشفير نص سري عن طريق تدوير النص الصريح بقيمة المفتاح. حيث يصبح النص المشفر &quot;DE&quot; إذا كانت الرسالة المهمة &quot;AB&quot; ، والمفتاح يساوي 3 <sup>[1]</sup>.</li></ol>",
+        "en_description":"<ol><li>The Caesar Cipher, used by Julius Caesar around 58 BC, is a substitution cipher that shifts letters in a message to make it unreadable if intercepted.</li><li>The Caesar Cipher is a simple method to encrypt a secret text by rotating the plaintext by the value of the key . Where the cipher text is becoming &ldquo;DE&rdquo; if an important message was &ldquo;AB&rdquo;, and the key is equal to 3 <sup>[1]<sup>.</li></ol>",
         "created_at": "04/14/2023 - 09:50 pm"
     },
     {
@@ -15,6 +17,8 @@
         "en_name": "ZigZag Cipher",
         "ar_short": "أعمدة السياج",        
         "en_short": "ZigZag",
+        "ar_description":"<p>هي خوارزمية تشفير التحويل التي تقوم بترتيب رسائل الرسائل بشكل عشوائي. تتضمن هذه الخوارزمية كتابة نص عادي لأسفل على التوالي يحتوي على صف علوي وصف سفلي. بينما يتم الحصول على النص المشفر من خلال قراءة الحروف بناءً على السطر. تقوم خوارزمية تشفير سياج السكك الحديدية بترتيب النص العادي بطريقة ziq-zag من خلال النزول إلى أسفل وإلى أعلى وفقًا لأحجام العمود والصف المحددة بواسطة المفتاح.</p>",
+        "en_description":"<p>Is a transposition cipher algorithm that randomizes the order of message letters. This algorithm involves writing plaintext down successively which has an upper row and a lower row. While the ciphertext is obtained by reading the letters based on the line. The Rail Fence Cipher algorithm arranges plaintext in a ziq-zag manner by going down and up according to the column and row sizes specified by the key.</p>",
         "created_at": "04/14/2023 - 09:50 pm"
     },
     {
@@ -24,6 +28,8 @@
         "en_name": "Mono Alphapetic",
         "ar_short": "Mono",        
         "en_short": "Mono",
+        "ar_description":"",
+        "en_description":"<ul><li>We saw the Caesar shift cipher and the multiplication cipher, but their keyspaces are very small. So now we move on to the general monoalphabetic substitution cipher. Here, the key is a rearrangement (a permutation) of the alphabet. Letters of the plaintext are replaced by their corresponding letters in the key.</li><li>&nbsp;For example, if our key is [3].</li><li>k = FLYINGSAUCERBDHJKMOPQTVWXZ</li><li>then letters are replaced as follows:</li></ul><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;plaintext:&nbsp; &nbsp;ABCDEFGHIJKLMNOPQRSTUVWXYZ</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ciphertext: FLYINGSAUCERBDHJKMOPQTVWXZ</p>",
         "created_at": "04/14/2023 - 09:50 pm"
     },
     {
