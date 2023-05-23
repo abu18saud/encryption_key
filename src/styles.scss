@@ -103,7 +103,7 @@ body {
     font-size: xx-large !important;
   }
 
-  background-color: $warn-color !important;
+  background-color: $accent-color !important;
 }
 
 .bg-warn {
@@ -308,11 +308,24 @@ textarea:focus {
   font-size: 24px !important;
 }
 
+.w-95{
+width: 95% !important;
+}
+
+.mr-1 {
+  margin-right: 0.5rem !important;
+}
+
 .mr-2 {
   margin-right: 0.8rem !important;
   margin-bottom: 0.8rem !important;
 }
 
+
+
+.ml-1 {
+  margin-left: 1rem !important;
+}
 .ml-5 {
   margin-left: 1.2rem !important;
 }
