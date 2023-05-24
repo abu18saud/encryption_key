@@ -1,6 +1,44 @@
 <div class="container mt-4">
-    <div class="col-12 border">
-        <div class="col-3 border">
+
+    <mat-tab-group class="bg-primary" [color]="'primary'" [backgroundColor]="'warn'" aria-label="Change color">
+        <mat-tab *ngFor="let item of items"
+            [label]="translateService.currentLang === 'ar'? item.ar_short: item.en_short">
+            <ng-template matTabContent>
+                <div class="parent-div min-height">
+                    <h1 class="mt-4 text-center text-white">{{translateService.currentLang === 'ar'? item.ar_name:
+                        item.en_name}}</h1>
+                    <p class="lh-lg m-4 text-justify text-white" [innerHtml]="translateService.currentLang === 'ar'?
+                item.ar_description: item.en_description"></p>
+
+                    <div class="corner-top-right m-5 text-white lh-lg">
+                        <b>{{item.ref.length === 0? '':('LABELS.REFERENCE' | translate)}}</b>
+                        <p class="">{{item.ref}}</p>
+                    </div>
+
+                </div>
+
+
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+
+    <mat-tab-group>
+        <!-- <mat-tab *ngFor="let item of items" [label]="item.translateService.currentLang === 'ar'?
+        item.ar_short: item.en_short">
+            <ng-template matTabContent>
+                <p [innerHtml]="translateService.currentLang === 'ar'?
+                item.ar_description: item.en_description"></p>                
+            </ng-template>
+        </mat-tab> -->
+
+
+    </mat-tab-group>
+
+
+
+
+    <!-- <div class="col-12 border">
+        <div class="col-12 border">
             <button *ngFor="let item of items"
                 [matTooltip]="translateService.currentLang === 'ar'? item.ar_name: item.en_name"
                 class="btn bg-primary text-white w-95 mb-1 mt-1 mr-1 ml-1">{{translateService.currentLang === 'ar'?
@@ -8,10 +46,15 @@
         </div>
 
         <div class="col-9">
+<div class="container">
+    <h1 class="text-center">Sfsdvsdvsdv</h1>
+
+</div>
+
 
         </div>
 
 
 
-    </div>
+    </div> -->
 </div>

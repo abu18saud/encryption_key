@@ -200,6 +200,10 @@ textarea:focus {
   outline: none !important;
 }
 
+.parent-div{
+  position: relative;
+}
+
 .corner-top-left {
   position: absolute;
   left: 0;
@@ -310,6 +314,10 @@ textarea:focus {
 
 .w-95{
 width: 95% !important;
+}
+
+.min-height{
+  min-height: 500px !important;
 }
 
 .mr-1 {

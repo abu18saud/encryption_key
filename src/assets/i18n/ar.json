@@ -44,6 +44,7 @@
         "CONTACT_US": "اتصل بنا"
     },
     "LABELS": {
+        "REFERENCE":"المرجع",
         "THE_ALGORITHM_USED": "الخوارزمية المستخدمة",
         "TEXT_AFTER_ENCRYPTION": "النص بعد التشفير",
         "PLAIN_TEXT": "النص العادي",

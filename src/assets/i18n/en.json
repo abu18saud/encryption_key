@@ -44,6 +44,7 @@
         "CONTACT_US": "CONTACT US"
     },
     "LABELS": {
+        "REFERENCE":"Reference",
         "THE_ALGORITHM_USED": "The Algorithm Used",
         "TEXT_AFTER_ENCRYPTION": "Text After Encryption",
         "PLAIN_TEXT": "Plain Text",
