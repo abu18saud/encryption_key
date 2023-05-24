@@ -1,14 +1,17 @@
 <div class="container mt-4">
-<div class="col-12 border">
-<div class="col-3 border">
-    <button *ngFor="let item of items" [matTooltip]="translateService.currentLang === 'ar'? item.ar_name: item.en_name" class="btn bg-primary text-white w-95 mb-1 mt-1 mr-1 ml-1">{{translateService.currentLang === 'ar'? item.ar_short: item.en_short}}</button>
-</div>
+    <div class="col-12 border">
+        <div class="col-3 border">
+            <button *ngFor="let item of items"
+                [matTooltip]="translateService.currentLang === 'ar'? item.ar_name: item.en_name"
+                class="btn bg-primary text-white w-95 mb-1 mt-1 mr-1 ml-1">{{translateService.currentLang === 'ar'?
+                item.ar_short: item.en_short}}</button>
+        </div>
 
-<div class="col-9">
+        <div class="col-9">
 
-</div>
+        </div>
 
 
 
-</div>
+    </div>
 </div>

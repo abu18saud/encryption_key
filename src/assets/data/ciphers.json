@@ -2,12 +2,13 @@
     {
         "id": 1,
         "text_id": "CAESAR_CIPHER",
-        "ar_name": "خوارزمية قيصر",        
+        "ar_name": "خوارزمية قيصر",
         "en_name": "Caesar Cipher",
-        "ar_short": "قيصر",        
+        "ar_short": "قيصر",
         "en_short": "Caesar",
-        "ar_description":"<ol><li>شيفرة قيصر ، التي استخدمها يوليوس قيصر حوالي عام 58 قبل الميلاد ، هي شفرة بديلة تنقل الحروف في رسالة لجعلها غير قابلة للقراءة إذا تم اعتراضها.</li><li>تشفير قيصر هو طريقة بسيطة لتشفير نص سري عن طريق تدوير النص الصريح بقيمة المفتاح. حيث يصبح النص المشفر &quot;DE&quot; إذا كانت الرسالة المهمة &quot;AB&quot; ، والمفتاح يساوي 3 <sup>[1]</sup>.</li></ol>",
-        "en_description":"<ol><li>The Caesar Cipher, used by Julius Caesar around 58 BC, is a substitution cipher that shifts letters in a message to make it unreadable if intercepted.</li><li>The Caesar Cipher is a simple method to encrypt a secret text by rotating the plaintext by the value of the key . Where the cipher text is becoming &ldquo;DE&rdquo; if an important message was &ldquo;AB&rdquo;, and the key is equal to 3 <sup>[1]<sup>.</li></ol>",
+        "ar_description": "<ol><li>شيفرة قيصر ، التي استخدمها يوليوس قيصر حوالي عام 58 قبل الميلاد ، هي شفرة بديلة تنقل الحروف في رسالة لجعلها غير قابلة للقراءة إذا تم اعتراضها.</li><li>تشفير قيصر هو طريقة بسيطة لتشفير نص سري عن طريق تدوير النص الصريح بقيمة المفتاح. حيث يصبح النص المشفر &quot;DE&quot; إذا كانت الرسالة المهمة &quot;AB&quot; ، والمفتاح يساوي 3 <sup>[1]</sup>.</li></ol>",
+        "en_description": "<ol><li>The Caesar Cipher, used by Julius Caesar around 58 BC, is a substitution cipher that shifts letters in a message to make it unreadable if intercepted.</li><li>The Caesar Cipher is a simple method to encrypt a secret text by rotating the plaintext by the value of the key . Where the cipher text is becoming &ldquo;DE&rdquo; if an important message was &ldquo;AB&rdquo;, and the key is equal to 3 <sup>[1]<sup>.</li></ol>",
+        "ref": "[1]- Msallam, M. M., & Aldoghan, F. (2023). Multistage Encryption for Text Using Steganography and Cryptography. Journal of Techniques, 5(1), 38-43.APA.",
         "created_at": "04/14/2023 - 09:50 pm"
     },
     {
@@ -15,10 +16,11 @@
         "text_id": "ZIGZAG_CIPHER",
         "ar_name": "خوارزمية أعمدة السياج",
         "en_name": "ZigZag Cipher",
-        "ar_short": "أعمدة السياج",        
+        "ar_short": "أعمدة السياج",
         "en_short": "ZigZag",
-        "ar_description":"<p>هي خوارزمية تشفير التحويل التي تقوم بترتيب رسائل الرسائل بشكل عشوائي. تتضمن هذه الخوارزمية كتابة نص عادي لأسفل على التوالي يحتوي على صف علوي وصف سفلي. بينما يتم الحصول على النص المشفر من خلال قراءة الحروف بناءً على السطر. تقوم خوارزمية تشفير سياج السكك الحديدية بترتيب النص العادي بطريقة ziq-zag من خلال النزول إلى أسفل وإلى أعلى وفقًا لأحجام العمود والصف المحددة بواسطة المفتاح.</p>",
-        "en_description":"<p>Is a transposition cipher algorithm that randomizes the order of message letters. This algorithm involves writing plaintext down successively which has an upper row and a lower row. While the ciphertext is obtained by reading the letters based on the line. The Rail Fence Cipher algorithm arranges plaintext in a ziq-zag manner by going down and up according to the column and row sizes specified by the key.</p>",
+        "ar_description": "<p>هي خوارزمية تشفير التحويل التي تقوم بترتيب رسائل الرسائل بشكل عشوائي. تتضمن هذه الخوارزمية كتابة نص عادي لأسفل على التوالي يحتوي على صف علوي وصف سفلي. بينما يتم الحصول على النص المشفر من خلال قراءة الحروف بناءً على السطر. تقوم خوارزمية تشفير سياج السكك الحديدية بترتيب النص العادي بطريقة ziq-zag من خلال النزول إلى أسفل وإلى أعلى وفقًا لأحجام العمود والصف المحددة بواسطة المفتاح.</p>",
+        "en_description": "<p>Is a transposition cipher algorithm that randomizes the order of message letters. This algorithm involves writing plaintext down successively which has an upper row and a lower row. While the ciphertext is obtained by reading the letters based on the line. The Rail Fence Cipher algorithm arranges plaintext in a ziq-zag manner by going down and up according to the column and row sizes specified by the key.</p>",
+        "ref": "",
         "created_at": "04/14/2023 - 09:50 pm"
     },
     {
@@ -26,10 +28,11 @@
         "text_id": "MONO_ALPHAPETIC",
         "ar_name": "خوارزمية Mono Alphapetic",
         "en_name": "Mono Alphapetic",
-        "ar_short": "Mono",        
+        "ar_short": "Mono",
         "en_short": "Mono",
-        "ar_description":"",
-        "en_description":"<ul><li>We saw the Caesar shift cipher and the multiplication cipher, but their keyspaces are very small. So now we move on to the general monoalphabetic substitution cipher. Here, the key is a rearrangement (a permutation) of the alphabet. Letters of the plaintext are replaced by their corresponding letters in the key.</li><li>&nbsp;For example, if our key is [3].</li><li>k = FLYINGSAUCERBDHJKMOPQTVWXZ</li><li>then letters are replaced as follows:</li></ul><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;plaintext:&nbsp; &nbsp;ABCDEFGHIJKLMNOPQRSTUVWXYZ</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ciphertext: FLYINGSAUCERBDHJKMOPQTVWXZ</p>",
+        "ar_description": "<ul><li>لقد رأينا تشفير إزاحة قيصر وشفرة الضرب ، لكن مساحات المفاتيح الخاصة بهم صغيرة جدًا. لذا ننتقل الآن إلى الشفرة البديلة أحادية الأبجدية العامة. هنا ، المفتاح هو إعادة ترتيب (تبديل) الأبجدية. يتم استبدال أحرف النص العادي بالأحرف المقابلة لها في المفتاح.</li><li>&nbsp; على سبيل المثال ، إذا كان مفتاحنا هو [3].</li></ul><p>ك = FLYINGSAUCERBDHJKMOPQTVWXZ</p><ul><li>ثم يتم استبدال الحروف كما يلي:</li></ul><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; نص عادي: ABCDEFGHIJKLMNOPQRSTUVWXYZ</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; النص المشفر: FLYINGSAUCERBDHJKMOPQTVWXZ</p>",
+        "en_description": "<ul><li>We saw the Caesar shift cipher and the multiplication cipher, but their keyspaces are very small. So now we move on to the general monoalphabetic substitution cipher. Here, the key is a rearrangement (a permutation) of the alphabet. Letters of the plaintext are replaced by their corresponding letters in the key.</li><li>&nbsp;For example, if our key is [3].</li><li>k = FLYINGSAUCERBDHJKMOPQTVWXZ</li><li>then letters are replaced as follows:</li></ul><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;plaintext:&nbsp; &nbsp;ABCDEFGHIJKLMNOPQRSTUVWXYZ</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ciphertext: FLYINGSAUCERBDHJKMOPQTVWXZ</p>",
+        "ref": "",
         "created_at": "04/14/2023 - 09:50 pm"
     },
     {
@@ -37,8 +40,11 @@
         "text_id": "PLAY_FAIR",
         "ar_name": "خوارزمية Play Fair",
         "en_name": "Play Fair",
-        "ar_short": "بلاي فير",        
+        "ar_short": "بلاي فير",
         "en_short": "Play Fair",
+        "ar_description": "<ul><li>استخدم مكتب الحرب البريطاني تشفير playfair لاستبدال متعدد الجرام ، الذي اكتشفه تشارلز ويتستون وبارون بلاي فير في عام 1854 ، لتشفير الرسائل السرية في أزواج من الحروف حتى بداية القرن العشرين. يميل المستخدمون إلى استخدام عبارة سهلة التذكر للحصول على مصفوفة المفاتيح ، والتي يتم من خلالها إزالة الأحرف المتكررة في العبارة الرئيسية وإلحاق الأحرف غير المخصصة بترتيب أبجدي. تمت صياغة المفتاح في مصفوفة 2D5 &times; 5 (تمت إزالة 25 إدخالًا من الأحرف الإنجليزية باستثناء الحرف &apos;J&apos;) وبالتالي فهو يقدم ما يصل إلى 25! = 15،511،210،043،330،985،984،000،000 مفتاح محتمل. يجب إعادة ترتيب الرسالة السرية إلى حد ما (على سبيل المثال ، يجب أن تكون J تم استبداله بـ I ، قسّم الرسالة إلى مجموعات كأزواج من الأحرف ، لا تسمح بأحرف مكررة في نفس الزوج - إذا حدث ذلك ، أدخل الحرف Z بينهما ، أضف Z في نهاية الرسالة إذا حدث زوج فردي) مسبقًا باستخدام قواعد تشفير playfair. من ناحية أخرى ، فإن قواعد فك التشفير هي مجرد عملية عكسية للتشفير ، بحيث يتم تغيير كل حرف بواسطة الحرف الموجود على يساره في المفتاح الموسع إذا كان أزواج الأحرف في نفس صف المفتاح ، وإلا استبدل كل حرف منهم من خلال الحرف العلوي منه إذا كان الحرفان موجودان في نفس العمود ، وإلا اتبع بالضبط نفس قاعدة التقاطع في التشفير [4].</li></ul>",
+        "en_description": "<ul><li>The &nbsp;British war &nbsp;office utilized &nbsp;the &nbsp;polygram substitution &nbsp;playfair &nbsp;cipher, &nbsp;discovered &nbsp;by &nbsp;Charles Wheatstone &nbsp;and playfair baron in 1854, to encrypt secret messages in pairs of letters until the beginning of the &nbsp;20th &nbsp;century. &nbsp;Users &nbsp;tend &nbsp;to &nbsp;use &nbsp;an &nbsp;easy-to-remember &nbsp;phrase &nbsp;to &nbsp;obtain &nbsp;the &nbsp;key &nbsp;matrix, &nbsp;from &nbsp;which &nbsp;the repeating characters in the key phrase are removed and append to them the unallocated letters in alphabetical order. &nbsp;The &nbsp;key &nbsp;is &nbsp;formulated &nbsp;in &nbsp;2D5&times;5 &nbsp;matrix &nbsp;(25 &nbsp;entries &nbsp;from English letters except the character &lsquo;J&rsquo; is removed) &nbsp;and &nbsp;thus &nbsp;it &nbsp;offer &nbsp;up &nbsp;to &nbsp;25!=15,511,210,043,330,985,984,000,000 &nbsp;possible &nbsp;keys.The &nbsp;secret message must be rearranged somewhat (i.e., J&rsquo;s must be replaced with I&rsquo;s, divide the message into groups as pairs of characters, don&rsquo;t allow duplicate letters in the same pair-if &nbsp;they &nbsp;happen &nbsp;insert &nbsp;the &nbsp;letter &nbsp;Z between them, add Z at the end of message if an odd pair is occur) prior of using the playfair cipher encryption rules. On the other hand, the decryption rules is merely the reverse process of encryption, such that, each character is altered by the one on its left in the extended key if the pairs of characters are in the same row of the key, else replace each of them by the upper one of it if the two characters located in the same column, otherwise follow exactly the same intersection rule in encryption [4].</li></ul>",
+        "ref": "[4]- Al-Hassani, M. D., & Gaata, M. T. (2023). Development of playfair cryptosystem based on generation a multi-dimensional key matrix. Bulletin of Electrical Engineering and Informatics, 12(3), 1849-1856.",
         "created_at": "04/14/2023 - 09:50 pm"
     },
     {
@@ -46,8 +52,11 @@
         "text_id": "AES",
         "ar_name": "خوارزمية AES",
         "en_name": "Advanced Encryption Standard (AES)",
-        "ar_short": "AES",        
+        "ar_short": "AES",
         "en_short": "AES",
+        "ar_description": "<p>تعد خوارزمية معيار التشفير المتقدم (AES) واحدة من أكثر الخوارزميات استخدامًا لتخزين البيانات ونقلها بشكل آمن. إن إطار التشفير وفك تشفير AES مستقل ومميز. يمكن لكل من أحجام المفاتيح الثلاثة التي يمكن لـ AES التعامل معها 128 و 192 و 256 بت نظرًا لأن طول المفتاح يحدد عدد الجولات التي يتم لعبها. تستخدم AES 10 جولات لمفاتيح 128 بت ، و 12 جولة لمفاتيح 192 بت ، و 14 جولة لمفاتيح 256 بت ، مع تحديد عدد الجولات حسب حجم المفتاح. تم تطبيق تقنية تشفير (AES) في Blockchain لتوفير مزيد من الأمان للبيانات أثناء عملية النقل حيث يتم تطبيق خوارزمية AES أولاً على محتويات الملف النصي المحدد. ثم يتم تسليم ملف البيانات المشفرة إلى دالة تجزئة ، والتي تستخدم تقنية التجزئة SHA-256 لإنشاء كود تجزئة. بعد ذلك ، يتم نقل الملف المشفر إلى العميل [5].</p>",
+        "en_description": "<p>The Advanced Encryption Standard (AES) algorithm is one of the most used ones for secure data storage and transmission. The AES encryption and decryption framework are independent and distinctive. Each of the three key sizes that AES can handle 128, 192, and &nbsp;256 bits.As &nbsp;the &nbsp;length &nbsp;of &nbsp;the &nbsp;key &nbsp;determines &nbsp;how &nbsp;many &nbsp;rounds &nbsp;are &nbsp;played. &nbsp;AES &nbsp;employs &nbsp;10 &nbsp;rounds &nbsp;for &nbsp;128-bit keys, &nbsp;12 rounds &nbsp;for &nbsp;192-bit &nbsp;keys, &nbsp;and &nbsp;14 &nbsp;rounds &nbsp;for &nbsp;256-bit &nbsp;keys, &nbsp;with &nbsp;the &nbsp;number &nbsp;of &nbsp;rounds &nbsp;determined &nbsp;by &nbsp;the &nbsp;key size. &nbsp;An &nbsp;(AES) &nbsp;encryption &nbsp;technique &nbsp;was &nbsp;applied &nbsp;in &nbsp;Blockchain &nbsp;to &nbsp;provide &nbsp;more &nbsp;security &nbsp;for &nbsp;data &nbsp;during &nbsp;transferring process as the following is first applied AES algorithm to the contents of the specified text file. The encrypted data file is &nbsp;then &nbsp;delivered &nbsp;to &nbsp;a &nbsp;hash &nbsp;function, &nbsp;which &nbsp;uses &nbsp;the &nbsp;SHA-256 &nbsp;hashing &nbsp;technique &nbsp;to &nbsp;generate &nbsp;a &nbsp;hash &nbsp;code. &nbsp;Next, &nbsp;the encrypted file is transferred to the customer [5].</p>",
+        "ref": "[5]- Hashim, A. N. (2023). Blockchain technology, methodology behind it, and its most extensively used encryption techniques. Al-Salam Journal for Engineering and Technology, 2(2), 140-151.",
         "created_at": "04/14/2023 - 09:50 pm"
     },
     {
@@ -55,8 +64,11 @@
         "text_id": "RSA",
         "ar_name": "خوارزمية RSA (ريفست شامير أدلمان)",
         "en_name": "RSA (Rivest–Shamir–Adleman)",
-        "ar_short": "RSA",        
+        "ar_short": "RSA",
         "en_short": "RSA",
+        "ar_description": "<ul><li>نظام التشفير RSA (Rivest-Shamir-Adleman) هو نظام تشفير ذو مفتاح عمومي شائع. تستمد أمانها من الطبيعة الصعبة المتمثلة في تحليل ناتج عددين رئيسيين ضخمين. يقوم تشفير RSA بتشفير البيانات باستخدام مفتاح عام وفك تشفيرها بمفتاح خاص. يمكن نقل المفتاح العام بحرية ، بينما يحتفظ المالك بخصوصية المفتاح الخاص. يستخدم تشفير RSA بشكل متكرر في الاتصالات الآمنة والتوقيعات الرقمية وتشفير البيانات الحساسة.</li><li>تعد أحجام المفاتيح الأطول ضرورية للحفاظ على نفس درجة الأمان حيث تصبح أجهزة الكمبيوتر أكثر قوة [6].</li></ul>",
+        "en_description": "<ul><li>The RSA (Rivest-Shamir-Adleman) cryptography system is a popular public-key cryptography system. It derives its security from the challenging nature of factoring the product of two huge prime integers. RSA cryptography encrypts data using a public key and decrypts it with a private key. The public key can be freely transmitted, whilst the owner keeps the private key private. RSA cryptography is frequently used in secure communication, digital signatures, and sensitive data encryption.&nbsp;</li><li>Longer key sizes are necessary to maintain the same degree of security as computers become more powerful [6].&nbsp;</li></ul>",
+        "ref": "[6]- Gopakumar, G., Nair, V. A., & Jayashree, J. (2023). COMPARING THE RESILIENCE AND EFFICIENCY OF POST-QUANTUM AND ASYMMETRIC ENCRYPTION. Journal of Data Acquisition and Processing, 38(2), 4525.",
         "created_at": "04/14/2023 - 09:50 pm"
     }
 ]
