@@ -18,6 +18,8 @@ export class HomeComponent {
   @ViewChild('copyResult') copyResult: ElementRef<HTMLInputElement>;
 
   process: Process = new Process();
+
+  currentCipher: any;
   items: any = [];
 
   constructor(
@@ -30,7 +32,18 @@ export class HomeComponent {
   ) {
     this.ciphersService.getItems().subscribe(res => {
       this.items = res;
+      this.currentCipher = res[0];
     });
     this.copyService.copyCipherTextProcess(this.process, '');
   }
+
+ngOnInit(){
+}
+
+
+  currentCipherMethod(event: any) {
+    this.currentCipher = event;
+    this.process.algorithm = event.text_id;
+  }
+
 }

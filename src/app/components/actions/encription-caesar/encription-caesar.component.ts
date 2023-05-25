@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { Process } from 'src/app/models/process.model';
 import { CiphersService } from 'src/app/services/ciphers.service';
 import { CopyService } from 'src/app/services/copy.service';
@@ -18,6 +18,7 @@ export class EncriptionCaesarComponent {
   @ViewChild('plainText') plainText: ElementRef<HTMLInputElement>;
   @ViewChild('copyProcess') copyProcess: ElementRef<HTMLInputElement>;
   @ViewChild('copyResult') copyResult: ElementRef<HTMLInputElement>;
+  @Input('cipher') cipher: any;
   process: Process = new Process();
   items: any = [];
   keyAfterMax: number = 0;

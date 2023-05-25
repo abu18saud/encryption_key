@@ -26,7 +26,7 @@
                         <ul>
                             <label for="">{{'LABELS.CHOOSE_AN_ALGORITHM' | translate}}:</label>
                             <li *ngFor="let item of items">
-                                <button (click)="process.algorithm = item.text_id"
+                                <button (click)="currentCipherMethod(item)"
                                 [class.bg-warn]="item.text_id === process.algorithm"
                                     [matTooltip]="(translateService.currentLang === 'ar')? item.ar_name: item.en_name">{{(translateService.currentLang
                                     === 'ar')? item.ar_short: item.en_short}}</button>
@@ -41,7 +41,7 @@
                             
 
                             <div *ngIf="process.status === true; else elseBlock">
-                                <app-encription-caesar></app-encription-caesar>
+                                <app-encription-caesar [cipher]="currentCipher"></app-encription-caesar>
                             </div>
                             <ng-template #elseBlock>
                                 <app-decryption-caesar></app-decryption-caesar>

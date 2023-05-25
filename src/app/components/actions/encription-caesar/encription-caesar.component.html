@@ -58,7 +58,7 @@
                     (click)="shareLinkService.shareByTwitter(contentsTextService.processShortText(process))">
                     <i class="mdi mdi-twitter icon-x"></i>
                     <span>{{'SOCIAL_MEDIA.TWITTER' | translate}}</span>
-                </button>        
+                </button>
                 <button mat-menu-item
                     (click)="shareLinkService.shareByFacebook(contentsTextService.processShortText(process))">
                     <i class="mdi mdi-facebook icon-x"></i>
@@ -115,11 +115,12 @@
                 <h1 class="text-uppercase lh-lg">{{'LABELS.WHAT_DO_YOU_KNOW_ABOUT' | translate}}
                 </h1>
 
-                <p class="text-justify lh-lg p-4" [innerHtml]="'LABELS.ABOUT_CAESAR_ALGORITHM' | translate">
+                <p class="text-justify lh-lg p-4"
+                    [innerHtml]="translateService.currentLang === 'ar'? cipher.ar_description: cipher.en_description">
                 </p>
 
-                <a href="https://ar.wikipedia.org/wiki/%D8%B4%D9%81%D8%B1%D8%A9_%D9%82%D9%8A%D8%B5%D8%B1"
-                    target="_blank">{{'LABELS.SOURCE' | translate}}</a>
+                <a dir="ltr" [href]="cipher.link" [matTooltip]="'LABELS.SOURCE' | translate"
+                    target="_blank">{{cipher.ref}}</a>
             </div>
 
         </div>

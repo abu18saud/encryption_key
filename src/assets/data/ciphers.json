@@ -8,6 +8,7 @@
         "en_short": "Caesar",
         "ar_description": "<ol><li>شيفرة قيصر ، التي استخدمها يوليوس قيصر حوالي عام 58 قبل الميلاد ، هي شفرة بديلة تنقل الحروف في رسالة لجعلها غير قابلة للقراءة إذا تم اعتراضها.</li><li>تشفير قيصر هو طريقة بسيطة لتشفير نص سري عن طريق تدوير النص الصريح بقيمة المفتاح. حيث يصبح النص المشفر &quot;DE&quot; إذا كانت الرسالة المهمة &quot;AB&quot; ، والمفتاح يساوي 3 <sup>[1]</sup>.</li></ol>",
         "en_description": "<ol><li>The Caesar Cipher, used by Julius Caesar around 58 BC, is a substitution cipher that shifts letters in a message to make it unreadable if intercepted.</li><li>The Caesar Cipher is a simple method to encrypt a secret text by rotating the plaintext by the value of the key . Where the cipher text is becoming &ldquo;DE&rdquo; if an important message was &ldquo;AB&rdquo;, and the key is equal to 3 <sup>[1]<sup>.</li></ol>",
+        "link":"https://www.iasj.net/iasj/download/0d9efd1329186e7d",
         "ref": "[1]- Msallam, M. M., & Aldoghan, F. (2023). Multistage Encryption for Text Using Steganography and Cryptography. Journal of Techniques, 5(1), 38-43.APA.",
         "created_at": "04/14/2023 - 09:50 pm"
     },
