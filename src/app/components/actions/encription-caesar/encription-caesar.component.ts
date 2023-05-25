@@ -1,6 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { Process } from 'src/app/models/process.model';
-import { CiphersService } from 'src/app/services/ciphers.service';
 import { CopyService } from 'src/app/services/copy.service';
 import { ProcessService } from 'src/app/services/process.service';
 import { ShareLinksService } from 'src/app/services/share-links.service';
@@ -26,16 +25,12 @@ export class EncriptionCaesarComponent {
 
   constructor(
     public contentsTextService: ContentsTextService,
-    private ciphersService: CiphersService,
     public copyService: CopyService,
     public algorithmsService: AlgorithmsService,
     public shareLinkService: ShareLinksService,
     public processService: ProcessService,
     public translateService: TranslateService
   ) {
-    this.ciphersService.getItems().subscribe(res => {
-      this.items = res;
-    });
     this.copyService.copyCipherTextProcess(this.process, '');
   }
 
