@@ -146,7 +146,7 @@
                     </tr>
                 </table>
 
-                <span>
+                <!-- <span>
                     {{'LABELS.SORT_AFTER_OFFSET' | translate}}:
                 </span>
                 <table>
@@ -160,12 +160,12 @@
                             [class]="(process.cipher_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
                             {{algorithmsService.getPrimaryAlphabets().indexOf(item)}}</th>
                     </tr>
-                </table>
+                </table> -->
 
-                <span
+                <!-- <span
                     [innerHtml]="('LABELS.ENCRYPTION_KEY_LABEL' | translate).replaceAll('{{KEY}}', process.encryption_key)">
-                </span>
-                <table>
+                </span> -->
+                <!-- <table>
                     <tr>
                         <th *ngFor="let item of algorithmsService.getPrimaryAlphabets()"
                             [class]="(process.plain_text === '')?'bg-white':(process.plain_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
@@ -176,7 +176,7 @@
                             [class]="(process.cipher_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
                             {{item}}</th>
                     </tr>
-                </table>
+                </table> -->
 
                 <span>
                     {{'LABELS.HOW_GET_THIS_RESULT' | translate}}
@@ -185,14 +185,15 @@
                 <ul dir="ltr" class="lh-lg mt-3">
                     <li *ngFor="let item of process.plain_text.toUpperCase().split('')">
                         {{(item.trim() !== '')? ('C =
-                        ('+ item + ' + ' + process.encryption_key +')mod('+
+                        ('+ item + ' - ' + process.encryption_key +')mod('+
                         algorithmsService.getPrimaryAlphabets().length +')
-                        = ('+ algorithmsService.getPrimaryAlphabets().indexOf(item) +' + '+
+                        = ('+ algorithmsService.getPrimaryAlphabets().indexOf(item) +' - '+
                         process.encryption_key+ ')mod('+
                         algorithmsService.getPrimaryAlphabets().length +') = '+
-                        (algorithmsService.getPrimaryAlphabets().indexOf(item) +
+                        (algorithmsService.getPrimaryAlphabets().indexOf(item) -
                         process.encryption_key) +' == '+
-                        algorithmsService.getPrimaryAlphabets()[keyAfterMaximum(item)]) : ('LABELS.SPACE' | translate)}}
+                        algorithmsService.getPrimaryAlphabets()[(algorithmsService.getPrimaryAlphabets().indexOf(item) -
+                        process.encryption_key)]) : ('LABELS.SPACE' | translate)}}
                     </li>
                 </ul>
             </div>

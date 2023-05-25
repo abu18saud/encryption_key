@@ -46,6 +46,28 @@ export class AlgorithmsService {
     return resultStr.join('');
   };
 
+
+  caesarDecryption(str: string, key: number): string {
+    let resultStr: string[] = [];
+    str = str.toLocaleUpperCase();
+    let newAlphabets: string[] = [];
+    let cutAlphabets: string[] = this.alphabets.slice(0, key)
+    newAlphabets = this.alphabets.slice(key, this.alphabets.length);
+    cutAlphabets.forEach(element => {
+      newAlphabets.push(element);
+    })
+
+    str.split('').forEach(element => {
+      if (this.alphabets.indexOf(element) !== -1) {
+        resultStr.push(this.alphabets[newAlphabets.indexOf(element)]);
+      } else {
+        resultStr.push(element);
+      }
+    });
+
+    return resultStr.join('');
+  };
+
   getPrimaryAlphabets(): string[] {
     return this.alphabets;
   }

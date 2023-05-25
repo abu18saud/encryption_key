@@ -28,11 +28,11 @@ export class DecryptionCaesarComponent {
     public processService: ProcessService,
     public translateService: TranslateService
   ) {
-    this.copyService.copyCipherTextProcess(this.process, '');
+    // this.copyService.copyCipherTextProcess(this.process, '');
   }
 
   encrypt() {
-    this.process.cipher_text = this.algorithmsService.caesarCipher(this.process.plain_text, this.process.encryption_key);
+    this.process.cipher_text = this.algorithmsService.caesarDecryption(this.process.plain_text, this.process.encryption_key);
   }
 
   encryptWithAddToHistory() {

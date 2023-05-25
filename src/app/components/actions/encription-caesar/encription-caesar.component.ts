@@ -22,7 +22,6 @@ export class EncriptionCaesarComponent {
   items: any = [];
   keyAfterMax: number = 0;
 
-
   constructor(
     public contentsTextService: ContentsTextService,
     public copyService: CopyService,
@@ -31,7 +30,7 @@ export class EncriptionCaesarComponent {
     public processService: ProcessService,
     public translateService: TranslateService
   ) {
-    this.copyService.copyCipherTextProcess(this.process, '');
+    // this.copyService.copyCipherTextProcess(this.process, '');
   }
 
   encrypt() {
