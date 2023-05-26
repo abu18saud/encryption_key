@@ -71,4 +71,34 @@ export class CopyService {
       });
     }
   }
+
+
+  async copyDecryptionTextProcess(process: Process, successMessageKey: string) {
+    this.value = await this.contentsTextService.processDecryptionText(process);
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = this.value;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+    if (this.translateService.currentLang === 'ar') {
+      this.handleTranslateService.getArLangFile().subscribe(res => {
+        let success = res['SUCCESS'];
+        let successMessage = success[successMessageKey];
+
+        this.snackBarService.openSnackBarAr(successMessage, "");
+      });
+    } else {
+      this.handleTranslateService.getEnLangFile().subscribe(res => {
+        let success = res['SUCCESS'];
+        let successMessage = success[successMessageKey];
+        this.snackBarService.openSnackBarEn(successMessage, "");
+      });
+    }
+  }
 }

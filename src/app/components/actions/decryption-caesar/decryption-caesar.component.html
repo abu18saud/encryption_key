@@ -33,7 +33,7 @@
                     <textarea [dir]="algorithmsService.checkRtl(plainText.value) === true? 'rtl':'ltr'"
                         (keyup)="encrypt()" #plainText class="full-width lh-lg font-24 mt-3"
                         [(ngModel)]="process.plain_text" maxlength="500" style="overflow:hidden"
-                        [placeholder]="process.status === true? ('PLACEHOLDERS.ENCRYPTION' | translate):('PLACEHOLDERS.DECRYPTION' | translate)"></textarea>
+                        [placeholder]="'PLACEHOLDERS.DECRYPTION' | translate"></textarea>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
                     <mat-icon>file_copy</mat-icon>
                     <span>{{'BUTTONS.COPY_RESULT' | translate}}</span>
                 </button>
-                <button mat-menu-item (click)="copyService.copyCipherTextProcess(process, 'COPY_PROCESS')">
+                <button mat-menu-item (click)="copyService.copyDecryptionTextProcess(process, 'COPY_PROCESS')">
                     <mat-icon>copy_all</mat-icon>
                     <span>{{'BUTTONS.COPY_PROCESS' | translate}}</span>
                 </button>
@@ -90,9 +90,7 @@
 
             <div class="mt-4 font-24 text-f5 text-justify lh-lg pl-10">
                 <div *ngIf="this.plainText.value.length === 0">
-                    {{(process.status === true)? ('PLACEHOLDERS.ENCRYPTION_DESTINATION' | translate)
-                    :
-                    ('PLACEHOLDERS.DECRYPTION_DESTINATION' | translate)}}
+                    {{'PLACEHOLDERS.DECRYPTION_DESTINATION' | translate}}
                 </div>
                 <div [dir]="algorithmsService.checkRtl(plainText.value) === true? 'rtl':'ltr'"
                     *ngIf="this.plainText.value.length !== 0"

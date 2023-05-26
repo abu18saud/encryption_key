@@ -46,7 +46,7 @@
     "LABELS": {
         "REFERENCE":"المرجع",
         "THE_ALGORITHM_USED": "الخوارزمية المستخدمة",
-        "TEXT_AFTER_ENCRYPTION": "النص بعد التشفير",
+        "TEXT_AFTER_ENCRYPTION": "النص المشفر",
         "PLAIN_TEXT": "النص العادي",
         "SPACE": "مسافة",
         "VISIT_OUR_WEBSITE": "قم بزيارة موقعنا من خلال الرابط أدناه",
@@ -231,8 +231,8 @@
     },
     "PLACEHOLDERS": {
         "ENCRYPTION_DESTINATION": "سيظهر هنا النص المشفر",
-        "DECRYPTION_DESTINATION": "سيظهر هنا النص بعد فك تشفيره",
-        "ENCRYPTION": "اكتب النص الذي تود تشفيره",
+        "DECRYPTION_DESTINATION": "سيظهر هنا النص العادي",
+        "ENCRYPTION": "اكتب هنا النص العادي",
         "DECRYPTION": "اكتب النص الذي تود فك تشفيره",
         "ENCRYPTION_KEY": "مثلاً: 3",
         "ROLE_NAME": "مثلاً: المسؤول الخارق",
