@@ -88,14 +88,14 @@
                 (click)="process.switch_case=!process.switch_case" [matTooltip]="'BUTTONS.SWITCH_CASE' | translate"
                 [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5')"></i>
 
-            <div class="mt-4 font-24 text-f5 text-justify lh-lg pl-10">
+            <div [class]="plainText.value.length !== 0? 'mt-4 font-24 text-f5 text-justify lh-lg pl-10':'mt-4 font-24 text-f5 lh-lg pl-10'">
                 <div *ngIf="this.plainText.value.length === 0">
                     {{(process.status === true)? ('PLACEHOLDERS.ENCRYPTION_DESTINATION' | translate)
                     :
                     ('PLACEHOLDERS.DECRYPTION_DESTINATION' | translate)}}
                 </div>
                 <div [dir]="algorithmsService.checkRtl(plainText.value) === true? 'rtl':'ltr'"
-                    *ngIf="this.plainText.value.length !== 0"
+                    *ngIf="plainText.value.length !== 0"
                     [class]="process.switch_case === true?'text-uppercase':'text-lowercase'">
                     {{process.cipher_text}}
                 </div>
