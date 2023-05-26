@@ -7,7 +7,7 @@
         "en_role": "Website Design And Programming",
         "email": "abdullahalsalem18@gmail.com",
         "mobile_no":"0508532127",
-        "img": "",
+        "img": "assets/img/work_team/team/Abdullah3.png",
         "icon": ""
     },
     {
@@ -18,29 +18,29 @@
         "en_role": "Report Content Writer",
         "email": "habmar32@gmail.com",
         "mobile_no":"0504917079",
-        "img": "",
+        "img": "assets/img/work_team/team/habeeb.png",
         "icon": ""
     },
     {
         "id": "442141274",
         "ar_name": "حمد الثواب",
         "en_name": "Hamad Altawab",
-        "ar_role": "كاتب محتوى العرض التقديري",
+        "ar_role": "كاتب محتوى العرض التقديمي",
         "en_role": "Presentation Content Writer",
         "email": "hamad49905@gmail.com",
         "mobile_no":"0532281167",
-        "img": "",
+        "img": "assets/img/work_team/team/hamad3.png",
         "icon": ""
     },
     {
         "id": "442141286",
         "ar_name": "نايف السبيعي",
         "en_name": "Naif Alsubaie",
-        "ar_role": "كاتب محتوى العرض التقديري",
+        "ar_role": "كاتب محتوى العرض التقديمي",
         "en_role": "Presentation Content Writer",
         "email": "naif3166@gmail.com",
         "mobile_no":"0597822221",
-        "img": "",
+        "img": "assets/img/work_team/team/naif3.png",
         "icon": ""
     }
 ]

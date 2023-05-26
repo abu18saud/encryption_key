@@ -1,48 +1,30 @@
 <div class="container">
     <div class="card mt-3 mb-5">
-        <h1 class="text-center mt-2"><b>{{'MAIN_MENU.ABOUT_US' | translate}}</b></h1>
+        <h1 class="text-center mt-2 text-uppercase"><b>{{'MAIN_MENU.ABOUT_US' | translate}}</b></h1>
 
         <p class="m-3 text-justify lh-lg">
-            نحن مجموعة من المتدربين نقوم من خلال هذا العمل بإهداء كليتنا
-            هذا العمل الذي سيساهم في زيادة الوعي والمعرفة في علم هو من أهم العلوم
-            وهو عِلم طوره العرب بشكل مذهل قبلاً ونحن سنقوم
-            بتطويره مثل علماء العرب الذين كانوا إلهاماُ للعالم بأسره في حينهم.
+            {{'ABOUT_US.PARAGHRAGH_1' | translate}}
         </p>
 
-        <p class="m-3 text-justify lh-lg">منصة مُفتاح التشفير هي منصة مجانية تُعنى بتعليم طريقة التشفير وفك التشفير
-            للعديد
-            من الشفرات القديمة والجديدة ويهتم مشرفيها بشكل كبير على تسهيل طريقة التعلم ، ويطمح مشرفيها أن تكون منصة
-            متكاملة لكل من يود تعلم التشفير وفك التشفير لكافة الشفرات التطبيقية، ما يميز هذه المنصة أنها تعمل باللغتين
-            العربية الإنجليزية وتختصر كثيراً من وقت المتعلم من ناحية البحث والاستقصاء في الشفرة المطلوبة، ونطمح أن تكون
-            منصتنا وجهة لكافة المدربين والمتدربين في كافة جهات التعليم، بحيثُ تكون منهجاً للتعلم والمعرفة، وسنخطط
-            مستقبلاً في توفير دورات تدريبية أكاديمية في المنصة، وأيضاً سنقوم بتطبيق قواعد تجربة المستخدم (UX) على منصتنا
-            بحيثُ يمكن لكافة المستخدمين استعمال كافة أدوات منصتنا لأنها ستكون سهلة الاستخدام للكبار والصغار والمتعلمين
-            وغير المتعلمين وسيكون من جمهورنا المستهدف ذوي القدرات المختلفة من خلال استخدام الأيقونات التي ستساعد الأشخاص
-            الذين يعانون من عدم القدرة على القراءة أو فهم اللغتين العربية والإنجليزية وسنُراعي المكفوفين من خلال ملاحظة
-            كيفية قراءة المتصفح بالصوت لمنصتنا، وستكون فكرة المنصة مشابهةً لمترجم جوجل الذي يستخدمه عدد لا نهائي من
-            البشر حول العالم بحيثُ يمكن للمستخدم إلصاق أو كتابة العبارة التي يود تشفيرها من ثم يقوم باختيار الشفرة من
-            القائمة المنسدلة ويقوم بكتابة المفتاح من بعد ذلك ستقوم المنصة بإعطائه النص المشفر بكل يُسر وسهولة، ولكي لا
-            نشتت المستخدم سنضع رابطاً أسفل كل أداة للانتقال إلى الشروحات المفصلة لكل تشفيرة وسيكون هناك مربع في الزاوية
-            اليُمنى السُفلى من الشاشة فيه شرح مبسط لكل تشفيرة. &nbsp; </p>
-        <p class="m-3 text-justify lh-lg">ونحن نعتقد كمجموعة بأنّ منصتنا ستحل مشكلة التحديات الكبيرة التي يواجهونها
-            الطلاب
-            والطالبات في فهم الكثير من الشفرات، وأيضاً نتوقع أن يزيد عدد مستخدمي منصتنا مع تقادم السنوات في ظل توجه
-            مملكتنا الغالية في تفعيل علوم الأمن السيبراني في مراحل المتوسطة والثانوية.</p>
-        <p class="m-3 text-justify lh-lg">ستساهم منصتنا هذه في كسب الكثير من الزوار &nbsp;المعرفة المتكاملة في طرق
-            التشفير
-            &nbsp;وهذا الأمر سيكون مساهمة اجتماعية مجانية وتعلم مجانياً لطرق تشفير وفك تشفير أهم الشفرات القديمة أو
-            الجديدة. </p>
+        <p class="m-3 text-justify lh-lg">{{'ABOUT_US.PARAGHRAGH_2' | translate}}</p>
+        <p class="m-3 text-justify lh-lg">{{'ABOUT_US.PARAGHRAGH_3' | translate}}</p>
+        <p class="m-3 text-justify lh-lg">{{'ABOUT_US.PARAGHRAGH_4' | translate}}</p>
 
-        <h1 class="text-center mt-4"><b>فريق العمل</b></h1>
+        <h1 class="text-center mt-4 text-uppercase"><b>{{'LABELS.WORK_TEAM' | translate}}</b></h1>
 
-        <div class="row imageselect row add-clearfix image-imagebox">
-            <div class="col-3">
-                <article class="imagebox m-3">
-                    <figure> <a href="#"><img class="logo" src="https://i.imgur.com/zYuFh8b.jpg" alt=""></a>
-                        <figcaption> <span class="price">@ 5,234</span>
-                            <h2 class="caption-title">High Hills</h2>
+        <div class="row">
+            <div *ngFor="let element of staff" class="col-3 imageselect add-clearfix image-imagebox">
+                <article class="imagebox text-center m-3">
+                    <figure>
+                        <span><img class="logo" [src]="element.img" [alt]="'صورة ' + element.ar_name"></span>
+                        <figcaption>
+                            <span class="price">{{'LABELS.ROLE_NAME' | translate}}</span>
+                            <h2 class="caption-title">{{translateService.currentLang === 'ar'? element.ar_role:
+                                element.en_role}}</h2>
                         </figcaption>
                     </figure>
+                    <span class="text-center">{{translateService.currentLang === 'ar'? element.ar_name:
+                        element.en_name}}</span>
                 </article>
             </div>
         </div>

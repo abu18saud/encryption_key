@@ -43,8 +43,15 @@
         "OTHER_LINKS": "OTHER LINKS",
         "CONTACT_US": "CONTACT US"
     },
+    "ABOUT_US": {
+        "PARAGHRAGH_1": "We are a group of trainees who, through this work, dedicate our college to this work, which will contribute to increasing awareness and knowledge in a science that is one of the most important sciences.",
+        "PARAGHRAGH_2": "The Encryption Key platform is a free platform that teaches the encryption and decryption method for many old and new ciphers. Its supervisors are very interested in facilitating the learning method, and its supervisors aspire to be an integrated platform for everyone who wants to learn encryption and decryption for all applied ciphers. What distinguishes this platform is that it works in both languages. Arabic and English, and it shortens a lot of the learner’s time in terms of research and investigation in the required code, and we aspire that our platform will be a destination for all trainers and trainees in all educational institutions, so that it will be a method for learning and knowledge, and we will plan in the future to provide academic training courses on the platform, and we will also apply the rules of user experience (UX) on our platform so that all users can use all the tools of our platform because it will be easy to use for adults and children, educated and uneducated, and it will be from our target audience with different abilities through the use of icons that will help people who suffer from the inability to read or understand the Arabic and English languages, and we will take care of the blind By observing how the browser reads the voice of our platform, the idea of the platform will be similar to the Google Translator that is used by an infinite number of people around the world so that the user can paste or write the phrase he wants to encrypt and then choose the code from the drop-down list and write the key after that the platform will By giving him the cipher text easily and easily, and in order not to distract the user, we will place a link at the bottom of each tool to go to the detailed explanations of each cipher, and there will be a box in the lower right corner of the screen containing a simplified explanation of each cipher.",
+        "PARAGHRAGH_3": "As a group, we believe that our platform will solve the problem of the great challenges faced by male and female students in understanding a lot of codes, and we also expect that the number of users of our platform will increase with the passing of the years in light of the direction of our dear Kingdom in activating cybersecurity sciences in the intermediate and secondary stages.",
+        "PARAGHRAGH_4": "Our platform will contribute to gaining a lot of visitors with integrated knowledge in encryption methods, and this will be a free social contribution and free learning of ways to encrypt and decrypt the most important old or new ciphers."
+    },
     "LABELS": {
-        "REFERENCE":"Reference",
+        "WORK_TEAM": "Work Team",
+        "REFERENCE": "Reference",
         "THE_ALGORITHM_USED": "The Algorithm Used",
         "TEXT_AFTER_ENCRYPTION": "Text After Encryption",
         "PLAIN_TEXT": "Plain Text",
