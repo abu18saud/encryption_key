@@ -1,6 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,7 +24,10 @@ import { ReportsComponent } from './pages/reports/reports.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EncriptionCaesarComponent } from './components/actions/encription-caesar/encription-caesar.component';
 import { DecryptionCaesarComponent } from './components/actions/decryption-caesar/decryption-caesar.component';
-
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { ReportDialogComponent } from './tools/report-dialog/report-dialog.component';
+import { FileSaverOptions } from 'file-saver';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -42,9 +44,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutUsComponent,
     ReportsComponent,
     EncriptionCaesarComponent,
-    DecryptionCaesarComponent
+    DecryptionCaesarComponent,
+    ReportDialogComponent
   ],
   imports: [
+    PdfViewerModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
@@ -76,3 +80,5 @@ export function HttpLoaderFactory(http: HttpClient) {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
