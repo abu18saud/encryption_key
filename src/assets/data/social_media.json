@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "ar_name": "واتسآب",
+        "en_name": "Whatsapp",
+        "ar_tooltip": "التواصل عبر واتسآب",
+        "en_tooltip": "Contact via WhatsApp",
+        "link": "https://wa.me/966508532127",
+        "icon": "mdi mdi-whatsapp"
+    },
+    {
+        "id": 2,
+        "ar_name": "GitHub",
+        "en_name": "GitHub",
+        "ar_tooltip": "احصل على الكود عبر GitHub",
+        "en_tooltip": "Get the code via GitHub",
+        "link": "https://github.com/abu18saud/encryption_key.git",
+        "icon": "mdi mdi-github"
+    },
+    {
+        "id": 3,
+        "ar_name": "يوتيوب",
+        "en_name": "YouTube",
+        "ar_tooltip": "اجتماعات تطوير المنصة",
+        "en_tooltip": "Platform development meetings",
+        "link": "https://youtube.com/playlist?list=PLDWGNpNXof-Bb1q0-pQXtFcPjQQ3zArKD",
+        "icon": "mdi mdi-youtube"
+    },
+    {
+        "id": 4,
+        "ar_name": "تيليجرام",
+        "en_name": "Telegram",
+        "ar_tooltip": "قناة م. عبدالله السالم",
+        "en_tooltip": "Eng. Abdullah Alsalem's Channel",
+        "link": "https://t.me/CsharpAbdullahAlsalem",
+        "icon": "mdi mdi-telegram"
+    }
+]
