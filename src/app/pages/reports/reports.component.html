@@ -1,1 +1,31 @@
-<p>reports works!</p>
+<div class="container">
+    <div class="card mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center"><b>{{'MAIN_MENU.REPORTS' | translate}}</b></h1>
+            </div>
+            <div class="col-12">
+                <h5 class="text-center">{{'LABELS.ALL_REPORTS' | translate}}</h5>
+            </div>
+        </div>
+
+        <div *ngFor="let item of items" class="row border m-4">
+            <div class="col-3">
+                <img [src]="item.img" class="report-img" [alt]="translateService.currentLang === 'ar'? item.ar_name:
+                        item.en_name" [matTooltip]="translateService.currentLang === 'ar'? item.ar_name:
+                        item.en_name">
+            </div>
+            <div class="col-7">
+                <h2 class="mt-3">{{translateService.currentLang === 'ar'? item.ar_name:
+                    item.en_name}}</h2>
+                <h5>تاريخ التسليم: {{item.due_date | date: 'dd/MM/yyyy'}}</h5>
+            </div>
+            <div class="col-2">
+                <mat-icon [matTooltip]="'BUTTONS.BROWSE_REPORT' | translate" [class]="translateService.currentLang === 'ar'? 'icon mt-4 ml-2' :'icon mt-4 mr-2'">visibility</mat-icon>
+                <mat-icon [matTooltip]="'BUTTONS.DOWNLOAD_REPORT' | translate" class="icon mt-4">file_download</mat-icon>
+            </div>
+
+        </div>
+
+    </div>
+</div>

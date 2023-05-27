@@ -32,6 +32,14 @@ body {
   margin-top: 1.5rem;
 }
 
+.report-img{
+  height: 100px;
+  width: auto;
+  border: $border-color 1px solid;
+  border-radius: 10px;
+  margin: 3px;
+}
+
 .staff-img {
   height: auto;
   width: 259px;
@@ -269,9 +277,9 @@ textarea:focus {
 .icon {
   color: $icon-color;
   cursor: pointer;
-  font-size: 35px;
-  height: 48px !important;
-  width: 48px !important;
+  font-size: 25px;
+  // height: 48px !important;
+  // width: 48px !important;
   // transform: translate(-50%,-50%);
 }
 
@@ -335,7 +343,7 @@ width: 95% !important;
 
 .mr-2 {
   margin-right: 0.8rem !important;
-  margin-bottom: 0.8rem !important;
+  // margin-bottom: 0.8rem !important;
 }
 
 
@@ -432,6 +440,10 @@ width: 95% !important;
 
 .mr-3{
   margin-right: 1.5rem !important;
+}
+
+.ml-2{
+  margin-left: 1rem !important;
 }
 
 .ml-3{
