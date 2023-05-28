@@ -18,11 +18,11 @@
                 <mat-hint dir="ltr" align="start">{{plainText.value.length}} / 500</mat-hint>
             </div>
             <div [class]="(translateService.currentLang === 'ar')? 'corner-bottom-right':'corner-bottom-left'">
-                <mat-form-field class="text-input mr-2">
+                <mat-form-field class="text-input alphabet-key mr-2">
                     <mat-label>{{'LABELS.ENCRYPTION_KEY' | translate}}</mat-label>
-                    <input matInput type="number" [placeholder]="'PLACEHOLDERS.ENCRYPTION_KEY' | translate"
+                    <input matInput type="text" [placeholder]="'PLACEHOLDERS.ENCRYPTION_KEY' | translate"
                         class="text-input" min="0" max="25" (change)="encrypt()" (keyup)="encrypt()"
-                        [(ngModel)]="process.encryption_key">
+                        [(ngModel)]="process.alphabet_key">
                     <mat-error align="start">
                         {{'ERRORS.ENCRYPTION_KEY' | translate}}
                     </mat-error>
@@ -41,7 +41,7 @@
         <!-- destination -->
         <div [class]="translateService.currentLang === 'ar'? 'col-6 bg-F5 left-area' : 'col-6 bg-F5-en left-area'">
             <mat-icon [matMenuTriggerFor]="menu" *ngIf="this.plainText.value.length !== 0"
-                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-5 mb-3' : 'icon material-icons-outlined corner-bottom-right mr-5 mb-3'"
+                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-5' : 'icon material-icons-outlined corner-bottom-right mr-5'"
                 [matTooltip]="'BUTTONS.SHARE_PROCESS' | translate">share</mat-icon>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item
@@ -66,7 +66,7 @@
                 </button>
             </mat-menu>
             <mat-icon [matMenuTriggerFor]="copyMenu" *ngIf="this.plainText.value.length !== 0"
-                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-10 mb-3' : 'icon material-icons-outlined corner-bottom-right mr-10 mb-3'"
+                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-10' : 'icon material-icons-outlined corner-bottom-right mr-10'"
                 [matTooltip]="'BUTTONS.COPY_PROCESS' | translate">copy</mat-icon>
             <mat-menu #copyMenu="matMenu">
                 <button mat-menu-item
@@ -82,11 +82,11 @@
 
 
             <mat-icon *ngIf="this.plainText.value.length !== 0"
-                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-top-left ml-5 mb-3' :'icon material-icons-outlined corner-top-right mr-5 mb-3'"
+                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-top-left ml-5' :'icon material-icons-outlined corner-top-right mr-5'"
                 [matTooltip]="'BUTTONS.SAVE_PROCESS' | translate">star_border</mat-icon>
             <i *ngIf="algorithmsService.checkRtl(plainText.value) !== true? (this.plainText.value.length !== 0): false"
                 (click)="process.switch_case=!process.switch_case" [matTooltip]="'BUTTONS.SWITCH_CASE' | translate"
-                [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5 mb-3':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5 mb-3')"></i>
+                [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5')"></i>
 
             <div [class]="plainText.value.length !== 0? 'mt-4 font-24 text-f5 text-justify lh-lg pl-10':'mt-4 font-24 text-f5 lh-lg pl-10'">
                 <div *ngIf="this.plainText.value.length === 0">

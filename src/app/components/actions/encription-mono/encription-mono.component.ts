@@ -8,11 +8,11 @@ import { TranslateService } from '@ngx-translate/core';
 import { ContentsTextService } from 'src/app/services/contents-text.service';
 
 @Component({
-  selector: 'app-encription-caesar',
-  templateUrl: './encription-caesar.component.html',
-  styleUrls: ['./encription-caesar.component.scss']
+  selector: 'app-encription-mono',
+  templateUrl: './encription-mono.component.html',
+  styleUrls: ['./encription-mono.component.scss']
 })
-export class EncriptionCaesarComponent {
+export class EncriptionMonoComponent {
   @ViewChild('plainText') plainText: ElementRef<HTMLInputElement>;
   @ViewChild('copyProcess') copyProcess: ElementRef<HTMLInputElement>;
   @ViewChild('copyResult') copyResult: ElementRef<HTMLInputElement>;
@@ -32,8 +32,9 @@ export class EncriptionCaesarComponent {
     // this.copyService.copyCipherTextProcess(this.process, '');
   }
 
+  
   encrypt() {
-    this.process.cipher_text = this.algorithmsService.caesarCipher(this.process.plain_text, this.process.encryption_key);
+    this.process.cipher_text = this.algorithmsService.monoEncription(this.process.plain_text, this.process.alphabet_key);
   }
 
   encryptWithAddToHistory() {
@@ -54,6 +55,4 @@ export class EncriptionCaesarComponent {
     this.process.plain_text = '';
     this.process.cipher_text = '';
   }
-
-
 }

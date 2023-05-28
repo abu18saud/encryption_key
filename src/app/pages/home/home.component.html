@@ -51,7 +51,18 @@
                         
                         </some-element>
                         <some-element *ngSwitchCase="'ZIGZAG_CIPHER'">ZIGZAG_CIPHER</some-element>
-                        <some-other-element *ngSwitchCase="'MONO_ALPHAPETIC'">MONO_ALPHAPETIC</some-other-element>
+                        <some-other-element *ngSwitchCase="'MONO_ALPHAPETIC'">
+                            
+                            <div *ngIf="process.status === true; else decryptionMono">
+                                <app-encription-mono [cipher]="currentCipher"></app-encription-mono>
+                            </div>
+                            <ng-template #decryptionMono>
+                                <app-decryption-mono [cipher]="currentCipher"></app-decryption-mono>
+                            </ng-template>
+                        
+                        
+                        
+                        </some-other-element>
                         <some-other-element *ngSwitchCase="'PLAY_FAIR'">PLAY_FAIR</some-other-element>
                         <some-other-element *ngSwitchCase="'AES'">AES</some-other-element>
                         <some-other-element *ngSwitchCase="'RSA'">RSA</some-other-element>

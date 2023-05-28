@@ -68,6 +68,29 @@ export class AlgorithmsService {
     return resultStr.join('');
   };
 
+  //--------------------------------------------------------------------
+  monoEncription(str: string, alphabetsKey: string): string {
+    let resultStr: string[] = [];
+    str = str.toLocaleUpperCase();
+    alphabetsKey = alphabetsKey.toLocaleLowerCase();
+    let newAlphabets: string[] = alphabetsKey.split('');
+    console.log(newAlphabets);
+
+    str.split('').forEach(element => {
+      if (this.alphabets.indexOf(element) !== -1) {
+        resultStr.push(newAlphabets[this.alphabets.indexOf(element)]);
+      } else {
+        resultStr.push(element);
+      }
+    });
+
+    return resultStr.join('');
+  };
+
+
+
+  //---------------------------------------------------------------------
+
   getPrimaryAlphabets(): string[] {
     return this.alphabets;
   }

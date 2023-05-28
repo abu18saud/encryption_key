@@ -28,6 +28,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { ReportDialogComponent } from './tools/report-dialog/report-dialog.component';
 import { FileSaverOptions } from 'file-saver';
+import { EncriptionMonoComponent } from './components/actions/encription-mono/encription-mono.component';
+import { DecryptionMonoComponent } from './components/actions/decryption-mono/decryption-mono.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -45,7 +47,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReportsComponent,
     EncriptionCaesarComponent,
     DecryptionCaesarComponent,
-    ReportDialogComponent
+    ReportDialogComponent,
+    EncriptionMonoComponent,
+    DecryptionMonoComponent
   ],
   imports: [
     PdfViewerModule,

@@ -9,7 +9,7 @@
             </div>
         </div>
 
-        <div *ngFor="let item of items" class="row border m-4">
+        <div *ngFor="let item of items" class="row border rounded m-4">
             <div class="col-3">
                 <img [src]="item.img" class="report-img" [alt]="translateService.currentLang === 'ar'? item.ar_name:
                         item.en_name" [matTooltip]="translateService.currentLang === 'ar'? item.ar_name:
