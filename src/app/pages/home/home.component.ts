@@ -37,9 +37,8 @@ export class HomeComponent {
     this.copyService.copyCipherTextProcess(this.process, '');
   }
 
-ngOnInit(){
-}
-
+  ngOnInit() {
+  }
 
   currentCipherMethod(event: any) {
     this.currentCipher = event;

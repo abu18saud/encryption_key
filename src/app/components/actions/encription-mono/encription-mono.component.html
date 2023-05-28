@@ -41,7 +41,7 @@
         <!-- destination -->
         <div [class]="translateService.currentLang === 'ar'? 'col-6 bg-F5 left-area' : 'col-6 bg-F5-en left-area'">
             <mat-icon [matMenuTriggerFor]="menu" *ngIf="this.plainText.value.length !== 0"
-                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-5' : 'icon material-icons-outlined corner-bottom-right mr-5'"
+                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-5 mb-3' : 'icon material-icons-outlined corner-bottom-right mr-5 mb-3'"
                 [matTooltip]="'BUTTONS.SHARE_PROCESS' | translate">share</mat-icon>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item
@@ -66,7 +66,7 @@
                 </button>
             </mat-menu>
             <mat-icon [matMenuTriggerFor]="copyMenu" *ngIf="this.plainText.value.length !== 0"
-                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-10' : 'icon material-icons-outlined corner-bottom-right mr-10'"
+                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-10 mb-3' : 'icon material-icons-outlined corner-bottom-right mr-10 mb-3'"
                 [matTooltip]="'BUTTONS.COPY_PROCESS' | translate">copy</mat-icon>
             <mat-menu #copyMenu="matMenu">
                 <button mat-menu-item
@@ -86,9 +86,10 @@
                 [matTooltip]="'BUTTONS.SAVE_PROCESS' | translate">star_border</mat-icon>
             <i *ngIf="algorithmsService.checkRtl(plainText.value) !== true? (this.plainText.value.length !== 0): false"
                 (click)="process.switch_case=!process.switch_case" [matTooltip]="'BUTTONS.SWITCH_CASE' | translate"
-                [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5')"></i>
+                [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5 mb-3':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5 mb-3')"></i>
 
-            <div [class]="plainText.value.length !== 0? 'mt-4 font-24 text-f5 text-justify lh-lg pl-10':'mt-4 font-24 text-f5 lh-lg pl-10'">
+            <div
+                [class]="plainText.value.length !== 0? 'mt-4 font-24 text-f5 text-justify lh-lg pl-10':'mt-4 font-24 text-f5 lh-lg pl-10'">
                 <div *ngIf="this.plainText.value.length === 0">
                     {{(process.status === true)? ('PLACEHOLDERS.ENCRYPTION_DESTINATION' | translate)
                     :
@@ -112,7 +113,8 @@
         <div class="col-6">
             <div
                 [class]="translateService.currentLang === 'ar'? 'card additions-cards mr-3 mt-3 p-2' :'card additions-cards ml-3 mt-3 p-2'">
-                <h1 class="text-uppercase lh-lg">{{'LABELS.WHAT_DO_YOU_KNOW_ABOUT' | translate}}
+                <h1 class="text-uppercase lh-lg">{{('LABELS.WHAT_DO_YOU_KNOW_CIPHER' |
+                    translate).replaceAll('{{cipher}}', ('CIPHERS.'+ cipher.text_id | translate))}}
                 </h1>
 
                 <p class="text-justify lh-lg p-4"
@@ -130,9 +132,10 @@
                 [class]="translateService.currentLang === 'ar'? 'card additions-cards ml-3 mt-3 p-2' : 'card additions-cards mr-3 mt-3 p-2'">
                 <h1 class="text-uppercase lh-lg">{{'LABELS.CURRENT_PROCESS_DETAILS' | translate}}:
                 </h1>
-                <span>
+                <span class="lh-lg">في {{'CIPHERS.'+ cipher.text_id | translate}} يكون مفتاح التشفير هو ترتيب الحروف المتفق عليه من قِبل الطرفين، وبناءً على المفتاح المدخل فالترتيب سيكون بالشكل التالي:</span>
+                <!-- <span>
                     {{'LABELS.PRIMARY_ALPHABETS' | translate}}:
-                </span>
+                </span> -->
                 <table>
                     <tr>
                         <th *ngFor="let item of algorithmsService.getPrimaryAlphabets()"
@@ -144,55 +147,27 @@
                             [class]="(process.plain_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
                             {{algorithmsService.getPrimaryAlphabets().indexOf(item)}}</th>
                     </tr>
-                </table>
-
-                <span>
-                    {{'LABELS.SORT_AFTER_OFFSET' | translate}}:
-                </span>
-                <table>
                     <tr>
-                        <th *ngFor="let item of algorithmsService.getNewAlphabets(process.encryption_key)"
+                        <th *ngFor="let item of process.alphabet_key.toUpperCase().split('')"
                             [class]="(process.cipher_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
                             {{item}}</th>
                     </tr>
-                    <tr>
-                        <th *ngFor="let item of algorithmsService.getNewAlphabets(process.encryption_key)"
-                            [class]="(process.cipher_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
-                            {{algorithmsService.getPrimaryAlphabets().indexOf(item)}}</th>
-                    </tr>
                 </table>
 
-                <span
-                    [innerHtml]="('LABELS.ENCRYPTION_KEY_LABEL' | translate).replaceAll('{{KEY}}', process.encryption_key)">
+                <span class="lh-lg">
+                    {{'المفتاح المستخدم' | translate}}:
                 </span>
-                <table>
-                    <tr>
-                        <th *ngFor="let item of algorithmsService.getPrimaryAlphabets()"
-                            [class]="(process.plain_text === '')?'bg-white':(process.plain_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-warn':''">
-                            {{item}}</th>
-                    </tr>
-                    <tr>
-                        <th *ngFor="let item of algorithmsService.getNewAlphabets(process.encryption_key)"
-                            [class]="(process.cipher_text.toUpperCase().split('').indexOf(item.trim()) !== -1)?'bg-primary':''">
-                            {{item}}</th>
-                    </tr>
-                </table>
 
-                <span>
+                <span class="lh-lg"><b>{{process.alphabet_key}}</b></span>
+
+                <span class="lh-lg">
                     {{'LABELS.HOW_GET_THIS_RESULT' | translate}}
                 </span>
 
                 <ul dir="ltr" class="lh-lg mt-3">
                     <li *ngFor="let item of process.plain_text.toUpperCase().split('')">
-                        {{(item.trim() !== '')? ('C =
-                        ('+ item + ' + ' + process.encryption_key +')mod('+
-                        algorithmsService.getPrimaryAlphabets().length +')
-                        = ('+ algorithmsService.getPrimaryAlphabets().indexOf(item) +' + '+
-                        process.encryption_key+ ')mod('+
-                        algorithmsService.getPrimaryAlphabets().length +') = '+
-                        (algorithmsService.getPrimaryAlphabets().indexOf(item) +
-                        process.encryption_key) +' == '+
-                        algorithmsService.getPrimaryAlphabets()[keyAfterMaximum(item)]) : ('LABELS.SPACE' | translate)}}
+                        {{item + " => "+ getIndexFromAlphapets(item) + " = "+ process.alphabet_key.toUpperCase().split('')[getIndexFromAlphapets(item)]}}
+                        <!-- {{process.plain_text.toUpperCase().split('').indexOf('M')}} -->
                     </li>
                 </ul>
             </div>

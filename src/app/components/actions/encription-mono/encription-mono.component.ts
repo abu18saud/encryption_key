@@ -32,9 +32,16 @@ export class EncriptionMonoComponent {
     // this.copyService.copyCipherTextProcess(this.process, '');
   }
 
-  
+  ngOnInit(){
+    console.log(this.cipher);
+  }
+
   encrypt() {
     this.process.cipher_text = this.algorithmsService.monoEncription(this.process.plain_text, this.process.alphabet_key);
+  }
+
+  getIndexFromAlphapets(item:any){
+    return Number(this.algorithmsService.getPrimaryAlphabets().indexOf(item));
   }
 
   encryptWithAddToHistory() {
