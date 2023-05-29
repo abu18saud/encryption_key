@@ -7,6 +7,7 @@
             style="width: 45vw; height: 32vw;"></pdf-viewer>
     </mat-dialog-content>
     <mat-dialog-actions align="end">
-        <button mat-dialog-close>{{'BUTTONS.CLOSE' | translate}}</button>
+        <button mat-raised-button color="primary" class="m-4 bg-primary-2" (click)="downloadFile()"><mat-icon>download</mat-icon> {{'BUTTONS.DOWNLOAD' | translate}}</button>
+        <button mat-raised-button color="accent" class="m-4 bg-accent-2" mat-dialog-close>{{'BUTTONS.CLOSE' | translate}}</button>
     </mat-dialog-actions>
 </div>
