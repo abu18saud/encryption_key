@@ -86,7 +86,7 @@
                 [matTooltip]="'BUTTONS.SAVE_PROCESS' | translate">star_border</mat-icon>
             <i *ngIf="algorithmsService.checkRtl(plainText.value) !== true? (this.plainText.value.length !== 0): false"
                 (click)="process.switch_case=!process.switch_case" [matTooltip]="'BUTTONS.SWITCH_CASE' | translate"
-                [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5 mb-3':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5 mb-3')"></i>
+                [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5 mb-3':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5 mb-3') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5 mb-3':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5 mb-3')"></i>
 
             <div
                 [class]="plainText.value.length !== 0? 'mt-4 font-24 text-f5 text-justify lh-lg pl-10':'mt-4 font-24 text-f5 lh-lg pl-10'">
@@ -132,7 +132,7 @@
                 [class]="translateService.currentLang === 'ar'? 'card additions-cards ml-3 mt-3 p-2' : 'card additions-cards mr-3 mt-3 p-2'">
                 <h1 class="text-uppercase lh-lg">{{'LABELS.CURRENT_PROCESS_DETAILS' | translate}}:
                 </h1>
-                <span class="lh-lg">في {{'CIPHERS.'+ cipher.text_id | translate}} يكون مفتاح التشفير هو ترتيب الحروف المتفق عليه من قِبل الطرفين، وبناءً على المفتاح المدخل فالترتيب سيكون بالشكل التالي:</span>
+                <span class="lh-lg">{{'LABELS.KEY_NOTE_OF_MONO' | translate}}</span>
                 <!-- <span>
                     {{'LABELS.PRIMARY_ALPHABETS' | translate}}:
                 </span> -->
@@ -155,7 +155,7 @@
                 </table>
 
                 <span class="lh-lg">
-                    {{'المفتاح المستخدم' | translate}}:
+                    {{'LABELS.KEY_USED' | translate}}:
                 </span>
 
                 <span class="lh-lg"><b>{{process.alphabet_key}}</b></span>
@@ -166,7 +166,8 @@
 
                 <ul dir="ltr" class="lh-lg mt-3">
                     <li *ngFor="let item of process.plain_text.toUpperCase().split('')">
-                        {{item + " => "+ getIndexFromAlphapets(item) + " = "+ process.alphabet_key.toUpperCase().split('')[getIndexFromAlphapets(item)]}}
+                        {{item + " => "+ getIndexFromAlphapets(item) + " = "+
+                        process.alphabet_key.toUpperCase().split('')[getIndexFromAlphapets(item)]}}
                         <!-- {{process.plain_text.toUpperCase().split('').indexOf('M')}} -->
                     </li>
                 </ul>

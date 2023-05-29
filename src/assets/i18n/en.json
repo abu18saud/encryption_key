@@ -50,7 +50,7 @@
         "PARAGHRAGH_4": "Our platform will contribute to gaining a lot of visitors with integrated knowledge in encryption methods, and this will be a free social contribution and free learning of ways to encrypt and decrypt the most important old or new ciphers."
     },
     "LABELS": {
-        "DUE_DATE":"Due Date",
+        "DUE_DATE": "Due Date",
         "ALL_REPORTS": "Here you will find all the reports that have been submitted to the course doctor",
         "WORK_TEAM": "Work Team",
         "REFERENCE": "Reference",
@@ -65,7 +65,10 @@
         "PRIMARY_ALPHABETS": "The basic order of the letters of the alphabet is as follows",
         "CURRENT_PROCESS_DETAILS": "Current process details",
         "SOURCE": "Source",
+        "KEY_USED":"Key Used",
         "WHAT_DO_YOU_KNOW_ABOUT": "What do you know about Caesar's algorithm?",
+        "WHAT_DO_YOU_KNOW_CIPHER": "What do you know about {{cipher}}?",
+        "KEY_NOTE_OF_MONO": "In Mono Alphapetic, the encryption key is the order of letters agreed upon by both parties, and based on the entered key, the order will be as follows:",
         "ABOUT_CAESAR_ALGORITHM": "The Caesar cipher, also called the Caesar cipher or shift cipher, is a method of classical cryptography for encrypting or encrypting texts. AD until 51 BC. This code is characterized by its ease of application, so it is often adopted as an introduction to the knowledge of classical cryptography, but it is not the oldest code recorded historically, as the first recorded historical attempt to practice the art of cryptography dates back to the year 1900 BC. The idea of the cipher is somewhat similar to the Attash cipher and other ciphers that were widespread in the past, as it depends on matching the letters of the alphabet with a modified version of the same letters, by adopting a simple modification that is often secret and agreed upon. The principle of the Caesar cipher or the shift cipher is based on matching the letters of the alphabet with a copy of the same letters that have been shifted by the position of three letters. And as stated by the Roman historian Suetonius in his book The Twelve Caesars, Augustus Caesar, who is the nephew of Julius Caesar, also used the same principle for encryption, except that he relied on a displacement of only one position, with the encryption of the last letter in the alphabet with the first repetition. letter of the alphabet twice. <br><br> The Caesar cipher cannot be considered a real cipher according to current standards because it does not respect Kirchhoff's principles, especially the principle of relying on the secret of the key and not on the secrecy of the algorithm. Thus, the Caesar cipher, like many other classical ciphers, is an insecure cipher at all, as it is possible to extract the original text from the encrypted text, because the nature of the distribution of letters in the text does not change, and therefore according to the nature of the original distribution of the original language, the original text can be derived. This type of attack is called : a ciphertext-sufficiency attack or a ciphertext-only attack. Despite the lack of protection when using the Caesar code, it finds uses for it (in its general form) in some cases that do not require protection as much as they require instantaneous concealment of the text, such as the Root 13 code, which is used in many places such as magazines and some electronic devices.",
         "SEND_FEEDBACK": "Send feedback",
         "ENCRYPTION_KEY": "Encryption Key",
