@@ -70,20 +70,20 @@
                         <some-element *ngSwitchDefault>...</some-element>
                       </container-element>
 
-
+<!-- (click)="drawer.toggle()" -->
                     <!-- أزرار المفضلة والسجل والمحتوى التعليمي -->
                     <nav class="all-actions mt-10"><!-- *ngIf="this.plainText.value.length === 0" -->
-                        <a (click)="drawer.toggle()" class="action-icon"
+                        <a (click)="UnderMaintenance()" class="action-icon"
                             data-probe-id="translation_history_footer_button">
                             <i class="mdi mdi-history"></i>
                             <div class="title" [innerHtml]="'BUTTONS.HISTORY' | translate"></div>
                         </a>
 
-                        <a href="./history" class="action-icon" data-probe-id="translation_history_footer_button">
+                        <a (click)="UnderMaintenance()" class="action-icon" data-probe-id="translation_history_footer_button">
                             <i class="mdi mdi-star"></i>
                             <div class="title" [innerHtml]="'BUTTONS.SAVED_OPERATIONS' | translate"></div>
                         </a>
-                        <a href="./history" class="action-icon" data-probe-id="translation_history_footer_button">
+                        <a (click)="openBookDialog()" class="action-icon" data-probe-id="translation_history_footer_button">
                             <i class="mdi mdi-book-open-variant"></i>
                             <div class="title" [innerHtml]="'BUTTONS.TRAINING_CURRICULUM' | translate"></div>
                         </a>

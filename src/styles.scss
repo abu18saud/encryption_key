@@ -325,6 +325,14 @@ textarea:focus {
   width: 300px !important;
 }
 
+.none-scroll{
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
 .mat-mdc-input-element {
   font-size: 12px;
 }

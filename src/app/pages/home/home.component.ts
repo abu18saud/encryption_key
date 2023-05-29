@@ -6,6 +6,9 @@ import { CiphersService } from 'src/app/services/ciphers.service';
 import { CopyService } from 'src/app/services/copy.service';
 import { ProcessService } from 'src/app/services/process.service';
 import { ShareLinksService } from 'src/app/services/share-links.service';
+import { MatDialog } from '@angular/material/dialog';
+import { HassanBookDialogComponent } from 'src/app/tools/hassan-book-dialog/hassan-book-dialog.component';
+import { SnackBarService } from 'src/app/services/snack-bar.service';
 
 @Component({
   selector: 'app-home',
@@ -23,12 +26,14 @@ export class HomeComponent {
   items: any = [];
 
   constructor(
+    public dialog: MatDialog,
     private ciphersService: CiphersService,
     public copyService: CopyService,
     public algorithmsService: AlgorithmsService,
     public shareLinkService: ShareLinksService,
     public processService: ProcessService,
-    public translateService: TranslateService
+    public translateService: TranslateService,
+    private snackBarService: SnackBarService
   ) {
     this.ciphersService.getItems().subscribe(res => {
       this.items = res;
@@ -38,6 +43,16 @@ export class HomeComponent {
   }
 
   ngOnInit() {
+  }
+
+  openBookDialog() {
+    const dialogRef = this.dialog.open(HassanBookDialogComponent);
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
+
+  UnderMaintenance() {
+    this.snackBarService.openSnackBarAr('هذه الأداة تحت الصيانة حالياً', '');
   }
 
   currentCipherMethod(event: any) {

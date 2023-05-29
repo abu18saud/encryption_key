@@ -30,7 +30,6 @@ export class ReportsComponent {
   }
 
   downloadOffersFile(item: any) {
-    FileSaver.saveAs(item.report_file, item.en_name + new Date().getDate() +'-'+ (new Date().getMonth() + 1) +'-'+ new Date().getFullYear() +'.pdf');
-
+    FileSaver.saveAs(item.report_file, item.en_name + new Date().getDate() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getFullYear() + '.pdf');
   }
 }

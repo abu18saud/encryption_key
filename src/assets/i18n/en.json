@@ -50,6 +50,8 @@
         "PARAGHRAGH_4": "Our platform will contribute to gaining a lot of visitors with integrated knowledge in encryption methods, and this will be a free social contribution and free learning of ways to encrypt and decrypt the most important old or new ciphers."
     },
     "LABELS": {
+        "APPLIED_CRYPTOGRAPHY_NOTE":"مذكرة التشفير التطبيقي",
+        "WRITTEN_BY_HASSAN_SULTAN":"تأليف حسن السلطان",
         "DUE_DATE": "Due Date",
         "ALL_REPORTS": "Here you will find all the reports that have been submitted to the course doctor",
         "WORK_TEAM": "Work Team",
@@ -181,6 +183,7 @@
         "MY_WISHLIST": "My Wishlist",
         "DOWNLOAD_OFFERS": "Download Offers",
         "DOWNLOAD_REPORT": "Download Report",
+        "DOWNLOAD":"Download",
         "BROWSE_OFFERS": "Browse Offers",
         "BROWSE_REPORT": "Browse Report",
         "CATEGORIES": "Categories",

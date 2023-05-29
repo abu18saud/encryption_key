@@ -72,7 +72,7 @@ export class AlgorithmsService {
   monoEncription(str: string, alphabetsKey: string): string {
     let resultStr: string[] = [];
     str = str.toLocaleUpperCase();
-    alphabetsKey = alphabetsKey.toLocaleLowerCase();
+    alphabetsKey = alphabetsKey.toLocaleUpperCase();
     let newAlphabets: string[] = alphabetsKey.split('');
     console.log(newAlphabets);
 
@@ -86,6 +86,25 @@ export class AlgorithmsService {
 
     return resultStr.join('');
   };
+
+
+  monoDecryption(str: string, alphabetsKey: string): string {
+    let resultStr: string[] = [];
+    str = str.toLocaleUpperCase();
+    alphabetsKey = alphabetsKey.toLocaleUpperCase();
+    let newAlphabets: string[] = alphabetsKey.split('');
+    console.log(newAlphabets);
+
+    str.split('').forEach(element => {
+      if (this.alphabets.indexOf(element) !== -1) {
+        resultStr.push(this.alphabets[newAlphabets.indexOf(element)]);
+      } else {
+        resultStr.push(element);
+      }
+    });
+
+    return resultStr.join('');
+  };  
 
 
 

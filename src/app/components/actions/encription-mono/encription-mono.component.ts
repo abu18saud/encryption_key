@@ -32,29 +32,21 @@ export class EncriptionMonoComponent {
     // this.copyService.copyCipherTextProcess(this.process, '');
   }
 
-  ngOnInit(){
-    console.log(this.cipher);
+  ngOnInit() {
+    // console.log(this.cipher);
   }
 
   encrypt() {
     this.process.cipher_text = this.algorithmsService.monoEncription(this.process.plain_text, this.process.alphabet_key);
   }
 
-  getIndexFromAlphapets(item:any){
+  getIndexFromAlphapets(item: any) {
     return Number(this.algorithmsService.getPrimaryAlphabets().indexOf(item));
   }
 
   encryptWithAddToHistory() {
     this.encrypt();
     this.processService.addNewItem(this.process);
-  }
-
-  keyAfterMaximum(item: any) {
-    this.keyAfterMax = this.algorithmsService.getPrimaryAlphabets().indexOf(item) + this.process.encryption_key;
-    if (this.keyAfterMax > 25) {
-      this.keyAfterMax = this.keyAfterMax - 26;
-    }
-    return this.keyAfterMax;
   }
 
   clear() {

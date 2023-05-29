@@ -14,5 +14,4 @@ export class ReportDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
   ) { }
   pdfSrc = this.data.item.report_file;
-
 }

@@ -1,13 +1,12 @@
-<div [dir]="(translateService.currentLang === 'ar')? 'rtl': 'ltr'" class="bg-primary-y text-black">
-    <h2 mat-dialog-title class="text-black text-center">{{(translateService.currentLang === 'ar')? data.item.ar_name: data.item.en_name}}</h2>
-    <mat-dialog-content class="mat-typography">
-
-        <pdf-viewer [src]="pdfSrc" [render-text]="false" [original-size]="false"
+<div [dir]="(translateService.currentLang === 'ar')? 'rtl': 'ltr'" class="bg-primary-y text-black none-scroll">
+    <h2 mat-dialog-title class="text-black text-center">{{(translateService.currentLang === 'ar')? data.item.ar_name:
+        data.item.en_name}}</h2>
+        <mat-divider></mat-divider>
+    <mat-dialog-content class="mat-typography none-scroll">
+        <pdf-viewer [src]="pdfSrc" [render-text]="false" [original-size]="true"
             style="width: 45vw; height: 32vw;"></pdf-viewer>
-
     </mat-dialog-content>
     <mat-dialog-actions align="end">
         <button mat-dialog-close>{{'BUTTONS.CLOSE' | translate}}</button>
     </mat-dialog-actions>
-
 </div>

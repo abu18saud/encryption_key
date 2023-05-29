@@ -1,0 +1,14 @@
+<div [dir]="(translateService.currentLang === 'ar')? 'rtl': 'ltr'" class="bg-primary-y text-black">
+    <h2 mat-dialog-title class="text-black text-center">{{'LABELS.APPLIED_CRYPTOGRAPHY_NOTE' | translate}}</h2>
+    <h5 class="text-center"><b>{{'LABELS.WRITTEN_BY_HASSAN_SULTAN' | translate}}</b></h5>
+    <mat-divider></mat-divider>
+    <mat-dialog-content class="mat-typography none-scroll">
+        <pdf-viewer [src]="'assets/pdf/curricula/Applied_Cryptography.pdf'" [render-text]="false" [original-size]="true"
+            style="width: 45vw; height: 32vw;"></pdf-viewer>
+    </mat-dialog-content>
+    <!-- 'src/assets/pdf/curricula/Applied_Cryptography.pdf' -->
+    <mat-dialog-actions align="end">
+        <button mat-button class="m-4" (click)="downloadFile()"><mat-icon>download</mat-icon> {{'BUTTONS.DOWNLOAD' | translate}}</button>
+        <button mat-button mat-dialog-close>{{'BUTTONS.CLOSE' | translate}}</button>
+    </mat-dialog-actions>
+</div>
