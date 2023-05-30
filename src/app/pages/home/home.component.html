@@ -50,7 +50,11 @@
                         
                         
                         </some-element>
-                        <some-element *ngSwitchCase="'ZIGZAG_CIPHER'">ZIGZAG_CIPHER</some-element>
+                        <some-element *ngSwitchCase="'ZIGZAG_CIPHER'">
+                            <app-encription-zigazg [cipher]="currentCipher"></app-encription-zigazg>                        
+                        
+                        
+                        </some-element>
                         <some-other-element *ngSwitchCase="'MONO_ALPHAPETIC'">
                             
                             <div *ngIf="process.status === true; else decryptionMono">

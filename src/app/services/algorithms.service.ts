@@ -104,11 +104,43 @@ export class AlgorithmsService {
     });
 
     return resultStr.join('');
-  };  
+  };
+
+
+
+  //------------------------------------- Zigzag --------------------------------
+  zigzagEncription(str: string, rowsQty: number): string {
+    let strArray = str.split('');
+
+    let object = [
+      ['A', '', 'd', '', 'l', '', 'a', ''],
+      ['', 'b', '', 'u', '', 'l', '', 'h']
+    ];
+
+    if (str.length > 6) {
+      for (let i = 0; i < rowsQty; i++) {
+        for (let a = 0; a < str.length; a++) {
+        object.push([strArray[0], '', strArray[2], '', strArray[4]])
+
+        }
+      }
+    }
+
+    return object.toString();
+  }
+
+
+
+
+
+
+
+
 
 
 
   //---------------------------------------------------------------------
+
 
   getPrimaryAlphabets(): string[] {
     return this.alphabets;
