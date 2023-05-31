@@ -41,7 +41,6 @@ export class HomeComponent {
       this.items = res;
       this.currentCipher = res[0];
     });
-    this.copyService.copyCipherTextProcess(this.process, '');
   }
 
   ngOnInit() {
