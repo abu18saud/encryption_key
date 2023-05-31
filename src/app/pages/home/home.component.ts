@@ -19,6 +19,8 @@ export class HomeComponent {
   @ViewChild('plainText') plainText: ElementRef<HTMLInputElement>;
   @ViewChild('copyProcess') copyProcess: ElementRef<HTMLInputElement>;
   @ViewChild('copyResult') copyResult: ElementRef<HTMLInputElement>;
+  @ViewChild('underMaintenance') underMaintenance: ElementRef<HTMLInputElement>;
+
 
   process: Process = new Process();
 
@@ -52,7 +54,7 @@ export class HomeComponent {
   }
 
   UnderMaintenance() {
-    this.snackBarService.openSnackBarAr('هذه الأداة تحت الصيانة حالياً', '');
+    this.snackBarService.openSnackBarAr(this.underMaintenance.nativeElement.value, '');
   }
 
   currentCipherMethod(event: any) {

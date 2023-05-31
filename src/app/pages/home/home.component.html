@@ -1,3 +1,5 @@
+<input #underMaintenance type="hidden" [value]="'WARNING.UNDER_MAINTENANCE' | translate">
+
 <mat-drawer-container class="example-container" hasBackdrop="false">
     <mat-drawer #drawer mode="side" position="end">
         <div class="container">
@@ -12,7 +14,7 @@
 
 
         <div class="container">
-            <div class="card main-card mb-3">
+            <div class="card main-card mb-3 none-scroll">
                 <div class="row">
                     <div class="col-12">
                         <div class="mx-auto text-center">
@@ -27,7 +29,7 @@
                             <label for="">{{'LABELS.CHOOSE_AN_ALGORITHM' | translate}}:</label>
                             <li *ngFor="let item of items">
                                 <button (click)="currentCipherMethod(item)"
-                                [class.bg-warn]="item.text_id === process.algorithm"
+                                    [class.bg-warn]="item.text_id === process.algorithm"
                                     [matTooltip]="(translateService.currentLang === 'ar')? item.ar_name: item.en_name">{{(translateService.currentLang
                                     === 'ar')? item.ar_short: item.en_short}}</button>
                             </li>
@@ -38,7 +40,7 @@
                     <container-element [ngSwitch]="process.algorithm">
                         <!-- the same view can be shown in more than one case -->
                         <some-element *ngSwitchCase="'CAESAR_CIPHER'">
-                            
+
 
                             <div *ngIf="process.status === true; else elseBlock">
                                 <app-encription-caesar [cipher]="currentCipher"></app-encription-caesar>
@@ -46,35 +48,55 @@
                             <ng-template #elseBlock>
                                 <app-decryption-caesar [cipher]="currentCipher"></app-decryption-caesar>
                             </ng-template>
-                        
-                        
-                        
+
+
+
                         </some-element>
                         <some-element *ngSwitchCase="'ZIGZAG_CIPHER'">
-                            <app-encription-zigazg [cipher]="currentCipher"></app-encription-zigazg>                        
-                        
-                        
+                            <div *ngIf="process.status === true; else elseZigDecryption">
+                                <app-encription-zigazg [cipher]="currentCipher"></app-encription-zigazg>
+                            </div>
+                            <ng-template #elseZigDecryption>
+                                <div class="container">
+                                    <h1 class="text-center mt-3">{{'WARNING.UNDER_MAINTENANCE' | translate}}</h1>
+                                </div>
+                            </ng-template>
+
+
+
                         </some-element>
                         <some-other-element *ngSwitchCase="'MONO_ALPHAPETIC'">
-                            
+
                             <div *ngIf="process.status === true; else decryptionMono">
                                 <app-encription-mono [cipher]="currentCipher"></app-encription-mono>
                             </div>
                             <ng-template #decryptionMono>
                                 <app-decryption-mono [cipher]="currentCipher"></app-decryption-mono>
                             </ng-template>
-                        
-                        
-                        
+
+
+
                         </some-other-element>
-                        <some-other-element *ngSwitchCase="'PLAY_FAIR'">PLAY_FAIR</some-other-element>
-                        <some-other-element *ngSwitchCase="'AES'">AES</some-other-element>
-                        <some-other-element *ngSwitchCase="'RSA'">RSA</some-other-element>
+                        <some-other-element *ngSwitchCase="'PLAY_FAIR'">
+                            <div class="container">
+                                <h1 class="text-center mt-3">{{'WARNING.UNDER_MAINTENANCE' | translate}}</h1>
+                            </div>
+                        </some-other-element>
+                        <some-other-element *ngSwitchCase="'AES'">
+                            <div class="container">
+                                <h1 class="text-center mt-3">{{'WARNING.UNDER_MAINTENANCE' | translate}}</h1>
+                            </div>
+                        </some-other-element>
+                        <some-other-element *ngSwitchCase="'RSA'">
+                            <div class="container">
+                                <h1 class="text-center mt-3">{{'WARNING.UNDER_MAINTENANCE' | translate}}</h1>
+                            </div>
+                        </some-other-element>
                         <!--default case when there are no matches -->
                         <some-element *ngSwitchDefault>...</some-element>
-                      </container-element>
+                    </container-element>
 
-<!-- (click)="drawer.toggle()" -->
+                    <!-- (click)="drawer.toggle()" -->
                     <!-- أزرار المفضلة والسجل والمحتوى التعليمي -->
                     <nav class="all-actions mt-10"><!-- *ngIf="this.plainText.value.length === 0" -->
                         <a (click)="UnderMaintenance()" class="action-icon"
@@ -83,11 +105,13 @@
                             <div class="title" [innerHtml]="'BUTTONS.HISTORY' | translate"></div>
                         </a>
 
-                        <a (click)="UnderMaintenance()" class="action-icon" data-probe-id="translation_history_footer_button">
+                        <a (click)="UnderMaintenance()" class="action-icon"
+                            data-probe-id="translation_history_footer_button">
                             <i class="mdi mdi-star"></i>
                             <div class="title" [innerHtml]="'BUTTONS.SAVED_OPERATIONS' | translate"></div>
                         </a>
-                        <a (click)="openBookDialog()" class="action-icon" data-probe-id="translation_history_footer_button">
+                        <a (click)="openBookDialog()" class="action-icon"
+                            data-probe-id="translation_history_footer_button">
                             <i class="mdi mdi-book-open-variant"></i>
                             <div class="title" [innerHtml]="'BUTTONS.TRAINING_CURRICULUM' | translate"></div>
                         </a>

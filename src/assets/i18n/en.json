@@ -288,6 +288,7 @@
         "DELETE_USER": "This user has already been removed, please contact the administrator!"
     },
     "WARNING": {
+        "UNDER_MAINTENANCE":"This tool is currently under maintenance",
         "DELETE_USER": "Warning: If you delete this user, you will not be able to create a new account for him with the same email!"
     },
     "SOCIAL_MEDIA": {
