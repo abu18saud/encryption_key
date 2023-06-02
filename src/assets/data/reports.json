@@ -35,4 +35,15 @@
         "img": "assets/img/reports/report_3.png",
         "icon": ""
     }
+,
+    {
+        "ar_name": "تقرير النهائي",
+        "en_name": "The Final Report",
+        "due_date": "06/03/2023",
+        "report_file": "assets/pdf/reports/Report_4.pdf",
+        "evaluation_file": "",
+        "img": "assets/img/reports/report_3.png",
+        "icon": ""
+    }
+    
 ]
