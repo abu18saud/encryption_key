@@ -34,8 +34,7 @@
         "evaluation_file": "assets/pdf/Progress-Report-3.pdf",
         "img": "assets/img/reports/report_3.png",
         "icon": ""
-    }
-,
+    },
     {
         "ar_name": "تقرير النهائي",
         "en_name": "The Final Report",
@@ -44,6 +43,14 @@
         "evaluation_file": "",
         "img": "assets/img/reports/report_3.png",
         "icon": ""
+    },
+    {
+        "ar_name": "العرض التقديمي",
+        "en_name": "The Presentation",
+        "due_date": "06/04/2023",
+        "report_file": "assets/pdf/reports/Presentation.pdf",
+        "evaluation_file": "",
+        "img": "assets/img/reports/report_3.png",
+        "icon": ""
     }
-    
 ]
