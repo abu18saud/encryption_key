@@ -28,7 +28,7 @@ export class DecryptionCaesarComponent {
     public processService: ProcessService,
     public translateService: TranslateService
   ) {
-    // this.copyService.copyCipherTextProcess(this.process, '');
+    // this.copyService.copyDecryptionTextProcess(this.process, '', false);
   }
 
   encrypt() {

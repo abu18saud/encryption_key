@@ -29,11 +29,11 @@ export class DecryptionMonoComponent {
     public processService: ProcessService,
     public translateService: TranslateService
   ) {
-    // this.copyService.copyCipherTextProcess(this.process, '');
+    // this.copyService.copyDecryptionMonoProcess(this.process, '', false);
   }
 
   ngOnInit() {
-    console.log(this.cipher);
+    this.process.algorithm = "MONO_ALPHAPETIC";
   }
 
   encrypt() {
@@ -42,6 +42,11 @@ export class DecryptionMonoComponent {
 
   getIndexFromAlphapets(item: any) {
     return Number(this.algorithmsService.getPrimaryAlphabets().indexOf(item));
+  }
+
+  copyProcessAction(){
+    this.process.algorithm = "MONO_ALPHAPETIC";
+    this.copyService.copyDecryptionMonoProcess(this.process, 'COPY_PROCESS', true)
   }
 
   encryptWithAddToHistory() {

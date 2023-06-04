@@ -50,8 +50,9 @@
         "PARAGHRAGH_4": "Our platform will contribute to gaining a lot of visitors with integrated knowledge in encryption methods, and this will be a free social contribution and free learning of ways to encrypt and decrypt the most important old or new ciphers."
     },
     "LABELS": {
-        "APPLIED_CRYPTOGRAPHY_NOTE":"Applied Cryptography Note",
-        "WRITTEN_BY_HASSAN_SULTAN":"Written by Mr. Hassan Sultan",
+        "BEGINNING_OF_DEVELOPMENT": "Initiation Date",
+        "APPLIED_CRYPTOGRAPHY_NOTE": "Applied Cryptography Note",
+        "WRITTEN_BY_HASSAN_SULTAN": "Written by Mr. Hassan Sultan",
         "DUE_DATE": "Due Date",
         "ALL_REPORTS": "Here you will find all the reports that have been submitted to the course doctor",
         "WORK_TEAM": "Work Team",
@@ -67,7 +68,7 @@
         "PRIMARY_ALPHABETS": "The basic order of the letters of the alphabet is as follows",
         "CURRENT_PROCESS_DETAILS": "Current process details",
         "SOURCE": "Source",
-        "KEY_USED":"Key Used",
+        "KEY_USED": "Key Used",
         "WHAT_DO_YOU_KNOW_ABOUT": "What do you know about Caesar's algorithm?",
         "WHAT_DO_YOU_KNOW_CIPHER": "What do you know about {{cipher}}?",
         "KEY_NOTE_OF_MONO": "In Mono Alphapetic, the encryption key is the order of letters agreed upon by both parties, and based on the entered key, the order will be as follows:",
@@ -151,6 +152,7 @@
         "UNIT_PRICE": "Unit Price"
     },
     "TOOLTIPS": {
+        "REFERENCE": "Click here for reference details",
         "SWITCH_ENCRYPTION_AND_DECRYPTION": "You can switch between encoding and decoding by simply clicking this button",
         "EDIT_QUANTITY": "You can adjust the quantity after adding through the wish list",
         "DEVELOPER": "Click here to view the engineer's CV",
@@ -183,7 +185,8 @@
         "MY_WISHLIST": "My Wishlist",
         "DOWNLOAD_OFFERS": "Download Offers",
         "DOWNLOAD_REPORT": "Download Report",
-        "DOWNLOAD":"Download",
+        "DR_EVALUATION": "Doctor Evaluation",
+        "DOWNLOAD": "Download",
         "BROWSE_OFFERS": "Browse Offers",
         "BROWSE_REPORT": "Browse Report",
         "CATEGORIES": "Categories",
@@ -288,7 +291,7 @@
         "DELETE_USER": "This user has already been removed, please contact the administrator!"
     },
     "WARNING": {
-        "UNDER_MAINTENANCE":"This tool is currently under maintenance",
+        "UNDER_MAINTENANCE": "This tool is currently under maintenance",
         "DELETE_USER": "Warning: If you delete this user, you will not be able to create a new account for him with the same email!"
     },
     "SOCIAL_MEDIA": {

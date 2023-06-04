@@ -29,7 +29,7 @@ export class EncriptionMonoComponent {
     public processService: ProcessService,
     public translateService: TranslateService
   ) {
-    // this.copyService.copyCipherTextProcess(this.process, '');
+    // this.copyService.copyEncryptionMonoProcess(this.process, '', false);
   }
 
   ngOnInit() {
@@ -47,6 +47,11 @@ export class EncriptionMonoComponent {
   encryptWithAddToHistory() {
     this.encrypt();
     this.processService.addNewItem(this.process);
+  }
+
+  copyProcessAction(){
+    this.process.algorithm = "MONO_ALPHAPETIC";
+    this.copyService.copyEncryptionMonoProcess(this.process, 'COPY_PROCESS', true)
   }
 
   clear() {

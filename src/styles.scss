@@ -170,7 +170,7 @@ hr {
 }
 
 .main-card {
-  margin-top: 1.5rem;
+  // margin-top: 1rem;
   min-height: 80vh !important;
   width: 100%;
 }
@@ -272,6 +272,22 @@ textarea:focus {
     margin-top: 3px;
     resize: none;
   }
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.no-decoration-link{
+  color: bisque;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.no-decoration-link:hover{
+  color: yellow;
 }
 
 .icon {

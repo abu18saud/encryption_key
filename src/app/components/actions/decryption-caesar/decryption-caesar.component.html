@@ -41,16 +41,16 @@
         <!-- destination -->
         <div [class]="translateService.currentLang === 'ar'? 'col-6 bg-F5 left-area' : 'col-6 bg-F5-en left-area'">
             <mat-icon [matMenuTriggerFor]="menu" *ngIf="this.plainText.value.length !== 0"
-                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-5' : 'icon material-icons-outlined corner-bottom-right mr-5'"
+                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-5 mb-3' : 'icon material-icons-outlined corner-bottom-right mr-5 mb-3'"
                 [matTooltip]="'BUTTONS.SHARE_PROCESS' | translate">share</mat-icon>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item
-                    (click)="shareLinkService.shareByWhatsapp(contentsTextService.processText(process))">
+                    (click)="shareLinkService.shareByWhatsapp(contentsTextService.processDecryptionText(process))">
                     <i class="mdi mdi-whatsapp icon-x"></i>
                     <span>{{'SOCIAL_MEDIA.WHATSAPP' | translate}}</span>
                 </button>
                 <button mat-menu-item
-                    (click)="shareLinkService.shareByTelegram(contentsTextService.processText(process))">
+                    (click)="shareLinkService.shareByTelegram(contentsTextService.processDecryptionText(process))">
                     <i class="mdi mdi-telegram icon-x"></i>
                     <span>{{'SOCIAL_MEDIA.TELEGRAM' | translate}}</span>
                 </button>
@@ -66,15 +66,15 @@
                 </button>
             </mat-menu>
             <mat-icon [matMenuTriggerFor]="copyMenu" *ngIf="this.plainText.value.length !== 0"
-                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-10' : 'icon material-icons-outlined corner-bottom-right mr-10'"
+                [class]="(translateService.currentLang === 'ar')? 'icon material-icons-outlined corner-bottom-left ml-10 mb-3' : 'icon material-icons-outlined corner-bottom-right mr-10 mb-3'"
                 [matTooltip]="'BUTTONS.COPY_PROCESS' | translate">copy</mat-icon>
             <mat-menu #copyMenu="matMenu">
                 <button mat-menu-item
-                    (click)="copyService.copyCipherTextResult((process.switch_case === true)? process.cipher_text.toUpperCase():process.cipher_text.toLowerCase(), 'COPY_RESULT')">
+                    (click)="copyService.copyCipherTextResult((process.switch_case === true)? process.cipher_text.toUpperCase():process.cipher_text.toLowerCase(), 'COPY_RESULT', true)">
                     <mat-icon>file_copy</mat-icon>
                     <span>{{'BUTTONS.COPY_RESULT' | translate}}</span>
                 </button>
-                <button mat-menu-item (click)="copyService.copyDecryptionTextProcess(process, 'COPY_PROCESS')">
+                <button mat-menu-item (click)="copyService.copyDecryptionTextProcess(process, 'COPY_PROCESS', true)">
                     <mat-icon>copy_all</mat-icon>
                     <span>{{'BUTTONS.COPY_PROCESS' | translate}}</span>
                 </button>
@@ -86,7 +86,7 @@
                 [matTooltip]="'BUTTONS.SAVE_PROCESS' | translate">star_border</mat-icon>
             <i *ngIf="algorithmsService.checkRtl(plainText.value) !== true? (this.plainText.value.length !== 0): false"
                 (click)="process.switch_case=!process.switch_case" [matTooltip]="'BUTTONS.SWITCH_CASE' | translate"
-                [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5')"></i>
+                [class]="translateService.currentLang === 'ar'? (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-right mr-5 mb-3':'icon mdi mdi-format-letter-case-lower corner-bottom-right mr-5 mb-3') : (process.switch_case === true? 'icon mdi mdi-format-letter-case-upper corner-bottom-left ml-5 mb-3':'icon mdi mdi-format-letter-case-lower corner-bottom-left ml-5 mb-3')"></i>
 
             <div class="mt-4 font-24 text-f5 text-justify lh-lg pl-10">
                 <div *ngIf="this.plainText.value.length === 0">
@@ -117,7 +117,7 @@
                     [innerHtml]="translateService.currentLang === 'ar'? cipher.ar_description: cipher.en_description">
                 </p>
 
-                <a dir="ltr" [href]="cipher.link" [matTooltip]="'LABELS.SOURCE' | translate"
+                <a dir="ltr" [href]="cipher.link" [matTooltip]="'TOOLTIPS.REFERENCE' | translate"
                     target="_blank">{{cipher.ref}}</a>
             </div>
 

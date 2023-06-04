@@ -70,11 +70,11 @@
                 [matTooltip]="'BUTTONS.COPY_PROCESS' | translate">copy</mat-icon>
             <mat-menu #copyMenu="matMenu">
                 <button mat-menu-item
-                    (click)="copyService.copyCipherTextResult((process.switch_case === true)? process.cipher_text.toUpperCase():process.cipher_text.toLowerCase(), 'COPY_RESULT')">
+                    (click)="copyService.copyCipherTextResult((process.switch_case === true)? process.cipher_text.toUpperCase():process.cipher_text.toLowerCase(), 'COPY_RESULT', true)">
                     <mat-icon>file_copy</mat-icon>
                     <span>{{'BUTTONS.COPY_RESULT' | translate}}</span>
                 </button>
-                <button mat-menu-item (click)="copyService.copyCipherTextProcess(process, 'COPY_PROCESS')">
+                <button mat-menu-item (click)="copyProcessAction()">
                     <mat-icon>copy_all</mat-icon>
                     <span>{{'BUTTONS.COPY_PROCESS' | translate}}</span>
                 </button>
@@ -121,7 +121,7 @@
                     [innerHtml]="translateService.currentLang === 'ar'? cipher.ar_description: cipher.en_description">
                 </p>
 
-                <a dir="ltr" [href]="cipher.link" [matTooltip]="'LABELS.SOURCE' | translate"
+                <a dir="ltr" [href]="cipher.link" [matTooltip]="'TOOLTIPS.REFERENCE' | translate"
                     target="_blank">{{cipher.ref}}</a>
             </div>
 

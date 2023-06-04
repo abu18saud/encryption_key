@@ -15,7 +15,7 @@ export class CopyService {
     private handleTranslateService: HandleTranslateService,
     private contentsTextService: ContentsTextService) { }
 
-  copyCipherTextResult(val: string, successMessageKey: string) {
+  copyCipherTextResult(val: string, successMessageKey: string, notification: boolean) {
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
@@ -31,19 +31,22 @@ export class CopyService {
       this.handleTranslateService.getArLangFile().subscribe(res => {
         let success = res['SUCCESS'];
         let successMessage = success[successMessageKey];
-
-        this.snackBarService.openSnackBarAr(successMessage, "");
+        if (notification === true) {
+          this.snackBarService.openSnackBarAr(successMessage, "");
+        }
       });
     } else {
       this.handleTranslateService.getEnLangFile().subscribe(res => {
         let success = res['SUCCESS'];
         let successMessage = success[successMessageKey];
-        this.snackBarService.openSnackBarEn(successMessage, "");
+        if (notification === true) {
+          this.snackBarService.openSnackBarEn(successMessage, "");
+        }
       });
     }
   }
 
-  async copyCipherTextProcess(process: Process, successMessageKey: string) {
+  async copyCipherTextProcess(process: Process, successMessageKey: string, notification: boolean) {
     this.value = await this.contentsTextService.processText(process);
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
@@ -60,20 +63,22 @@ export class CopyService {
       this.handleTranslateService.getArLangFile().subscribe(res => {
         let success = res['SUCCESS'];
         let successMessage = success[successMessageKey];
-
-        this.snackBarService.openSnackBarAr(successMessage, "");
+        if (notification === true) {
+          this.snackBarService.openSnackBarAr(successMessage, "");
+        }
       });
     } else {
       this.handleTranslateService.getEnLangFile().subscribe(res => {
         let success = res['SUCCESS'];
         let successMessage = success[successMessageKey];
-        this.snackBarService.openSnackBarEn(successMessage, "");
+        if (notification === true) {
+          this.snackBarService.openSnackBarEn(successMessage, "");
+        }
       });
     }
   }
 
-
-  async copyDecryptionTextProcess(process: Process, successMessageKey: string) {
+  async copyDecryptionTextProcess(process: Process, successMessageKey: string, notification: boolean) {
     this.value = await this.contentsTextService.processDecryptionText(process);
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
@@ -91,13 +96,84 @@ export class CopyService {
         let success = res['SUCCESS'];
         let successMessage = success[successMessageKey];
 
-        this.snackBarService.openSnackBarAr(successMessage, "");
+        if (notification === true) {
+          this.snackBarService.openSnackBarAr(successMessage, "");
+        }
       });
     } else {
       this.handleTranslateService.getEnLangFile().subscribe(res => {
         let success = res['SUCCESS'];
         let successMessage = success[successMessageKey];
-        this.snackBarService.openSnackBarEn(successMessage, "");
+        if (notification === true) {
+          this.snackBarService.openSnackBarEn(successMessage, "");
+        }
+      });
+    }
+  }
+  //--------------------------------------------------------------
+  async copyEncryptionMonoProcess(process: Process, successMessageKey: string, notification: boolean) {
+    this.value = await this.contentsTextService.processEncryptionMonoText(process);
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = this.value;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+    if (this.translateService.currentLang === 'ar') {
+      this.handleTranslateService.getArLangFile().subscribe(res => {
+        let success = res['SUCCESS'];
+        let successMessage = success[successMessageKey];
+
+        if (notification === true) {
+          this.snackBarService.openSnackBarAr(successMessage, "");
+        }
+      });
+    } else {
+      this.handleTranslateService.getEnLangFile().subscribe(res => {
+        let success = res['SUCCESS'];
+        let successMessage = success[successMessageKey];
+        if (notification === true) {
+          this.snackBarService.openSnackBarEn(successMessage, "");
+        }
+      });
+    }
+  }
+
+  async copyDecryptionMonoProcess(process: Process, successMessageKey: string, notification: boolean) {
+    this.value = await this.contentsTextService.processDecryptionMonoText(process);
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = this.value;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+    if (this.translateService.currentLang === 'ar') {
+      this.handleTranslateService.getArLangFile().subscribe(res => {
+        let success = res['SUCCESS'];
+        let successMessage = success[successMessageKey];
+
+        if (notification === true) {
+          this.snackBarService.openSnackBarAr(successMessage, "");
+        }
+      });
+    } else {
+      this.handleTranslateService.getEnLangFile().subscribe(res => {
+        let success = res['SUCCESS'];
+        let successMessage = success[successMessageKey];
+
+        if (notification === true) {
+          this.snackBarService.openSnackBarEn(successMessage, "");
+        }
       });
     }
   }

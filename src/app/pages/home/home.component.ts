@@ -59,6 +59,7 @@ export class HomeComponent {
   currentCipherMethod(event: any) {
     this.currentCipher = event;
     this.process.algorithm = event.text_id;
+    console.log(this.process);
   }
 
 }

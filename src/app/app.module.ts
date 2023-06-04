@@ -31,6 +31,7 @@ import { EncriptionMonoComponent } from './components/actions/encription-mono/en
 import { DecryptionMonoComponent } from './components/actions/decryption-mono/decryption-mono.component';
 import { HassanBookDialogComponent } from './tools/hassan-book-dialog/hassan-book-dialog.component';
 import { EncriptionZigazgComponent } from './components/actions/encription-zigazg/encription-zigazg.component';
+import { EvaluationDialogComponent } from './tools/evaluation-dialog/evaluation-dialog.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -53,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DecryptionMonoComponent,
     HassanBookDialogComponent,
     EncriptionZigazgComponent,
+    EvaluationDialogComponent,
   ],
   imports: [
     PdfViewerModule,

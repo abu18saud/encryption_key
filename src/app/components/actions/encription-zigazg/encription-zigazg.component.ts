@@ -29,7 +29,7 @@ export class EncriptionZigazgComponent {
     public processService: ProcessService,
     public translateService: TranslateService
   ) {
-    // this.copyService.copyCipherTextProcess(this.process, '');
+    // this.copyService.copyCipherTextProcess(this.process, '', false);
   }
 
   

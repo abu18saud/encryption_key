@@ -1,6 +1,6 @@
 <div class="container mt-4">
 
-    <mat-tab-group class="bg-primary" [color]="'primary'" [backgroundColor]="'warn'" aria-label="Change color">
+    <mat-tab-group class="bg-primary" [color]="'primary'" [backgroundColor]="'accent'" aria-label="Change color">
         <mat-tab *ngFor="let item of items"
             [label]="translateService.currentLang === 'ar'? item.ar_short: item.en_short">
             <ng-template matTabContent>
@@ -8,16 +8,15 @@
                     <h1 class="mt-4 text-center text-white">{{translateService.currentLang === 'ar'? item.ar_name:
                         item.en_name}}</h1>
                     <p class="lh-lg m-4 text-justify text-white" [innerHtml]="translateService.currentLang === 'ar'?
-                item.ar_description: item.en_description"></p>
-
+                        item.ar_description: item.en_description"></p>
                     <div class="corner-top-right m-5 text-white lh-lg">
-                        <b>{{item.ref.length === 0? '':('LABELS.REFERENCE' | translate)}}</b>
-                        <p class="">{{item.ref}}</p>
+                        <b>{{item.ref.length === 0? '':('LABELS.REFERENCE' | translate)}}</b> <br>
+                        <a class="no-decoration-link" [matTooltip]="'TOOLTIPS.REFERENCE' | translate" [href]="item.link"
+                            target="_blank">
+                            {{item.ref}}
+                        </a>
                     </div>
-
                 </div>
-
-
             </ng-template>
         </mat-tab>
     </mat-tab-group>

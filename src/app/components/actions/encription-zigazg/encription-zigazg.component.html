@@ -70,11 +70,11 @@
                 [matTooltip]="'BUTTONS.COPY_PROCESS' | translate">copy</mat-icon>
             <mat-menu #copyMenu="matMenu">
                 <button mat-menu-item
-                    (click)="copyService.copyCipherTextResult((process.switch_case === true)? process.cipher_text.toUpperCase():process.cipher_text.toLowerCase(), 'COPY_RESULT')">
+                    (click)="copyService.copyCipherTextResult((process.switch_case === true)? process.cipher_text.toUpperCase():process.cipher_text.toLowerCase(), 'COPY_RESULT', true)">
                     <mat-icon>file_copy</mat-icon>
                     <span>{{'BUTTONS.COPY_RESULT' | translate}}</span>
                 </button>
-                <button mat-menu-item (click)="copyService.copyCipherTextProcess(process, 'COPY_PROCESS')">
+                <button mat-menu-item (click)="copyService.copyCipherTextProcess(process, 'COPY_PROCESS', true)">
                     <mat-icon>copy_all</mat-icon>
                     <span>{{'BUTTONS.COPY_PROCESS' | translate}}</span>
                 </button>
@@ -112,14 +112,15 @@
         <div class="col-6">
             <div
                 [class]="translateService.currentLang === 'ar'? 'card additions-cards mr-3 mt-3 p-2' :'card additions-cards ml-3 mt-3 p-2'">
-                <h1 class="text-uppercase lh-lg">{{'LABELS.WHAT_DO_YOU_KNOW_ABOUT' | translate}}
+                <h1 class="text-uppercase lh-lg">{{('LABELS.WHAT_DO_YOU_KNOW_CIPHER' |
+                    translate).replaceAll('{{cipher}}', ('CIPHERS.'+ cipher.text_id | translate))}}
                 </h1>
 
                 <p class="text-justify lh-lg p-4"
                     [innerHtml]="translateService.currentLang === 'ar'? cipher.ar_description: cipher.en_description">
                 </p>
 
-                <a dir="ltr" [href]="cipher.link" [matTooltip]="'LABELS.SOURCE' | translate"
+                <a dir="ltr" [href]="cipher.link" [matTooltip]="'TOOLTIPS.REFERENCE' | translate"
                     target="_blank">{{cipher.ref}}</a>
             </div>
 
